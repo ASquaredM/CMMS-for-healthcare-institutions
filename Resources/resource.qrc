@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="Edit">
+    <file>images/cross-gross-symbol.png</file>
+    <file>images/black-placeholder-variant.png</file>
+    <file>images/monitor-tool-symbol.png</file>
+    <file>images/document-rounded-square-interface-symbol-with-text-lines.png</file>
+    <file>images/calender.png</file>
+    <file>images/check.png</file>
+    <file>images/follow-up.png</file>
+    <file>images/export.png</file>
+    <file>images/request.png</file>
+    <file>images/home.png</file>
+    <file>images/list.png</file>
+    <file>images/settings.png</file>
+    <file>images/new.png</file>
+    <file>images/open.png</file>
+    <file>images/app.png</file>
+    <file>images/paste.png</file>
+    <file>images/copy.png</file>
+    <file>images/cut.png</file>
+  </qresource>
+</RCC>
