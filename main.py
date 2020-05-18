@@ -1,7 +1,9 @@
-from PyQt5 import QtWidgets
-from hospital_gui import Ui_MainWindow 
-import sys
 import os
+import sys
+
+from PyQt5 import QtWidgets
+
+from hospital_gui import Ui_MainWindow
 
 
 class ApplicationWindow(QtWidgets.QMainWindow):
