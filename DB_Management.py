@@ -25,16 +25,25 @@ class DatabaseUtilities:
         return self.RunCommand("SHOW COLUMNS FROM %s;" % tableName)
 
     def GetRows(self, tableName):
-        return self.RunCommand("SELECT * from %s;" % tableName)
+        return self.RunCommand("SELECT * FROM %s;" % tableName)
 
     def SelectRows(self, tableName, Condition):
         cmd = tableName + ' where ' + Condition
-        return self.RunCommand("SELECT * from %s;" % cmd)
+        return self.RunCommand("SELECT * FROM %s;" % cmd)
+
+    def GetDF(self, i):
+        cmd = '''
+        SELECT T1.text, T1.formid, T1.formtype, T1.formfamily FROM (SELECT form.text, form.formid, form.formtype, form.formfamily, device.depid 
+                                                                            FROM form 
+                                                                            INNER JOIN device on form.formfamily = device.family) AS T1 
+        WHERE depid = %s;)
+        ''' % i
+        return self.RunCommand(cmd)
 
     def RunCommand(self, cmd):
         print("RUNNING COMMAND: " + cmd)
         try:
-            self.cursor.execute(cmd)
+            self.cursor.execute(cmd, multi=True)
         except mysql.connector.Error as err:
             print('ERROR MESSAGE: ' + str(err.msg))
             print('WITH ' + cmd)

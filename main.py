@@ -57,19 +57,27 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 DB.SelectRows(
                     'device', 'depid = %s' % self.DepartmentSelection_combo.
                     currentIndex()), self.Devices_table))
+        self.DepartmentSelection_combo_3.currentIndexChanged.connect(
+            lambda: self.UpdateTable(
+                DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self
+                .Forms_table))
 
     def UpdateTables(self):
         self.UpdateTable(DB.GetRows('department'), self.Department_table)
         self.UpdateTable(DB.GetRows('device'), self.Devices_table)
+        self.UpdateTable(DB.GetRows('form'), self.Forms_table)
 
     def UpdateTable(self, rows, UItable):
-        UItable.setRowCount(len(rows))
-        UItable.setColumnCount(len(rows[0]))
+        if str(type(rows)) != "<class 'NoneType'>":
+            UItable.setRowCount(len(rows))
+            UItable.setColumnCount(len(rows[0]))
 
-        for row_number, row_data in enumerate(rows):
-            for column_number, column_data in enumerate(row_data):
-                self.InsertAtIndex(UItable, row_number, column_number,
-                                   str(column_data))
+            for row_number, row_data in enumerate(rows):
+                for column_number, column_data in enumerate(row_data):
+                    self.InsertAtIndex(UItable, row_number, column_number,
+                                       str(column_data))
+        else:
+            UItable.clearContents()
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
