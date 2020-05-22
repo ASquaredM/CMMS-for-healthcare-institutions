@@ -3,7 +3,7 @@ from mysql.connector import errorcode
 from datetime import datetime
 
 class DatabaseUtilities: 
-	def __init__(self, database, tableName):
+	def __init__(self):
 		self.mydb = mysql.connector.connect(
 								host="localhost",
 								user="root",
@@ -19,8 +19,14 @@ class DatabaseUtilities:
 	def GetTable(self, tableName):
 		return self.RunCommand("SELECT * FROM %s;" % tableName)
 
+	def GetTables(self):
+		return self.RunCommand("SHOW Tables")
+
 	def GetColumns(self, tableName):
 		return self.RunCommand("SHOW COLUMNS FROM %s;" % tableName)
+
+	def GetRows(self, tableName):
+		return self.RunCommand("SHOW ROWS FROM %s;" % tableName)
 
 	def RunCommand(self, cmd):
 		print ("RUNNING COMMAND: " + cmd)

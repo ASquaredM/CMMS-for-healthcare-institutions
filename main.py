@@ -7,11 +7,12 @@ from PyQt5.QtWidgets import QTableWidgetItem
 from DB_Management import DatabaseUtilities as DU
 import hospital_gui
 
+DB = DU()
 
 class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self,mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
-
+        
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -41,7 +42,6 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.actionManage_Tasks.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.actionCMMS.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         '''
-
 
 
     def InsertAtIndex(self, table, y, x, Item):
