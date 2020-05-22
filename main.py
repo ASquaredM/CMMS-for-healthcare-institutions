@@ -14,6 +14,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
         
         self.UpdateTables()
+
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -50,6 +51,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
+        
         self.DepartmentSelection_combo.currentIndexChanged.connect(lambda: self.UpdateTable(DB.SelectRows('device','depid = %s'% self.DepartmentSelection_combo.currentIndex()),self.Devices_table))
 
 
