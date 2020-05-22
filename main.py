@@ -51,16 +51,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
-
+        ## gives an error when we choose all departmenst after changing the department from the combo
+        ## because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
             lambda: self.UpdateTable(
                 DB.SelectRows(
                     'device', 'depid = %s' % self.DepartmentSelection_combo.
-                    currentIndex()), self.Devices_table))
+                    currentIndex()), self.Devices_table)) 
         self.DepartmentSelection_combo_3.currentIndexChanged.connect(
             lambda: self.UpdateTable(
-                DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self
-                .Forms_table))
+                DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self.Forms_table))
 
     def UpdateTables(self):
         self.UpdateTable(DB.GetRows('department'), self.Department_table)
@@ -68,8 +68,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.UpdateTable(DB.GetRows('form'), self.Forms_table)
 
     def UpdateTable(self, rows, UItable):
-        if str(type(rows)) != "<class 'NoneType'>":
+        if str(type(rows)) != "<class 'NoneType'>" and len(rows[0])>0 :
             UItable.setRowCount(len(rows))
+           
             UItable.setColumnCount(len(rows[0]))
 
             for row_number, row_data in enumerate(rows):

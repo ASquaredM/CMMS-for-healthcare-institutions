@@ -5,6 +5,10 @@ from datetime import datetime
 
 class DatabaseUtilities:
     def __init__(self):
+       self.DB_init()
+
+
+    def DB_init(self):
         self.mydb = mysql.connector.connect(host="localhost",
                                             user="root",
                                             passwd="mysql",
@@ -35,10 +39,13 @@ class DatabaseUtilities:
         cmd = '''
         SELECT T1.text, T1.formid, T1.formtype, T1.formfamily FROM (SELECT form.text, form.formid, form.formtype, form.formfamily, device.depid 
                                                                     FROM form 
-                                                                    INNER JOIN device on form.formfamily = device.family) AS T1 
-        WHERE depid = %s;)
-        ''' % i
-        return self.RunCommand(cmd)
+                                                                    JOIN device on form.formfamily = device.family) AS T1 
+        WHERE depid = {};)
+        '''.format(i)
+        result = self.RunCommand(cmd)
+        self.cursor.close()
+        self.DB_init()
+        return result
 
     def RunCommand(self, cmd):
         print("RUNNING COMMAND: " + cmd)
@@ -49,8 +56,13 @@ class DatabaseUtilities:
             print('WITH ' + cmd)
         try:
             msg = self.cursor.fetchall()
+
+            print("NOICE")
         except:
             msg = self.cursor.fetchone()
+            print("shiiiiiiiiit")
+            
+            
         return msg
 
     def AddEntryToTable(self, tableName, message):
