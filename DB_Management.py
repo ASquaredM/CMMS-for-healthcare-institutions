@@ -28,6 +28,10 @@ class DatabaseUtilities:
 	def GetRows(self, tableName):
 		return self.RunCommand("SELECT * from %s;" % tableName)
 
+	def SelectRows(self, tableName, Condition):
+		cmd = tableName + ' where ' + Condition
+		return self.RunCommand("SELECT * from %s;" % cmd)
+
 	def RunCommand(self, cmd):
 		print ("RUNNING COMMAND: " + cmd)
 		try:

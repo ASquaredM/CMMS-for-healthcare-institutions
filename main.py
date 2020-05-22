@@ -43,18 +43,26 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.actionManage_Tasks.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.actionCMMS.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         '''
+        ''' Combos
+        self.DepartmentSelection_combo
+        self.DepartmentSelection_combo_2
+        self.DepartmentSelection_combo_3
+        self.Date_comboBox
+        self.Inspection_comboBox
+        '''
+        self.DepartmentSelection_combo.currentIndexChanged.connect(lambda: self.UpdateTable(DB.SelectRows('device','depid = %s'% self.DepartmentSelection_combo.currentIndex()),self.Devices_table))
+
+
 
     def UpdateTables(self):
-        self.UpdateTable('department',self.Department_table)
-        self.UpdateTable('device',self.Devices_table)
+        self.UpdateTable(DB.GetRows('department'),self.Department_table)
+        self.UpdateTable(DB.GetRows('device'),self.Devices_table)
 
-    def UpdateTable(self,DBtable,UItable):
-        rows = DB.GetRows(str(DBtable))
+    def UpdateTable(self,rows,UItable):
         UItable.setRowCount(len(rows))
         UItable.setColumnCount(len(rows[0]))
         
         for row_number, row_data in enumerate(rows):
-            print(row_data[0])
             for column_number, column_data in enumerate(row_data):
                 self.InsertAtIndex(UItable, row_number, column_number, str(column_data))
         
