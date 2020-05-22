@@ -30,16 +30,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Search_lineEdit
         '''
         ''' Actions (Ordered by the actual toolbar order)
-        self.actionFollow_Up
-        self.actionHome
-        self.actionTo_Do
-        self.actionDaily_Inspection
-        self.actionInformation
-        self.actionTools
-        self.actionAdd_Device
-        self.actionCreate_Form
-        self.actionManage_Tasks
-        self.actionCMMS
+        self.actionFollow_Up.triggere seld.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionHome.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionTo_Do.triggered.connect(lambda:f.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionDaily_Inspection.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionInformation.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionTools.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionAdd_Device.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionCreate_Form.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionManage_Tasks.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionCMMS.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         '''
 
 
