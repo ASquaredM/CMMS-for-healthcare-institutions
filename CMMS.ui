@@ -11,27 +11,27 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CMMS</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1013</width>
-         <height>618</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
-        <iconset resource="Resources/resource.qrc">
-         <normaloff>:/Edit/images/follow-up.png</normaloff>:/Edit/images/follow-up.png</iconset>
+        <iconset>
+         <normaloff>Resources/images/follow-up.png</normaloff>Resources/images/follow-up.png</iconset>
        </attribute>
        <attribute name="label">
         <string>Follow-Up</string>
@@ -40,7 +40,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget">
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <property name="iconSize">
            <size>
@@ -59,8 +59,8 @@
           </property>
           <widget class="QWidget" name="tab_2">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/home.png</normaloff>:/Edit/images/home.png</iconset>
+            <iconset>
+             <normaloff>Resources/images/home.png</normaloff>Resources/images/home.png</iconset>
            </attribute>
            <attribute name="title">
             <string>Dashboard</string>
@@ -120,7 +120,7 @@
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
                <item>
-                <widget class="QLineEdit" name="lineEdit">
+                <widget class="QLineEdit" name="Search_lineEdit">
                  <property name="placeholderText">
                   <string>Search for To Do, Tasks, Devices,..etc</string>
                  </property>
@@ -313,8 +313,8 @@
                </font>
               </property>
               <property name="icon">
-               <iconset resource="Resources/resource.qrc">
-                <normaloff>:/Edit/images/paste.png</normaloff>:/Edit/images/paste.png</iconset>
+               <iconset>
+                <normaloff>Resources/images/paste.png</normaloff>Resources/images/paste.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -350,8 +350,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources/resource.qrc">
-                <normaloff>:/Edit/images/black-placeholder-variant.png</normaloff>:/Edit/images/black-placeholder-variant.png</iconset>
+               <iconset>
+                <normaloff>Resources/images/black-placeholder-variant.png</normaloff>Resources/images/black-placeholder-variant.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -387,8 +387,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources/resource.qrc">
-                <normaloff>:/Edit/images/monitor-tool-symbol.png</normaloff>:/Edit/images/monitor-tool-symbol.png</iconset>
+               <iconset>
+                <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -424,8 +424,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources/resource.qrc">
-                <normaloff>:/Edit/images/check.png</normaloff>:/Edit/images/check.png</iconset>
+               <iconset>
+                <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -458,8 +458,8 @@
                </font>
               </property>
               <property name="icon">
-               <iconset resource="Resources/resource.qrc">
-                <normaloff>:/Edit/images/list.png</normaloff>:/Edit/images/list.png</iconset>
+               <iconset>
+                <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -499,8 +499,8 @@
           </widget>
           <widget class="QWidget" name="tab">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/list.png</normaloff>:/Edit/images/list.png</iconset>
+            <iconset>
+             <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
            </attribute>
            <attribute name="title">
             <string>To Do</string>
@@ -627,8 +627,8 @@
                   <string>Export...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="Resources/resource.qrc">
-                   <normaloff>:/Edit/images/export.png</normaloff>:/Edit/images/export.png</iconset>
+                  <iconset>
+                   <normaloff>Resources/images/export.png</normaloff>Resources/images/export.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -655,7 +655,7 @@
                 </widget>
                </item>
                <item row="0" column="2">
-                <widget class="QPushButton" name="pushButton_5">
+                <widget class="QPushButton" name="Print_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -666,8 +666,8 @@
                   <string>Print...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="Resources/resource.qrc">
-                   <normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
+                  <iconset>
+                   <normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -678,8 +678,8 @@
           </widget>
           <widget class="QWidget" name="tab_8">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/check.png</normaloff>:/Edit/images/check.png</iconset>
+            <iconset>
+             <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
            </attribute>
            <attribute name="title">
             <string>Inspection</string>
@@ -698,7 +698,7 @@
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
                <item row="0" column="2">
-                <widget class="QCheckBox" name="checkBox">
+                <widget class="QCheckBox" name="MarkAsDone_checkBox">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -711,7 +711,7 @@
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="comboBox_2">
+                <widget class="QComboBox" name="Inspection_comboBox">
                  <property name="currentIndex">
                   <number>0</number>
                  </property>
@@ -739,8 +739,8 @@
                   <string>13/5/2020</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="Resources/resource.qrc">
-                   <normaloff>:/Edit/images/calender.png</normaloff>:/Edit/images/calender.png</iconset>
+                  <iconset>
+                   <normaloff>Resources/images/calender.png</normaloff>Resources/images/calender.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1052,13 +1052,13 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1013</width>
-         <height>618</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
-        <iconset resource="Resources/resource.qrc">
-         <normaloff>:/Edit/images/request.png</normaloff>:/Edit/images/request.png</iconset>
+        <iconset>
+         <normaloff>Resources/images/request.png</normaloff>Resources/images/request.png</iconset>
        </attribute>
        <attribute name="label">
         <string>Information</string>
@@ -1067,7 +1067,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <property name="iconSize">
            <size>
@@ -1077,8 +1077,8 @@
           </property>
           <widget class="QWidget" name="tab_6">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/monitor-tool-symbol.png</normaloff>:/Edit/images/monitor-tool-symbol.png</iconset>
+            <iconset>
+             <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
            </attribute>
            <attribute name="title">
             <string>Devices</string>
@@ -1254,8 +1254,8 @@
           </widget>
           <widget class="QWidget" name="tab_4">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/black-placeholder-variant.png</normaloff>:/Edit/images/black-placeholder-variant.png</iconset>
+            <iconset>
+             <normaloff>Resources/images/black-placeholder-variant.png</normaloff>Resources/images/black-placeholder-variant.png</iconset>
            </attribute>
            <attribute name="title">
             <string>Departments</string>
@@ -1362,8 +1362,8 @@
           </widget>
           <widget class="QWidget" name="tab_7">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/check.png</normaloff>:/Edit/images/check.png</iconset>
+            <iconset>
+             <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
            </attribute>
            <attribute name="title">
             <string>Forms</string>
@@ -1464,13 +1464,13 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1013</width>
-         <height>618</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
-        <iconset resource="Resources/resource.qrc">
-         <normaloff>:/Edit/images/settings.png</normaloff>:/Edit/images/settings.png</iconset>
+        <iconset>
+         <normaloff>Resources/images/settings.png</normaloff>Resources/images/settings.png</iconset>
        </attribute>
        <attribute name="label">
         <string>Tools</string>
@@ -1491,8 +1491,8 @@
               </size>
              </property>
              <property name="icon">
-              <iconset resource="Resources/resource.qrc">
-               <normaloff>:/Edit/images/check.png</normaloff>:/Edit/images/check.png</iconset>
+              <iconset>
+               <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -1523,8 +1523,8 @@
               </size>
              </property>
              <property name="icon">
-              <iconset resource="Resources/resource.qrc">
-               <normaloff>:/Edit/images/monitor-tool-symbol.png</normaloff>:/Edit/images/monitor-tool-symbol.png</iconset>
+              <iconset>
+               <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -1555,8 +1555,8 @@
               </size>
              </property>
              <property name="icon">
-              <iconset resource="Resources/resource.qrc">
-               <normaloff>:/Edit/images/list.png</normaloff>:/Edit/images/list.png</iconset>
+              <iconset>
+               <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -1584,7 +1584,7 @@
      <x>0</x>
      <y>0</y>
      <width>1033</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1654,12 +1654,11 @@
    <addaction name="actionCMMS"/>
    <addaction name="separator"/>
    <addaction name="separator"/>
-   <addaction name="actionExit"/>
   </widget>
   <action name="actionCMMS">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/app.png</normaloff>:/Edit/images/app.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/app.png</normaloff>Resources/images/app.png</iconset>
    </property>
    <property name="text">
     <string>About CMMS</string>
@@ -1670,8 +1669,8 @@
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/open.png</normaloff>:/Edit/images/open.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/open.png</normaloff>Resources/images/open.png</iconset>
    </property>
    <property name="text">
     <string>Exit</string>
@@ -1682,8 +1681,8 @@
   </action>
   <action name="actionRequests">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/request.png</normaloff>:/Edit/images/request.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/request.png</normaloff>Resources/images/request.png</iconset>
    </property>
    <property name="text">
     <string>Requests</string>
@@ -1692,7 +1691,7 @@
   <action name="actionExit">
    <property name="icon">
     <iconset>
-     <normaloff>:/Edit/images/cross-gross-symbol.png</normaloff>:/Edit/images/cross-gross-symbol.png</iconset>
+     <normaloff>Resources/images/cross-gross-symbol.png</normaloff>Resources/images/cross-gross-symbol.png</iconset>
    </property>
    <property name="text">
     <string>Exit</string>
@@ -1703,8 +1702,8 @@
   </action>
   <action name="actionTo_Do">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/list.png</normaloff>:/Edit/images/list.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
    </property>
    <property name="text">
     <string>To Do</string>
@@ -1712,8 +1711,8 @@
   </action>
   <action name="actionHome">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/home.png</normaloff>:/Edit/images/home.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/home.png</normaloff>Resources/images/home.png</iconset>
    </property>
    <property name="text">
     <string>Home</string>
@@ -1721,8 +1720,8 @@
   </action>
   <action name="actionDaily_Inspection">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/check.png</normaloff>:/Edit/images/check.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
    </property>
    <property name="text">
     <string>Inspection</string>
@@ -1730,8 +1729,8 @@
   </action>
   <action name="actionFollow_Up">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/follow-up.png</normaloff>:/Edit/images/follow-up.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/follow-up.png</normaloff>Resources/images/follow-up.png</iconset>
    </property>
    <property name="text">
     <string>Follow-Up</string>
@@ -1739,8 +1738,8 @@
   </action>
   <action name="actionInformation">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/request.png</normaloff>:/Edit/images/request.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/request.png</normaloff>Resources/images/request.png</iconset>
    </property>
    <property name="text">
     <string>Information</string>
@@ -1748,8 +1747,8 @@
   </action>
   <action name="actionAdd_Device">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/monitor-tool-symbol.png</normaloff>:/Edit/images/monitor-tool-symbol.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
    </property>
    <property name="text">
     <string>Add Device</string>
@@ -1757,8 +1756,8 @@
   </action>
   <action name="actionTools">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/settings.png</normaloff>:/Edit/images/settings.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/settings.png</normaloff>Resources/images/settings.png</iconset>
    </property>
    <property name="text">
     <string>Tools</string>
@@ -1766,8 +1765,8 @@
   </action>
   <action name="actionCreate_Form">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/check.png</normaloff>:/Edit/images/check.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
    </property>
    <property name="text">
     <string>Create Form</string>
@@ -1775,8 +1774,8 @@
   </action>
   <action name="actionManage_Tasks">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/list.png</normaloff>:/Edit/images/list.png</iconset>
+    <iconset>
+     <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
    </property>
    <property name="text">
     <string>Manage Tasks</string>
