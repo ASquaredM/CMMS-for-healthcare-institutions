@@ -29,6 +29,18 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' LineEdit
         self.Search_lineEdit
         '''
+        ''' Actions (Ordered by the actual toolbar order)
+        self.actionFollow_Up
+        self.actionHome
+        self.actionTo_Do
+        self.actionDaily_Inspection
+        self.actionInformation
+        self.actionTools
+        self.actionAdd_Device
+        self.actionCreate_Form
+        self.actionManage_Tasks
+        self.actionCMMS
+        '''
 
 
 
