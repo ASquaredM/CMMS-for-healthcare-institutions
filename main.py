@@ -45,14 +45,18 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         '''
 
     def UpdateTables(self):
-        self.UpdateTable('department')
+        self.UpdateTable('department',self.Department_table)
+        self.UpdateTable('device',self.Devices_table)
 
-    def UpdateTable(self,tableName):
-        self.Deps = DB.GetRows(str(tableName))
-        for row_number, row_data in enumerate(self.Deps):
+    def UpdateTable(self,DBtable,UItable):
+        rows = DB.GetRows(str(DBtable))
+        UItable.setRowCount(len(rows))
+        UItable.setColumnCount(len(rows[0]))
+        
+        for row_number, row_data in enumerate(rows):
             print(row_data[0])
             for column_number, column_data in enumerate(row_data):
-                self.InsertAtIndex(self.Department_table, row_number, column_number, str(column_data))
+                self.InsertAtIndex(UItable, row_number, column_number, str(column_data))
         
 
     def InsertAtIndex(self, table, y, x, Item):
