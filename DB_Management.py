@@ -34,8 +34,8 @@ class DatabaseUtilities:
     def GetDF(self, i):
         cmd = '''
         SELECT T1.text, T1.formid, T1.formtype, T1.formfamily FROM (SELECT form.text, form.formid, form.formtype, form.formfamily, device.depid 
-                                                                            FROM form 
-                                                                            INNER JOIN device on form.formfamily = device.family) AS T1 
+                                                                    FROM form 
+                                                                    INNER JOIN device on form.formfamily = device.family) AS T1 
         WHERE depid = %s;)
         ''' % i
         return self.RunCommand(cmd)
