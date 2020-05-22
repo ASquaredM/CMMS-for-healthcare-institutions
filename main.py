@@ -13,6 +13,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self,mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
         
+        self.UpdateTables()
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -43,6 +44,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.actionCMMS.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         '''
 
+    def UpdateTables(self):
+        self.UpdateTable('department')
+
+    def UpdateTable(self,tableName):
+        self.Deps = DB.GetRows(str(tableName))
+        for row_number, row_data in enumerate(self.Deps):
+            print(row_data[0])
+            for column_number, column_data in enumerate(row_data):
+                self.InsertAtIndex(self.Department_table, row_number, column_number, str(column_data))
+        
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))

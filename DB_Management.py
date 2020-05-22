@@ -26,7 +26,7 @@ class DatabaseUtilities:
 		return self.RunCommand("SHOW COLUMNS FROM %s;" % tableName)
 
 	def GetRows(self, tableName):
-		return self.RunCommand("SHOW ROWS FROM %s;" % tableName)
+		return self.RunCommand("SELECT * from %s;" % tableName)
 
 	def RunCommand(self, cmd):
 		print ("RUNNING COMMAND: " + cmd)
