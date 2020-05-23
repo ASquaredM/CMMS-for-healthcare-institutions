@@ -47,19 +47,17 @@ class DatabaseUtilities:
         return result
 
     def RunCommand(self, cmd):
-        print("RUNNING COMMAND: " + cmd)
+        # print("RUNNING COMMAND: " + cmd)
         try:
             self.cursor.execute(cmd, multi=True)
         except mysql.connector.Error as err:
-            print('ERROR MESSAGE: ' + str(err.msg))
-            print('WITH ' + cmd)
+            pass
+            # print('ERROR MESSAGE: ' + str(err.msg))
+            # print('WITH ' + cmd)
         try:
             msg = self.cursor.fetchall()
-
-            print("NOICE")
         except:
             msg = self.cursor.fetchone()
-            print("shiiiiiiiiit")
 
         return msg
 

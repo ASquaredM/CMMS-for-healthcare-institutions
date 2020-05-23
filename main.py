@@ -25,6 +25,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ]
 
         self.UpdateTables()
+        self.UpdateDevCombo()
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -70,12 +71,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             lambda: self.toolBox.setCurrentIndex(1))
         self.actionTools.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(2))
-        """ self.actionAdd_Device.triggered.connect()
-        self.actionCreate_Form.triggered.connect()
-        self.actionManage_Tasks.triggered.connect()
-        self.actionCMMS.triggered.connect() """
-
-        self.Inspection_comboBox.clear()
+        """ self.MarkAsDone_checkBox.isChecked.connect() """
 
         ## gives an error when we choose all departmenst after changing the department from the combo
         ## because there is no department with id ==0
@@ -88,22 +84,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             lambda: self.UpdateTable(
                 DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self
                 .Forms_table))
+
+        self.Inspection_comboBox.currentIndexChanged.connect(self.update_form)
+
+    def UpdateDevCombo(self):
+        self.Inspection_comboBox.clear()
+
         dailyDevices_names = DB.RunCommand("SELECT DevName FROM device")
         dailyDevices_names = [str(device[0]) for device in dailyDevices_names]
-        self.Inspection_comboBox.addItems(dailyDevices_names)
 
-        family = DB.SelectRows(
-            "device", "DevName='{}'".format(
-                self.Inspection_comboBox.currentText()))[0][8]
-        # print(family)
-        form = DB.SelectRows(
-            "form", "formfamily='{}' AND formtype= 'daily inspection' ".format(
-                str(family)))
-        form = form[0][3].split("?")[1:]
-        form = [str(question) + str('  ?') for question in form]
-        for i, quest in enumerate(form):
-            self.question[i].setText(quest)
-        self.Inspection_comboBox.currentIndexChanged.connect(self.update_form)
+        self.Inspection_comboBox.addItems(dailyDevices_names)
 
     def UpdateTables(self):
         self.UpdateTable(DB.GetRows('department'), self.Department_table)
@@ -125,6 +115,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             UItable.clearContents()
 
     def update_form(self):
+        self.clear_form(10, 10)
         family = DB.SelectRows(
             "device",
             "DevName='{}'".format(self.Inspection_comboBox.currentText()))
@@ -136,24 +127,29 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             if len(form) > 0:
                 form = form[0][3].split("?")
                 form = [str(question) + str('  ?') for question in form]
+                print(form)
                 for i, quest in enumerate(form):
                     if quest != "  ?":
-                        self.question[i].setText(quest)
-                self.enable_form(len(form))
-                self.clear_form(10 - len(form))
+                        print(quest)
+                        self.question[i - 1].setText(quest)
+                self.clear_form(len(self.checks), 10 - len(form))
+                self.enable_form(len(form) - 1)
         else:
-            self.clear_form(10)
+            print('Clearing All Form')
+            self.clear_form(10, 10)
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
 
-    def clear_form(self, amount):
+    def clear_form(self, lenlist, amount):
         for i in range(amount):
-            self.question[len(self.question) - i - 1].clear()
-            self.checks[len(self.checks) - i - 1].hide()
+            self.question[lenlist - i - 1].clear()
+            self.checks[lenlist - i - 1].hide()
+            self.checks[lenlist - i - 1].setDisabled(True)
 
     def enable_form(self, amount):
         for i in range(amount):
+            self.checks[i].setDisabled(False)
             self.checks[i].show()
 
     def NavTo(self, i):
