@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
@@ -38,7 +38,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QTabWidget" name="tabWidget">
+         <widget class="QTabWidget" name="followUp_tabWidget">
           <property name="currentIndex">
            <number>2</number>
           </property>
@@ -165,7 +165,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>0</string>
+                <string>3</string>
                </property>
               </widget>
              </widget>
@@ -206,7 +206,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>0</string>
+                <string>31</string>
                </property>
               </widget>
              </widget>
@@ -288,7 +288,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>3</string>
+                <string>38</string>
                </property>
               </widget>
              </widget>
@@ -311,6 +311,9 @@
                <font>
                 <pointsize>12</pointsize>
                </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
               </property>
               <property name="icon">
                <iconset>
@@ -345,6 +348,9 @@
                <font>
                 <pointsize>12</pointsize>
                </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
               </property>
               <property name="text">
                <string/>
@@ -383,6 +389,9 @@
                 <pointsize>12</pointsize>
                </font>
               </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -420,6 +429,9 @@
                 <pointsize>12</pointsize>
                </font>
               </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -456,6 +468,9 @@
                <font>
                 <pointsize>12</pointsize>
                </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
               </property>
               <property name="icon">
                <iconset>
@@ -697,19 +712,6 @@
                <string>Task:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
-               <item row="0" column="2">
-                <widget class="QCheckBox" name="MarkAsDone_checkBox">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>Mark as Done</string>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="0">
                 <widget class="QComboBox" name="Inspection_comboBox">
                  <property name="currentIndex">
@@ -727,8 +729,8 @@
                  </item>
                 </widget>
                </item>
-               <item row="0" column="1">
-                <widget class="QPushButton" name="inspectionDate_button">
+               <item row="0" column="2">
+                <widget class="QCheckBox" name="MarkAsDone_checkBox">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -736,11 +738,37 @@
                   </sizepolicy>
                  </property>
                  <property name="text">
-                  <string>13/5/2020</string>
+                  <string>Check all</string>
                  </property>
-                 <property name="icon">
-                  <iconset>
-                   <normaloff>Resources/images/calender.png</normaloff>Resources/images/calender.png</iconset>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDateEdit" name="dateEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2020</year>
+                   <month>5</month>
+                   <day>20</day>
+                  </datetime>
+                 </property>
+                 <property name="minimumDate">
+                  <date>
+                   <year>2015</year>
+                   <month>9</month>
+                   <day>14</day>
+                  </date>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -757,7 +785,7 @@
             <item>
              <layout class="QGridLayout" name="gridLayout_7">
               <item row="14" column="2">
-               <widget class="QCheckBox" name="checkBox_12">
+               <widget class="QCheckBox" name="checkq8">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -770,7 +798,7 @@
                </widget>
               </item>
               <item row="12" column="2">
-               <widget class="QCheckBox" name="checkBox_11">
+               <widget class="QCheckBox" name="checkq7">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -790,7 +818,7 @@
                </widget>
               </item>
               <item row="2" column="2">
-               <widget class="QCheckBox" name="checkBox_3">
+               <widget class="QCheckBox" name="checkq2">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -810,7 +838,7 @@
                </widget>
               </item>
               <item row="18" column="2">
-               <widget class="QCheckBox" name="checkBox_22">
+               <widget class="QCheckBox" name="checkq10">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -830,7 +858,7 @@
                </widget>
               </item>
               <item row="16" column="2">
-               <widget class="QCheckBox" name="checkBox_21">
+               <widget class="QCheckBox" name="checkq9">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -845,7 +873,7 @@
               <item row="12" column="0">
                <widget class="QLabel" name="q7">
                 <property name="text">
-                 <string>Hhhh</string>
+                 <string> </string>
                 </property>
                </widget>
               </item>
@@ -878,7 +906,7 @@
                </widget>
               </item>
               <item row="6" column="2">
-               <widget class="QCheckBox" name="checkBox_8">
+               <widget class="QCheckBox" name="checkq4">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -898,7 +926,7 @@
                </widget>
               </item>
               <item row="4" column="2">
-               <widget class="QCheckBox" name="checkBox_4">
+               <widget class="QCheckBox" name="checkq3">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -932,7 +960,7 @@
                </widget>
               </item>
               <item row="10" column="2">
-               <widget class="QCheckBox" name="checkBox_10">
+               <widget class="QCheckBox" name="checkq6">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -945,7 +973,7 @@
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QCheckBox" name="checkBox_2">
+               <widget class="QCheckBox" name="checkq1">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -958,7 +986,7 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="Line" name="line">
+               <widget class="Line" name="line_1">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -1000,7 +1028,7 @@
                </widget>
               </item>
               <item row="8" column="2">
-               <widget class="QCheckBox" name="checkBox_9">
+               <widget class="QCheckBox" name="checkq5">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1031,6 +1059,34 @@
                  <string>Submit</string>
                 </property>
                </widget>
+              </item>
+              <item row="19" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Notes</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextEdit" name="textEdit">
+                  <property name="html">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
@@ -1065,9 +1121,9 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
-         <widget class="QTabWidget" name="tabWidget_2">
+         <widget class="QTabWidget" name="information_tabWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <property name="iconSize">
            <size>
@@ -1466,6 +1522,12 @@
                <height>250</height>
               </size>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
              <property name="icon">
               <iconset>
                <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
@@ -1498,6 +1560,12 @@
                <height>250</height>
               </size>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
              <property name="icon">
               <iconset>
                <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
@@ -1529,6 +1597,12 @@
                <width>250</width>
                <height>250</height>
               </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
              </property>
              <property name="icon">
               <iconset>
