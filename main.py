@@ -51,6 +51,12 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
+        self.question =[self.q2 ,self.q2,self.q3,self.q4,self.q5,self.q6,self.q7,self.q8,self.q9,self.q10 ] 
+        form = DB.RunCommand("SELECT Text FROM form WHERE formtype=(Daily Inspection) AND FormFamily=MRIs ") 
+        # form = form[0][1:].split("?")
+        # form = [str(device[0])  for device in dailyDevices_names ]
+        print(form)
+
         ## gives an error when we choose all departmenst after changing the department from the combo
         ## because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
