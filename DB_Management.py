@@ -5,8 +5,7 @@ from datetime import datetime
 
 class DatabaseUtilities:
     def __init__(self):
-       self.DB_init()
-
+        self.DB_init()
 
     def DB_init(self):
         self.mydb = mysql.connector.connect(host="localhost",
@@ -61,8 +60,7 @@ class DatabaseUtilities:
         except:
             msg = self.cursor.fetchone()
             print("shiiiiiiiiit")
-            
-            
+
         return msg
 
     def AddEntryToTable(self, tableName, message):

@@ -14,8 +14,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self, mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
 
-        self.question =[self.q1 ,self.q2,self.q3,self.q4,self.q5,self.q6,self.q7,self.q8,self.q9,self.q10 ] 
-        self.checks = [self.checkq1, self.checkq2, self.checkq3, self.checkq4 , self.checkq5, self.checkq6 , self.checkq7, self.checkq8, self.checkq9, self.checkq10]
+        self.question = [
+            self.q1, self.q2, self.q3, self.q4, self.q5, self.q6, self.q7,
+            self.q8, self.q9, self.q10
+        ]
+        self.checks = [
+            self.checkq1, self.checkq2, self.checkq3, self.checkq4,
+            self.checkq5, self.checkq6, self.checkq7, self.checkq8,
+            self.checkq9, self.checkq10
+        ]
+
         self.UpdateTables()
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -56,44 +64,44 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
 
         self.Inspection_comboBox.clear()
 
-
         ## gives an error when we choose all departmenst after changing the department from the combo
         ## because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
             lambda: self.UpdateTable(
                 DB.SelectRows(
                     'device', 'depid = %s' % self.DepartmentSelection_combo.
-                    currentIndex()), self.Devices_table)) 
+                    currentIndex()), self.Devices_table))
         self.DepartmentSelection_combo_3.currentIndexChanged.connect(
             lambda: self.UpdateTable(
-                DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self.Forms_table))
+                DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self
+                .Forms_table))
         dailyDevices_names = DB.RunCommand("SELECT DevName FROM device")
-        dailyDevices_names = [str(device[0])  for device in dailyDevices_names ]
+        dailyDevices_names = [str(device[0]) for device in dailyDevices_names]
         self.Inspection_comboBox.addItems(dailyDevices_names)
 
-        family = DB.SelectRows("device","DevName='{}'".format(self.Inspection_comboBox.currentText()) )[0][8]
+        family = DB.SelectRows(
+            "device", "DevName='{}'".format(
+                self.Inspection_comboBox.currentText()))[0][8]
         # print(family)
-        form = DB.SelectRows("form","formfamily='{}' AND formtype= 'daily inspection' ".format(str(family)) )
+        form = DB.SelectRows(
+            "form", "formfamily='{}' AND formtype= 'daily inspection' ".format(
+                str(family)))
         form = form[0][3].split("?")[1:]
-        form = [str(question)+str('  ?')  for question in form ]
-        for i ,quest in enumerate(form):
+        form = [str(question) + str('  ?') for question in form]
+        for i, quest in enumerate(form):
             self.question[i].setText(quest)
         self.Inspection_comboBox.currentIndexChanged.connect(self.update_form)
 
-
-        
     def UpdateTables(self):
         self.UpdateTable(DB.GetRows('department'), self.Department_table)
         self.UpdateTable(DB.GetRows('device'), self.Devices_table)
         self.UpdateTable(DB.GetRows('form'), self.Forms_table)
         self.update_form()
 
-        
-        
     def UpdateTable(self, rows, UItable):
-        if str(type(rows)) != "<class 'NoneType'>" and len(rows[0])>0 :
+        if str(type(rows)) != "<class 'NoneType'>" and len(rows[0]) > 0:
             UItable.setRowCount(len(rows))
-           
+
             UItable.setColumnCount(len(rows[0]))
 
             for row_number, row_data in enumerate(rows):
@@ -102,35 +110,39 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                                        str(column_data))
         else:
             UItable.clearContents()
+
     def update_form(self):
-        family = DB.SelectRows("device","DevName='{}'".format(self.Inspection_comboBox.currentText()) )
-        if len(family)>0 :
-            form = DB.SelectRows("form","formfamily='{}' AND formtype= 'daily inspection' ".format(str(family[0][8])) )
-            if len(form)>0:
+        family = DB.SelectRows(
+            "device",
+            "DevName='{}'".format(self.Inspection_comboBox.currentText()))
+        if len(family) > 0:
+            form = DB.SelectRows(
+                "form",
+                "formfamily='{}' AND formtype= 'daily inspection' ".format(
+                    str(family[0][8])))
+            if len(form) > 0:
                 form = form[0][3].split("?")
-                form = [str(question)+str('  ?')  for question in form ]
-                for i ,quest in enumerate(form):
-                    if quest !="  ?" :
+                form = [str(question) + str('  ?') for question in form]
+                for i, quest in enumerate(form):
+                    if quest != "  ?":
                         self.question[i].setText(quest)
-                self.clear_form(10-len(form))
-        else :
+                self.enable_form(len(form))
+                self.clear_form(10 - len(form))
+        else:
             self.clear_form(10)
 
-    def clear_form(self,amount) :
-        for i in range(amount) :
-            self.question[len(self.question)-i-1].clear()
-            self.checks[len(self.checks)-i-1].hide()
+    def clear_form(self, amount):
+        for i in range(amount):
+            self.question[len(self.question) - i - 1].clear()
+            self.checks[len(self.checks) - i - 1].hide()
 
-    # def enable_form(self):
-    #     for i in range(10) :
-    #         self.question[i].setDisabled(False)
-
+    def enable_form(self, amount):
+        for i in range(amount):
+            self.checks[i].show()
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
 
-
-    
 
 def main():
     app = QtWidgets.QApplication(sys.argv)

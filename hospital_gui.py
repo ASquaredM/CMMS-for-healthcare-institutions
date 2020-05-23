@@ -6,7 +6,6 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -36,25 +35,31 @@ class Ui_MainWindow(object):
         self.gridLayout_10 = QtWidgets.QGridLayout(self.tab_2)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.splitter_2 = QtWidgets.QSplitter(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.splitter_2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.splitter_2.sizePolicy().hasHeightForWidth())
         self.splitter_2.setSizePolicy(sizePolicy)
         self.splitter_2.setOrientation(QtCore.Qt.Horizontal)
         self.splitter_2.setObjectName("splitter_2")
         self.label_29 = QtWidgets.QLabel(self.splitter_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_29.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_29.sizePolicy().hasHeightForWidth())
         self.label_29.setSizePolicy(sizePolicy)
         self.label_29.setObjectName("label_29")
         self.DashTasksCount_label = QtWidgets.QLabel(self.splitter_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.DashTasksCount_label.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.DashTasksCount_label.sizePolicy().hasHeightForWidth())
         self.DashTasksCount_label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setBold(True)
@@ -63,10 +68,12 @@ class Ui_MainWindow(object):
         self.DashTasksCount_label.setObjectName("DashTasksCount_label")
         self.gridLayout_10.addWidget(self.splitter_2, 1, 1, 1, 1)
         self.groupBox_3 = QtWidgets.QGroupBox(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.groupBox_3.sizePolicy().hasHeightForWidth())
         self.groupBox_3.setSizePolicy(sizePolicy)
         self.groupBox_3.setObjectName("groupBox_3")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox_3)
@@ -76,52 +83,65 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.Search_lineEdit)
         self.gridLayout_10.addWidget(self.groupBox_3, 0, 0, 1, 5)
         self.splitter_5 = QtWidgets.QSplitter(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.splitter_5.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.splitter_5.sizePolicy().hasHeightForWidth())
         self.splitter_5.setSizePolicy(sizePolicy)
         self.splitter_5.setOrientation(QtCore.Qt.Horizontal)
         self.splitter_5.setObjectName("splitter_5")
         self.label_35 = QtWidgets.QLabel(self.splitter_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_35.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_35.sizePolicy().hasHeightForWidth())
         self.label_35.setSizePolicy(sizePolicy)
         self.label_35.setObjectName("label_35")
         self.DashDepatmentsCount_label = QtWidgets.QLabel(self.splitter_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.DashDepatmentsCount_label.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.DashDepatmentsCount_label.sizePolicy().hasHeightForWidth())
         self.DashDepatmentsCount_label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.DashDepatmentsCount_label.setFont(font)
-        self.DashDepatmentsCount_label.setObjectName("DashDepatmentsCount_label")
+        self.DashDepatmentsCount_label.setObjectName(
+            "DashDepatmentsCount_label")
         self.gridLayout_10.addWidget(self.splitter_5, 1, 3, 1, 1)
         self.splitter_3 = QtWidgets.QSplitter(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.splitter_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.splitter_3.sizePolicy().hasHeightForWidth())
         self.splitter_3.setSizePolicy(sizePolicy)
         self.splitter_3.setOrientation(QtCore.Qt.Horizontal)
         self.splitter_3.setObjectName("splitter_3")
         self.label_31 = QtWidgets.QLabel(self.splitter_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_31.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_31.sizePolicy().hasHeightForWidth())
         self.label_31.setSizePolicy(sizePolicy)
         self.label_31.setObjectName("label_31")
         self.DashDevicesCount_label = QtWidgets.QLabel(self.splitter_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.DashDevicesCount_label.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.DashDevicesCount_label.sizePolicy().hasHeightForWidth())
         self.DashDevicesCount_label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setBold(True)
@@ -130,25 +150,31 @@ class Ui_MainWindow(object):
         self.DashDevicesCount_label.setObjectName("DashDevicesCount_label")
         self.gridLayout_10.addWidget(self.splitter_3, 1, 2, 1, 1)
         self.splitter_4 = QtWidgets.QSplitter(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.splitter_4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.splitter_4.sizePolicy().hasHeightForWidth())
         self.splitter_4.setSizePolicy(sizePolicy)
         self.splitter_4.setOrientation(QtCore.Qt.Horizontal)
         self.splitter_4.setObjectName("splitter_4")
         self.label_33 = QtWidgets.QLabel(self.splitter_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_33.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_33.sizePolicy().hasHeightForWidth())
         self.label_33.setSizePolicy(sizePolicy)
         self.label_33.setObjectName("label_33")
         self.DashFormsCount_label = QtWidgets.QLabel(self.splitter_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.DashFormsCount_label.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.DashFormsCount_label.sizePolicy().hasHeightForWidth())
         self.DashFormsCount_label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setBold(True)
@@ -157,25 +183,31 @@ class Ui_MainWindow(object):
         self.DashFormsCount_label.setObjectName("DashFormsCount_label")
         self.gridLayout_10.addWidget(self.splitter_4, 1, 4, 1, 1)
         self.splitter = QtWidgets.QSplitter(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.splitter.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.splitter.sizePolicy().hasHeightForWidth())
         self.splitter.setSizePolicy(sizePolicy)
         self.splitter.setOrientation(QtCore.Qt.Horizontal)
         self.splitter.setObjectName("splitter")
         self.label_25 = QtWidgets.QLabel(self.splitter)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_25.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_25.sizePolicy().hasHeightForWidth())
         self.label_25.setSizePolicy(sizePolicy)
         self.label_25.setObjectName("label_25")
         self.DashToDoCount_label = QtWidgets.QLabel(self.splitter)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.DashToDoCount_label.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.DashToDoCount_label.sizePolicy().hasHeightForWidth())
         self.DashToDoCount_label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setBold(True)
@@ -184,93 +216,115 @@ class Ui_MainWindow(object):
         self.DashToDoCount_label.setObjectName("DashToDoCount_label")
         self.gridLayout_10.addWidget(self.splitter, 1, 0, 1, 1)
         self.pushButton_7 = QtWidgets.QPushButton(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_7.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.pushButton_7.sizePolicy().hasHeightForWidth())
         self.pushButton_7.setSizePolicy(sizePolicy)
         self.pushButton_7.setMinimumSize(QtCore.QSize(100, 100))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton_7.setFont(font)
-        self.pushButton_7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_7.setCursor(QtGui.QCursor(
+            QtCore.Qt.PointingHandCursor))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Resources/images/paste.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Resources/images/paste.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_7.setIcon(icon)
         self.pushButton_7.setIconSize(QtCore.QSize(50, 100))
         self.pushButton_7.setFlat(True)
         self.pushButton_7.setObjectName("pushButton_7")
         self.gridLayout_10.addWidget(self.pushButton_7, 2, 4, 1, 1)
         self.pushButton_8 = QtWidgets.QPushButton(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.pushButton_8.sizePolicy().hasHeightForWidth())
         self.pushButton_8.setSizePolicy(sizePolicy)
         self.pushButton_8.setMinimumSize(QtCore.QSize(100, 100))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton_8.setFont(font)
-        self.pushButton_8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_8.setCursor(QtGui.QCursor(
+            QtCore.Qt.PointingHandCursor))
         self.pushButton_8.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Resources/images/black-placeholder-variant.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(
+            QtGui.QPixmap("Resources/images/black-placeholder-variant.png"),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_8.setIcon(icon1)
         self.pushButton_8.setIconSize(QtCore.QSize(50, 100))
         self.pushButton_8.setFlat(True)
         self.pushButton_8.setObjectName("pushButton_8")
         self.gridLayout_10.addWidget(self.pushButton_8, 2, 3, 1, 1)
         self.pushButton_6 = QtWidgets.QPushButton(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_6.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.pushButton_6.sizePolicy().hasHeightForWidth())
         self.pushButton_6.setSizePolicy(sizePolicy)
         self.pushButton_6.setMinimumSize(QtCore.QSize(100, 100))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton_6.setFont(font)
-        self.pushButton_6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_6.setCursor(QtGui.QCursor(
+            QtCore.Qt.PointingHandCursor))
         self.pushButton_6.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Resources/images/monitor-tool-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(
+            QtGui.QPixmap("Resources/images/monitor-tool-symbol.png"),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_6.setIcon(icon2)
         self.pushButton_6.setIconSize(QtCore.QSize(50, 100))
         self.pushButton_6.setFlat(True)
         self.pushButton_6.setObjectName("pushButton_6")
         self.gridLayout_10.addWidget(self.pushButton_6, 2, 2, 1, 1)
         self.pushButton_4 = QtWidgets.QPushButton(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.pushButton_4.sizePolicy().hasHeightForWidth())
         self.pushButton_4.setSizePolicy(sizePolicy)
         self.pushButton_4.setMinimumSize(QtCore.QSize(100, 100))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton_4.setFont(font)
-        self.pushButton_4.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_4.setCursor(QtGui.QCursor(
+            QtCore.Qt.PointingHandCursor))
         self.pushButton_4.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Resources/images/check.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("Resources/images/check.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_4.setIcon(icon3)
         self.pushButton_4.setIconSize(QtCore.QSize(50, 100))
         self.pushButton_4.setFlat(True)
         self.pushButton_4.setObjectName("pushButton_4")
         self.gridLayout_10.addWidget(self.pushButton_4, 2, 1, 1, 1)
         self.pushButton_3 = QtWidgets.QPushButton(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.pushButton_3.sizePolicy().hasHeightForWidth())
         self.pushButton_3.setSizePolicy(sizePolicy)
         self.pushButton_3.setMinimumSize(QtCore.QSize(100, 100))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton_3.setFont(font)
-        self.pushButton_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_3.setCursor(QtGui.QCursor(
+            QtCore.Qt.PointingHandCursor))
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Resources/images/list.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("Resources/images/list.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_3.setIcon(icon4)
         self.pushButton_3.setIconSize(QtCore.QSize(50, 100))
         self.pushButton_3.setFlat(True)
@@ -279,18 +333,22 @@ class Ui_MainWindow(object):
         self.gridLayout_8 = QtWidgets.QGridLayout()
         self.gridLayout_8.setObjectName("gridLayout_8")
         self.calendarWidget = QtWidgets.QCalendarWidget(self.tab_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
+                                           QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.calendarWidget.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.calendarWidget.sizePolicy().hasHeightForWidth())
         self.calendarWidget.setSizePolicy(sizePolicy)
         self.calendarWidget.setMinimumSize(QtCore.QSize(750, 300))
         self.calendarWidget.setGridVisible(True)
         self.calendarWidget.setObjectName("calendarWidget")
-        self.gridLayout_8.addWidget(self.calendarWidget, 0, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.gridLayout_8.addWidget(self.calendarWidget, 0, 0, 1, 1,
+                                    QtCore.Qt.AlignHCenter)
         self.gridLayout_10.addLayout(self.gridLayout_8, 3, 0, 1, 5)
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("Resources/images/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("Resources/images/home.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.followUp_tabWidget.addTab(self.tab_2, icon5, "")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -339,13 +397,16 @@ class Ui_MainWindow(object):
         self.gridLayout_5 = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.Export_button = QtWidgets.QPushButton(self.groupBox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Export_button.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.Export_button.sizePolicy().hasHeightForWidth())
         self.Export_button.setSizePolicy(sizePolicy)
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("Resources/images/export.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("Resources/images/export.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Export_button.setIcon(icon6)
         self.Export_button.setObjectName("Export_button")
         self.gridLayout_5.addWidget(self.Export_button, 0, 1, 1, 1)
@@ -356,13 +417,18 @@ class Ui_MainWindow(object):
         self.Date_comboBox.addItem("")
         self.gridLayout_5.addWidget(self.Date_comboBox, 0, 0, 1, 1)
         self.Print_button = QtWidgets.QPushButton(self.groupBox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Print_button.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.Print_button.sizePolicy().hasHeightForWidth())
         self.Print_button.setSizePolicy(sizePolicy)
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("Resources/images/document-rounded-square-interface-symbol-with-text-lines.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(
+            QtGui.QPixmap(
+                "Resources/images/document-rounded-square-interface-symbol-with-text-lines.png"
+            ), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Print_button.setIcon(icon7)
         self.Print_button.setObjectName("Print_button")
         self.gridLayout_5.addWidget(self.Print_button, 0, 2, 1, 1)
@@ -373,10 +439,12 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.tab_8)
         self.verticalLayout.setObjectName("verticalLayout")
         self.groupBox_2 = QtWidgets.QGroupBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.groupBox_2.sizePolicy().hasHeightForWidth())
         self.groupBox_2.setSizePolicy(sizePolicy)
         self.groupBox_2.setObjectName("groupBox_2")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.groupBox_2)
@@ -387,20 +455,25 @@ class Ui_MainWindow(object):
         self.Inspection_comboBox.addItem("")
         self.gridLayout_6.addWidget(self.Inspection_comboBox, 0, 0, 1, 1)
         self.MarkAsDone_checkBox = QtWidgets.QCheckBox(self.groupBox_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.MarkAsDone_checkBox.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.MarkAsDone_checkBox.sizePolicy().hasHeightForWidth())
         self.MarkAsDone_checkBox.setSizePolicy(sizePolicy)
         self.MarkAsDone_checkBox.setObjectName("MarkAsDone_checkBox")
         self.gridLayout_6.addWidget(self.MarkAsDone_checkBox, 0, 2, 1, 1)
         self.dateEdit = QtWidgets.QDateEdit(self.groupBox_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.dateEdit.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.dateEdit.sizePolicy().hasHeightForWidth())
         self.dateEdit.setSizePolicy(sizePolicy)
-        self.dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2020, 5, 20), QtCore.QTime(0, 0, 0)))
+        self.dateEdit.setDateTime(
+            QtCore.QDateTime(QtCore.QDate(2020, 5, 20), QtCore.QTime(0, 0, 0)))
         self.dateEdit.setMinimumDate(QtCore.QDate(2015, 9, 14))
         self.dateEdit.setCalendarPopup(True)
         self.dateEdit.setObjectName("dateEdit")
@@ -414,18 +487,22 @@ class Ui_MainWindow(object):
         self.gridLayout_7 = QtWidgets.QGridLayout()
         self.gridLayout_7.setObjectName("gridLayout_7")
         self.checkq8 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq8.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq8.sizePolicy().hasHeightForWidth())
         self.checkq8.setSizePolicy(sizePolicy)
         self.checkq8.setObjectName("checkq8")
         self.gridLayout_7.addWidget(self.checkq8, 14, 2, 1, 1)
         self.checkq7 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq7.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq7.sizePolicy().hasHeightForWidth())
         self.checkq7.setSizePolicy(sizePolicy)
         self.checkq7.setObjectName("checkq7")
         self.gridLayout_7.addWidget(self.checkq7, 12, 2, 1, 1)
@@ -433,10 +510,12 @@ class Ui_MainWindow(object):
         self.q1.setObjectName("q1")
         self.gridLayout_7.addWidget(self.q1, 0, 0, 1, 1)
         self.checkq2 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq2.sizePolicy().hasHeightForWidth())
         self.checkq2.setSizePolicy(sizePolicy)
         self.checkq2.setObjectName("checkq2")
         self.gridLayout_7.addWidget(self.checkq2, 2, 2, 1, 1)
@@ -444,10 +523,12 @@ class Ui_MainWindow(object):
         self.q2.setObjectName("q2")
         self.gridLayout_7.addWidget(self.q2, 2, 0, 1, 1)
         self.checkq10 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq10.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq10.sizePolicy().hasHeightForWidth())
         self.checkq10.setSizePolicy(sizePolicy)
         self.checkq10.setObjectName("checkq10")
         self.gridLayout_7.addWidget(self.checkq10, 18, 2, 1, 1)
@@ -457,10 +538,12 @@ class Ui_MainWindow(object):
         self.line_9.setObjectName("line_9")
         self.gridLayout_7.addWidget(self.line_9, 17, 0, 1, 1)
         self.checkq9 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq9.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq9.sizePolicy().hasHeightForWidth())
         self.checkq9.setSizePolicy(sizePolicy)
         self.checkq9.setObjectName("checkq9")
         self.gridLayout_7.addWidget(self.checkq9, 16, 2, 1, 1)
@@ -482,10 +565,12 @@ class Ui_MainWindow(object):
         self.line_2.setObjectName("line_2")
         self.gridLayout_7.addWidget(self.line_2, 3, 0, 1, 1)
         self.checkq4 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq4.sizePolicy().hasHeightForWidth())
         self.checkq4.setSizePolicy(sizePolicy)
         self.checkq4.setObjectName("checkq4")
         self.gridLayout_7.addWidget(self.checkq4, 6, 2, 1, 1)
@@ -493,10 +578,12 @@ class Ui_MainWindow(object):
         self.q3.setObjectName("q3")
         self.gridLayout_7.addWidget(self.q3, 4, 0, 1, 1)
         self.checkq3 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq3.sizePolicy().hasHeightForWidth())
         self.checkq3.setSizePolicy(sizePolicy)
         self.checkq3.setObjectName("checkq3")
         self.gridLayout_7.addWidget(self.checkq3, 4, 2, 1, 1)
@@ -514,18 +601,22 @@ class Ui_MainWindow(object):
         self.line_5.setObjectName("line_5")
         self.gridLayout_7.addWidget(self.line_5, 9, 0, 1, 1)
         self.checkq6 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq6.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq6.sizePolicy().hasHeightForWidth())
         self.checkq6.setSizePolicy(sizePolicy)
         self.checkq6.setObjectName("checkq6")
         self.gridLayout_7.addWidget(self.checkq6, 10, 2, 1, 1)
         self.checkq1 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq1.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq1.sizePolicy().hasHeightForWidth())
         self.checkq1.setSizePolicy(sizePolicy)
         self.checkq1.setObjectName("checkq1")
         self.gridLayout_7.addWidget(self.checkq1, 0, 2, 1, 1)
@@ -556,10 +647,12 @@ class Ui_MainWindow(object):
         self.q4.setObjectName("q4")
         self.gridLayout_7.addWidget(self.q4, 6, 0, 1, 1)
         self.checkq5 = QtWidgets.QCheckBox(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkq5.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.checkq5.sizePolicy().hasHeightForWidth())
         self.checkq5.setSizePolicy(sizePolicy)
         self.checkq5.setObjectName("checkq5")
         self.gridLayout_7.addWidget(self.checkq5, 8, 2, 1, 1)
@@ -569,10 +662,12 @@ class Ui_MainWindow(object):
         self.line_8.setObjectName("line_8")
         self.gridLayout_7.addWidget(self.line_8, 15, 0, 1, 1)
         self.SubmitAnswers_button = QtWidgets.QPushButton(self.tab_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.SubmitAnswers_button.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.SubmitAnswers_button.sizePolicy().hasHeightForWidth())
         self.SubmitAnswers_button.setSizePolicy(sizePolicy)
         self.SubmitAnswers_button.setObjectName("SubmitAnswers_button")
         self.gridLayout_7.addWidget(self.SubmitAnswers_button, 19, 2, 1, 1)
@@ -598,7 +693,8 @@ class Ui_MainWindow(object):
         self.followUp_tabWidget.addTab(self.tab_8, icon3, "")
         self.gridLayout_2.addWidget(self.followUp_tabWidget, 0, 0, 1, 1)
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("Resources/images/follow-up.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(QtGui.QPixmap("Resources/images/follow-up.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page, icon8, "")
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setGeometry(QtCore.QRect(0, 0, 1013, 618))
@@ -613,7 +709,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.tab_6)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.DepartmentSelection_combo = QtWidgets.QComboBox(self.tab_6)
-        self.DepartmentSelection_combo.setObjectName("DepartmentSelection_combo")
+        self.DepartmentSelection_combo.setObjectName(
+            "DepartmentSelection_combo")
         self.DepartmentSelection_combo.addItem("")
         self.DepartmentSelection_combo.addItem("")
         self.DepartmentSelection_combo.addItem("")
@@ -715,7 +812,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.tab_7)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.DepartmentSelection_combo_3 = QtWidgets.QComboBox(self.tab_7)
-        self.DepartmentSelection_combo_3.setObjectName("DepartmentSelection_combo_3")
+        self.DepartmentSelection_combo_3.setObjectName(
+            "DepartmentSelection_combo_3")
         self.DepartmentSelection_combo_3.addItem("")
         self.DepartmentSelection_combo_3.addItem("")
         self.DepartmentSelection_combo_3.addItem("")
@@ -746,7 +844,8 @@ class Ui_MainWindow(object):
         self.information_tabWidget.addTab(self.tab_7, icon3, "")
         self.gridLayout_3.addWidget(self.information_tabWidget, 0, 0, 1, 1)
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("Resources/images/request.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(QtGui.QPixmap("Resources/images/request.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page_2, icon9, "")
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setGeometry(QtCore.QRect(0, 0, 1013, 618))
@@ -759,7 +858,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.CreateForm_button = QtWidgets.QPushButton(self.groupBox_5)
         self.CreateForm_button.setMinimumSize(QtCore.QSize(250, 250))
-        self.CreateForm_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.CreateForm_button.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.CreateForm_button.setMouseTracking(True)
         self.CreateForm_button.setIcon(icon3)
         self.CreateForm_button.setIconSize(QtCore.QSize(150, 150))
@@ -773,7 +873,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.AddDevice_button = QtWidgets.QPushButton(self.groupBox_4)
         self.AddDevice_button.setMinimumSize(QtCore.QSize(250, 250))
-        self.AddDevice_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.AddDevice_button.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.AddDevice_button.setMouseTracking(True)
         self.AddDevice_button.setIcon(icon2)
         self.AddDevice_button.setIconSize(QtCore.QSize(150, 150))
@@ -787,7 +888,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.ManageTasks_button = QtWidgets.QPushButton(self.groupBox_11)
         self.ManageTasks_button.setMinimumSize(QtCore.QSize(250, 250))
-        self.ManageTasks_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.ManageTasks_button.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.ManageTasks_button.setMouseTracking(True)
         self.ManageTasks_button.setIcon(icon4)
         self.ManageTasks_button.setIconSize(QtCore.QSize(150, 150))
@@ -796,7 +898,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.addWidget(self.ManageTasks_button)
         self.gridLayout_18.addWidget(self.groupBox_11, 0, 2, 1, 1)
         icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("Resources/images/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon10.addPixmap(QtGui.QPixmap("Resources/images/settings.png"),
+                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page_3, icon10, "")
         self.gridLayout.addWidget(self.toolBox, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -820,12 +923,14 @@ class Ui_MainWindow(object):
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
         self.actionCMMS = QtWidgets.QAction(MainWindow)
         icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("Resources/images/app.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon11.addPixmap(QtGui.QPixmap("Resources/images/app.png"),
+                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionCMMS.setIcon(icon11)
         self.actionCMMS.setObjectName("actionCMMS")
         self.actionOpen = QtWidgets.QAction(MainWindow)
         icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("Resources/images/open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon12.addPixmap(QtGui.QPixmap("Resources/images/open.png"),
+                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionOpen.setIcon(icon12)
         self.actionOpen.setObjectName("actionOpen")
         self.actionRequests = QtWidgets.QAction(MainWindow)
@@ -833,7 +938,9 @@ class Ui_MainWindow(object):
         self.actionRequests.setObjectName("actionRequests")
         self.actionExit = QtWidgets.QAction(MainWindow)
         icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("Resources/images/cross-gross-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon13.addPixmap(
+            QtGui.QPixmap("Resources/images/cross-gross-symbol.png"),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionExit.setIcon(icon13)
         self.actionExit.setObjectName("actionExit")
         self.actionTo_Do = QtWidgets.QAction(MainWindow)
@@ -906,7 +1013,8 @@ class Ui_MainWindow(object):
         self.label_29.setText(_translate("MainWindow", "Tasks:"))
         self.DashTasksCount_label.setText(_translate("MainWindow", "2"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Search"))
-        self.Search_lineEdit.setPlaceholderText(_translate("MainWindow", "Search for To Do, Tasks, Devices,..etc"))
+        self.Search_lineEdit.setPlaceholderText(
+            _translate("MainWindow", "Search for To Do, Tasks, Devices,..etc"))
         self.label_35.setText(_translate("MainWindow", "Departments:"))
         self.DashDepatmentsCount_label.setText(_translate("MainWindow", "3"))
         self.label_31.setText(_translate("MainWindow", "Devices:"))
@@ -915,7 +1023,9 @@ class Ui_MainWindow(object):
         self.DashFormsCount_label.setText(_translate("MainWindow", "0"))
         self.label_25.setText(_translate("MainWindow", "To Do:"))
         self.DashToDoCount_label.setText(_translate("MainWindow", "38"))
-        self.followUp_tabWidget.setTabText(self.followUp_tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Dashboard"))
+        self.followUp_tabWidget.setTabText(
+            self.followUp_tabWidget.indexOf(self.tab_2),
+            _translate("MainWindow", "Dashboard"))
         self.ToDo_table.setSortingEnabled(True)
         item = self.ToDo_table.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Task"))
@@ -934,7 +1044,9 @@ class Ui_MainWindow(object):
         item = self.ToDo_table.item(0, 2)
         item.setText(_translate("MainWindow", "In-Progress"))
         item = self.ToDo_table.item(0, 3)
-        item.setText(_translate("MainWindow", "This is test item for evaluation purpose only!"))
+        item.setText(
+            _translate("MainWindow",
+                       "This is test item for evaluation purpose only!"))
         item = self.ToDo_table.item(1, 0)
         item.setText(_translate("MainWindow", "Task Y"))
         item = self.ToDo_table.item(1, 1)
@@ -942,7 +1054,9 @@ class Ui_MainWindow(object):
         item = self.ToDo_table.item(1, 2)
         item.setText(_translate("MainWindow", "Done"))
         item = self.ToDo_table.item(1, 3)
-        item.setText(_translate("MainWindow", "This is test item for evaluation purpose only!"))
+        item.setText(
+            _translate("MainWindow",
+                       "This is test item for evaluation purpose only!"))
         item = self.ToDo_table.item(2, 0)
         item.setText(_translate("MainWindow", "Review"))
         item = self.ToDo_table.item(2, 1)
@@ -950,7 +1064,9 @@ class Ui_MainWindow(object):
         item = self.ToDo_table.item(2, 2)
         item.setText(_translate("MainWindow", "On-Hold"))
         item = self.ToDo_table.item(2, 3)
-        item.setText(_translate("MainWindow", "This is test item for evaluation purpose only!"))
+        item.setText(
+            _translate("MainWindow",
+                       "This is test item for evaluation purpose only!"))
         self.ToDo_table.setSortingEnabled(__sortingEnabled)
         self.groupBox.setTitle(_translate("MainWindow", "View:"))
         self.Export_button.setText(_translate("MainWindow", "Export..."))
@@ -958,10 +1074,14 @@ class Ui_MainWindow(object):
         self.Date_comboBox.setItemText(1, _translate("MainWindow", "3 Days"))
         self.Date_comboBox.setItemText(2, _translate("MainWindow", "Today"))
         self.Print_button.setText(_translate("MainWindow", "Print..."))
-        self.followUp_tabWidget.setTabText(self.followUp_tabWidget.indexOf(self.tab), _translate("MainWindow", "To Do"))
+        self.followUp_tabWidget.setTabText(
+            self.followUp_tabWidget.indexOf(self.tab),
+            _translate("MainWindow", "To Do"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Task:"))
-        self.Inspection_comboBox.setItemText(0, _translate("MainWindow", "Task X"))
-        self.Inspection_comboBox.setItemText(1, _translate("MainWindow", "Task Y"))
+        self.Inspection_comboBox.setItemText(
+            0, _translate("MainWindow", "Task X"))
+        self.Inspection_comboBox.setItemText(
+            1, _translate("MainWindow", "Task Y"))
         self.MarkAsDone_checkBox.setText(_translate("MainWindow", "Check all"))
         self.checkq8.setText(_translate("MainWindow", "Done"))
         self.checkq7.setText(_translate("MainWindow", "Done"))
@@ -985,17 +1105,28 @@ class Ui_MainWindow(object):
         self.checkq5.setText(_translate("MainWindow", "Done"))
         self.SubmitAnswers_button.setText(_translate("MainWindow", "Submit"))
         self.label.setText(_translate("MainWindow", "Notes"))
-        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;\"><br /></p></body></html>"))
-        self.followUp_tabWidget.setTabText(self.followUp_tabWidget.indexOf(self.tab_8), _translate("MainWindow", "Inspection"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "Follow-Up"))
-        self.DepartmentSelection_combo.setItemText(0, _translate("MainWindow", "All Departments"))
-        self.DepartmentSelection_combo.setItemText(1, _translate("MainWindow", "Operating Room"))
-        self.DepartmentSelection_combo.setItemText(2, _translate("MainWindow", "ICU"))
-        self.DepartmentSelection_combo.setItemText(3, _translate("MainWindow", "Radiology"))
+        self.textEdit.setHtml(
+            _translate(
+                "MainWindow",
+                "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                "p, li { white-space: pre-wrap; }\n"
+                "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
+                "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;\"><br /></p></body></html>"
+            ))
+        self.followUp_tabWidget.setTabText(
+            self.followUp_tabWidget.indexOf(self.tab_8),
+            _translate("MainWindow", "Inspection"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page),
+                                 _translate("MainWindow", "Follow-Up"))
+        self.DepartmentSelection_combo.setItemText(
+            0, _translate("MainWindow", "All Departments"))
+        self.DepartmentSelection_combo.setItemText(
+            1, _translate("MainWindow", "Operating Room"))
+        self.DepartmentSelection_combo.setItemText(
+            2, _translate("MainWindow", "ICU"))
+        self.DepartmentSelection_combo.setItemText(
+            3, _translate("MainWindow", "Radiology"))
         item = self.Devices_table.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
         item = self.Devices_table.horizontalHeaderItem(1)
@@ -1049,7 +1180,9 @@ class Ui_MainWindow(object):
         item = self.Devices_table.item(0, 12)
         item.setText(_translate("MainWindow", "002"))
         self.Devices_table.setSortingEnabled(__sortingEnabled)
-        self.information_tabWidget.setTabText(self.information_tabWidget.indexOf(self.tab_6), _translate("MainWindow", "Devices"))
+        self.information_tabWidget.setTabText(
+            self.information_tabWidget.indexOf(self.tab_6),
+            _translate("MainWindow", "Devices"))
         item = self.Department_table.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
         item = self.Department_table.horizontalHeaderItem(1)
@@ -1077,11 +1210,17 @@ class Ui_MainWindow(object):
         item = self.Department_table.item(2, 2)
         item.setText(_translate("MainWindow", "Basement"))
         self.Department_table.setSortingEnabled(__sortingEnabled)
-        self.information_tabWidget.setTabText(self.information_tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Departments"))
-        self.DepartmentSelection_combo_3.setItemText(0, _translate("MainWindow", "All Departments"))
-        self.DepartmentSelection_combo_3.setItemText(1, _translate("MainWindow", "Operating Room"))
-        self.DepartmentSelection_combo_3.setItemText(2, _translate("MainWindow", "ICU"))
-        self.DepartmentSelection_combo_3.setItemText(3, _translate("MainWindow", "Radiology"))
+        self.information_tabWidget.setTabText(
+            self.information_tabWidget.indexOf(self.tab_4),
+            _translate("MainWindow", "Departments"))
+        self.DepartmentSelection_combo_3.setItemText(
+            0, _translate("MainWindow", "All Departments"))
+        self.DepartmentSelection_combo_3.setItemText(
+            1, _translate("MainWindow", "Operating Room"))
+        self.DepartmentSelection_combo_3.setItemText(
+            2, _translate("MainWindow", "ICU"))
+        self.DepartmentSelection_combo_3.setItemText(
+            3, _translate("MainWindow", "Radiology"))
         item = self.Forms_table.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
         item = self.Forms_table.horizontalHeaderItem(1)
@@ -1099,14 +1238,20 @@ class Ui_MainWindow(object):
         item = self.Forms_table.item(0, 2)
         item.setText(_translate("MainWindow", "MRI"))
         item = self.Forms_table.item(0, 3)
-        item.setText(_translate("MainWindow", "Q1$Q2$Q3$$FDFASFAASFASFAFASFAGF$$DAFAFFAFASGASGSAGA"))
+        item.setText(
+            _translate("MainWindow",
+                       "Q1$Q2$Q3$$FDFASFAASFASFAFASFAGF$$DAFAFFAFASGASGSAGA"))
         self.Forms_table.setSortingEnabled(__sortingEnabled)
-        self.information_tabWidget.setTabText(self.information_tabWidget.indexOf(self.tab_7), _translate("MainWindow", "Forms"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), _translate("MainWindow", "Information"))
+        self.information_tabWidget.setTabText(
+            self.information_tabWidget.indexOf(self.tab_7),
+            _translate("MainWindow", "Forms"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2),
+                                 _translate("MainWindow", "Information"))
         self.groupBox_5.setTitle(_translate("MainWindow", "Create Form"))
         self.groupBox_4.setTitle(_translate("MainWindow", "Add Device"))
         self.groupBox_11.setTitle(_translate("MainWindow", "Manage Tasks"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("MainWindow", "Tools"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3),
+                                 _translate("MainWindow", "Tools"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuEdit.setTitle(_translate("MainWindow", "Edit"))
         self.menuSettings.setTitle(_translate("MainWindow", "Settings"))
@@ -1122,13 +1267,15 @@ class Ui_MainWindow(object):
         self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+W"))
         self.actionTo_Do.setText(_translate("MainWindow", "To Do"))
         self.actionHome.setText(_translate("MainWindow", "Home"))
-        self.actionDaily_Inspection.setText(_translate("MainWindow", "Inspection"))
+        self.actionDaily_Inspection.setText(
+            _translate("MainWindow", "Inspection"))
         self.actionFollow_Up.setText(_translate("MainWindow", "Follow-Up"))
         self.actionInformation.setText(_translate("MainWindow", "Information"))
         self.actionAdd_Device.setText(_translate("MainWindow", "Add Device"))
         self.actionTools.setText(_translate("MainWindow", "Tools"))
         self.actionCreate_Form.setText(_translate("MainWindow", "Create Form"))
-        self.actionManage_Tasks.setText(_translate("MainWindow", "Manage Tasks"))
+        self.actionManage_Tasks.setText(
+            _translate("MainWindow", "Manage Tasks"))
 
 
 if __name__ == "__main__":
