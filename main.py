@@ -71,7 +71,8 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             lambda: self.toolBox.setCurrentIndex(1))
         self.actionTools.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(2))
-        """ self.MarkAsDone_checkBox.isChecked.connect() """
+
+        self.MarkAsDone_checkBox.stateChanged.connect(self.CheckAll)
 
         ## gives an error when we choose all departmenst after changing the department from the combo
         ## because there is no department with id ==0
@@ -158,6 +159,13 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def NavTo(self, i):
         self.toolBox.setCurrentIndex(0)
         self.followUp_tabWidget.setCurrentIndex(i)
+
+    def CheckAll(self):
+        for i in range(10):
+            if self.MarkAsDone_checkBox.isChecked():
+                self.checks[i].setChecked(True)
+            else:
+                self.checks[i].setChecked(False)
 
 
 def main():
