@@ -74,6 +74,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
 
         self.MarkAsDone_checkBox.stateChanged.connect(self.CheckAll)
 
+        for i in range(10):
+            self.checks[i].stateChanged.connect(self.FormIsFilling)
+
         ## gives an error when we choose all departmenst after changing the department from the combo
         ## because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
@@ -164,8 +167,25 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         for i in range(10):
             if self.MarkAsDone_checkBox.isChecked():
                 self.checks[i].setChecked(True)
+                self.FormIsFilling()
             else:
                 self.checks[i].setChecked(False)
+                self.FormIsFilling()
+
+    def FormIsFilling(self):
+        self.CheckStates = [
+            False, False, False, False, False, False, False, False, False,
+            False, False
+        ]
+        print(len(self.CheckStates))
+        self.CheckStates[10] = self.MarkAsDone_checkBox.isChecked()
+        for i in range(10):
+            self.CheckStates[i] = self.checks[i].isChecked()
+
+        if any(self.CheckStates):
+            self.Inspection_comboBox.setDisabled(True)
+        else:
+            self.Inspection_comboBox.setDisabled(False)
 
 
 def main():
