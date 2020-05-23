@@ -61,7 +61,10 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.DepartmentSelection_combo_3.currentIndexChanged.connect(
             lambda: self.UpdateTable(
                 DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self.Forms_table))
-
+        dailyDevices_names = DB.RunCommand("SELECT DevName FROM device")
+        dailyDevices_names = [str(device[0])  for device in dailyDevices_names ]
+        self.Inspection_comboBox.clear()
+        self.Inspection_comboBox.addItems(dailyDevices_names)
     def UpdateTables(self):
         self.UpdateTable(DB.GetRows('department'), self.Department_table)
         self.UpdateTable(DB.GetRows('device'), self.Devices_table)
