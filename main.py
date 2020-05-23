@@ -24,8 +24,8 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.checkq9, self.checkq10
         ]
 
-        self.UpdateTables()
         self.UpdateDevCombo()
+        self.UpdateTables()
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -115,7 +115,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             UItable.clearContents()
 
     def update_form(self):
-        self.clear_form(10, 10)
+        print(self.Inspection_comboBox.currentText())
         family = DB.SelectRows(
             "device",
             "DevName='{}'".format(self.Inspection_comboBox.currentText()))
@@ -128,15 +128,19 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 form = form[0][3].split("?")
                 form = [str(question) + str('  ?') for question in form]
                 print(form)
+                EnableVar = len(form)
                 for i, quest in enumerate(form):
                     if quest != "  ?":
                         print(quest)
                         self.question[i - 1].setText(quest)
+                    else:
+                        EnableVar -= 1
                 self.clear_form(len(self.checks), 10 - len(form))
-                self.enable_form(len(form) - 1)
+                self.enable_form(EnableVar)
         else:
             print('Clearing All Form')
             self.clear_form(10, 10)
+            self.question[0].setText('No Form To Display For This Device')
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
