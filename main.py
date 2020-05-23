@@ -132,7 +132,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                         self.question[i - 1].setText(quest)
                     else:
                         EnableVar -= 1
-                self.clear_form(len(self.checks), 10 - len(form))
+                self.clear_form(len(self.checks), 10 - EnableVar)
                 self.enable_form(EnableVar)
             else:
                 self.clear_form(10, 10)
