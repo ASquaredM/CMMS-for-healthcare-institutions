@@ -18,15 +18,15 @@
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1015</width>
-         <height>634</height>
+         <width>1013</width>
+         <height>618</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -40,7 +40,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>2</number>
           </property>
           <property name="iconSize">
            <size>
@@ -728,7 +728,7 @@
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QPushButton" name="pushButton_2">
+                <widget class="QPushButton" name="inspectionDate_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -783,7 +783,7 @@
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="QLabel" name="label_2">
+               <widget class="QLabel" name="q1">
                 <property name="text">
                  <string>Fix Lights</string>
                 </property>
@@ -803,7 +803,7 @@
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="label">
+               <widget class="QLabel" name="q2">
                 <property name="text">
                  <string>Fix Beds</string>
                 </property>
@@ -843,28 +843,28 @@
                </widget>
               </item>
               <item row="12" column="0">
-               <widget class="QLabel" name="label_11">
+               <widget class="QLabel" name="q7">
                 <property name="text">
                  <string>Hhhh</string>
                 </property>
                </widget>
               </item>
               <item row="8" column="0">
-               <widget class="QLabel" name="label_9">
+               <widget class="QLabel" name="q5">
                 <property name="text">
                  <string>Clean Windows</string>
                 </property>
                </widget>
               </item>
               <item row="14" column="0">
-               <widget class="QLabel" name="label_12">
+               <widget class="QLabel" name="q8">
                 <property name="text">
                  <string>HHHH</string>
                 </property>
                </widget>
               </item>
               <item row="18" column="0">
-               <widget class="QLabel" name="label_14">
+               <widget class="QLabel" name="q10">
                 <property name="text">
                  <string>HhHh</string>
                 </property>
@@ -891,7 +891,7 @@
                </widget>
               </item>
               <item row="4" column="0">
-               <widget class="QLabel" name="label_3">
+               <widget class="QLabel" name="q3">
                 <property name="text">
                  <string>Fix MRI</string>
                 </property>
@@ -918,7 +918,7 @@
                </widget>
               </item>
               <item row="16" column="0">
-               <widget class="QLabel" name="label_13">
+               <widget class="QLabel" name="q9">
                 <property name="text">
                  <string>hhhh</string>
                 </property>
@@ -965,7 +965,7 @@
                </widget>
               </item>
               <item row="10" column="0">
-               <widget class="QLabel" name="label_10">
+               <widget class="QLabel" name="q6">
                 <property name="text">
                  <string>Install Word 2007</string>
                 </property>
@@ -993,7 +993,7 @@
                </widget>
               </item>
               <item row="6" column="0">
-               <widget class="QLabel" name="label_4">
+               <widget class="QLabel" name="q4">
                 <property name="text">
                  <string>Fix X-Ray</string>
                 </property>
@@ -1052,8 +1052,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1015</width>
-         <height>634</height>
+         <width>1013</width>
+         <height>618</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1262,30 +1262,6 @@
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="QComboBox" name="DepartmentSelection_combo_2">
-              <item>
-               <property name="text">
-                <string>All Departments</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Operating Room</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>ICU</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Radiology</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
              <widget class="QTableWidget" name="Department_table">
               <property name="rowCount">
                <number>3</number>
@@ -1464,8 +1440,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1015</width>
-         <height>634</height>
+         <width>1013</width>
+         <height>618</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1584,7 +1560,7 @@
      <x>0</x>
      <y>0</y>
      <width>1033</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
