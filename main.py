@@ -85,7 +85,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self
                 .Forms_table))
 
-        self.Inspection_comboBox.currentIndexChanged.connect(self.update_form)
+        self.Inspection_comboBox.currentIndexChanged.connect(self.UpdateForm)
 
     def UpdateDevCombo(self):
         self.Inspection_comboBox.clear()
@@ -99,7 +99,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.UpdateTable(DB.GetRows('department'), self.Department_table)
         self.UpdateTable(DB.GetRows('device'), self.Devices_table)
         self.UpdateTable(DB.GetRows('form'), self.Forms_table)
-        self.update_form()
+        self.UpdateForm()
 
     def UpdateTable(self, rows, UItable):
         if str(type(rows)) != "<class 'NoneType'>" and len(rows[0]) > 0:
@@ -114,8 +114,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         else:
             UItable.clearContents()
 
-    def update_form(self):
-        print(self.Inspection_comboBox.currentText())
+    def UpdateForm(self):
         family = DB.SelectRows(
             "device",
             "DevName='{}'".format(self.Inspection_comboBox.currentText()))
@@ -127,18 +126,18 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             if len(form) > 0:
                 form = form[0][3].split("?")
                 form = [str(question) + str('  ?') for question in form]
-                print(form)
                 EnableVar = len(form)
                 for i, quest in enumerate(form):
                     if quest != "  ?":
-                        print(quest)
                         self.question[i - 1].setText(quest)
                     else:
                         EnableVar -= 1
                 self.clear_form(len(self.checks), 10 - len(form))
                 self.enable_form(EnableVar)
+            else:
+                self.clear_form(10, 10)
+                self.question[0].setText('No Form To Display For This Device')
         else:
-            print('Clearing All Form')
             self.clear_form(10, 10)
             self.question[0].setText('No Form To Display For This Device')
 
