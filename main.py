@@ -43,16 +43,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Search_lineEdit
         '''
         ''' Actions (Ordered by the actual toolbar order)
-        self.actionFollow_Up.triggere seld.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionHome.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionTo_Do.triggered.connect(lambda:f.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionDaily_Inspection.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionInformation.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionTools.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionAdd_Device.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionCreate_Form.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionManage_Tasks.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.actionCMMS.triggered.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.actionFollow_Up.triggered.connect()
+        self.actionHome.triggered.connect()
+        self.actionTo_Do.triggered.connect()
+        self.actionDaily_Inspection.triggered.connect()
+        self.actionInformation.triggered.connect()
+        self.actionTools.triggered.connect()
+        self.actionAdd_Device.triggered.connect()
+        self.actionCreate_Form.triggered.connect()
+        self.actionManage_Tasks.triggered.connect()
+        self.actionCMMS.triggered.connect()
         '''
         ''' Combos
         self.DepartmentSelection_combo
@@ -61,6 +61,19 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
+        self.actionFollow_Up.triggered.connect(
+            lambda: self.toolBox.setCurrentIndex(0))
+        self.actionHome.triggered.connect(lambda: self.NavTo(0))
+        self.actionTo_Do.triggered.connect(lambda: self.NavTo(1))
+        self.actionDaily_Inspection.triggered.connect(lambda: self.NavTo(2))
+        self.actionInformation.triggered.connect(
+            lambda: self.toolBox.setCurrentIndex(1))
+        self.actionTools.triggered.connect(
+            lambda: self.toolBox.setCurrentIndex(2))
+        """ self.actionAdd_Device.triggered.connect()
+        self.actionCreate_Form.triggered.connect()
+        self.actionManage_Tasks.triggered.connect()
+        self.actionCMMS.triggered.connect() """
 
         self.Inspection_comboBox.clear()
 
@@ -131,6 +144,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         else:
             self.clear_form(10)
 
+    def InsertAtIndex(self, table, y, x, Item):
+        table.setItem(y, x, QTableWidgetItem(Item))
+
     def clear_form(self, amount):
         for i in range(amount):
             self.question[len(self.question) - i - 1].clear()
@@ -140,8 +156,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         for i in range(amount):
             self.checks[i].show()
 
-    def InsertAtIndex(self, table, y, x, Item):
-        table.setItem(y, x, QTableWidgetItem(Item))
+    def NavTo(self, i):
+        self.toolBox.setCurrentIndex(0)
+        self.followUp_tabWidget.setCurrentIndex(i)
 
 
 def main():
