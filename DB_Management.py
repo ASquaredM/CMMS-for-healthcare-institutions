@@ -51,9 +51,8 @@ class DatabaseUtilities:
         try:
             self.cursor.execute(cmd, multi=True)
         except mysql.connector.Error as err:
-            pass
-            # print('ERROR MESSAGE: ' + str(err.msg))
-            # print('WITH ' + cmd)
+            print('ERROR MESSAGE: ' + str(err.msg))
+            print('WITH ' + cmd)
         try:
             msg = self.cursor.fetchall()
         except:

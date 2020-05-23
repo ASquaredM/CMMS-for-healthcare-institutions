@@ -13,19 +13,6 @@ DB = DU()
 class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self, mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
-
-        self.question = [
-            self.q1, self.q2, self.q3, self.q4, self.q5, self.q6, self.q7,
-            self.q8, self.q9, self.q10
-        ]
-        self.checks = [
-            self.checkq1, self.checkq2, self.checkq3, self.checkq4,
-            self.checkq5, self.checkq6, self.checkq7, self.checkq8,
-            self.checkq9, self.checkq10
-        ]
-
-        self.UpdateDevCombo()
-        self.UpdateTables()
         ''' Buttons
         self.AddDevice_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
         self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
@@ -62,6 +49,30 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
+        self.question = [
+            self.q1, self.q2, self.q3, self.q4, self.q5, self.q6, self.q7,
+            self.q8, self.q9, self.q10
+        ]
+
+        self.InitCheckBoxes()
+        self.InitActions()
+        self.UpdateDevCombo()
+        self.UpdateTables()
+        self.InitComboBoxes()
+
+    def InitCheckBoxes(self):
+        self.checks = [
+            self.checkq1, self.checkq2, self.checkq3, self.checkq4,
+            self.checkq5, self.checkq6, self.checkq7, self.checkq8,
+            self.checkq9, self.checkq10
+        ]
+
+        self.MarkAsDone_checkBox.stateChanged.connect(self.CheckAll)
+
+        for i in range(10):
+            self.checks[i].stateChanged.connect(self.FormIsFilling)
+
+    def InitActions(self):
         self.actionFollow_Up.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(0))
         self.actionHome.triggered.connect(lambda: self.NavTo(0))
@@ -72,11 +83,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.actionTools.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(2))
 
-        self.MarkAsDone_checkBox.stateChanged.connect(self.CheckAll)
-
-        for i in range(10):
-            self.checks[i].stateChanged.connect(self.FormIsFilling)
-
+    def InitComboBoxes(self):
         ## gives an error when we choose all departmenst after changing the department from the combo
         ## because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
