@@ -1553,7 +1553,7 @@ class Ui_MainWindow(object):
         icon14 = QtGui.QIcon()
         icon14.addPixmap(
             QtGui.QPixmap(
-                ":/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png"
+                "Resources/images/document-rounded-square-interface-symbol-with-text-lines.png"
             ), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionPPM.setIcon(icon14)
         self.actionPPM.setObjectName("actionPPM")

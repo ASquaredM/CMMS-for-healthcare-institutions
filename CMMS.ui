@@ -2794,7 +2794,7 @@ All Rights Reserved</string>
   <action name="actionPPM">
    <property name="icon">
     <iconset resource="Resources/resource.qrc">
-     <normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
+     <normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
    </property>
    <property name="text">
     <string>PPM</string>
