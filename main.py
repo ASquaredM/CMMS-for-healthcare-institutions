@@ -15,10 +15,10 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self, mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
         ''' Buttons
-        self.SubmitAnswers_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.ManageTasks_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.Export_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
-        self.Print_button.clicked.connect(lambda: self.InsertAtIndex(self.Devices_table, 1, 0, 'Test'))
+        self.SubmitPPMAnswers_button.clicked.connect()
+        self.ManageTasks_button.clicked.connect()
+        self.Export_button.clicked.connect()
+        self.Print_button.clicked.connect()
         '''
         ''' Tables
         self.ToDo_table
@@ -42,6 +42,15 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.dockWidget_CreateFormWindow.close()
         self.dockWidget_AboutWindow.close()
 
+        self.InitVariables()
+        self.InitCheckBoxes()
+        self.InitActions()
+        self.UpdateDevCombo()
+        self.UpdateTables()
+        self.InitComboBoxes()
+        self.InitButtons()
+
+    def InitVariables(self):
         self.question1 = [
             self.q1, self.q2, self.q3, self.q4, self.q5, self.q6, self.q7,
             self.q8, self.q9, self.q10
@@ -52,12 +61,6 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ]
         self.tabs = [self.followUp_tabWidget, self.information_tabWidget]
         self.questions = [self.question1, self.question2]
-        self.InitCheckBoxes()
-        self.InitActions()
-        self.UpdateDevCombo()
-        self.UpdateTables()
-        self.InitComboBoxes()
-        self.InitButtons()
 
     def InitCheckBoxes(self):
         self.checks1 = [
@@ -123,6 +126,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.CreateForm_button.clicked.connect(
             self.dockWidget_CreateFormWindow.show)
 
+        self.SubmitInspectionAnswers_button.clicked.connect(
+            self.CollectingForm)
+
     def UpdateDevCombo(self):
         self.Inspection_comboBox.clear()
         self.ppm_comboBox.clear()
@@ -165,11 +171,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 "form",
                 "formfamily='{}' AND formtype= 'daily inspection' ".format(
                     str(family[0][8])))
-            print(form)
             if len(form) > 0:
                 form = form[0][3].split("?")
                 form = [str(question) + str('  ?') for question in form]
-                print(form)
                 EnableVar = len(form)
                 for i, quest in enumerate(form):
                     if quest != "  ?":
@@ -253,6 +257,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.Inspection_comboBox.setDisabled(True)
         else:
             self.Inspection_comboBox.setDisabled(False)
+
+    def CollectingForm(self):
+        Answers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+        for i in range(10):
+            if len(self.question1[i].text()
+                   ) > 3 and self.checks[0][i].isChecked():
+                Answers[i] = 1
+
+        print(Answers)
 
 
 def main():
