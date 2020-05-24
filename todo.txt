@@ -1,1 +1,3 @@
 add field to device table -----> last PPM and to be = april 2020 for all devices
+in ppm table, i made the ppmid which is the pk ----> autoincrement
+the same in inspection tbale inspecid ----->autoincrement
