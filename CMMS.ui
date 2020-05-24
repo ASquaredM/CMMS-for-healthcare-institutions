@@ -24,7 +24,7 @@
        <property name="geometry">
         <rect>
          <x>-54</x>
-         <y>-218</y>
+         <y>-99</y>
          <width>798</width>
          <height>599</height>
         </rect>
@@ -40,7 +40,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="followUp_tabWidget">
           <property name="currentIndex">
-           <number>2</number>
+           <number>3</number>
           </property>
           <property name="iconSize">
            <size>
@@ -1203,9 +1203,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="3" column="0">
@@ -1254,9 +1251,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="15" column="0">
@@ -1277,9 +1271,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="3" column="2">
@@ -1293,9 +1284,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="4" column="0">
@@ -1316,9 +1304,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="5" column="0">
@@ -1339,9 +1324,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="18" column="0">
@@ -1376,9 +1358,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="9" column="0">
@@ -1413,9 +1392,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="1" column="2">
@@ -1429,9 +1405,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="20" column="0">
@@ -1555,9 +1528,6 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">buttonGroup</string>
-                </attribute>
                </widget>
               </item>
               <item row="0" column="0" colspan="3">
@@ -3044,7 +3014,4 @@ All Rights Reserved</string>
    </hints>
   </connection>
  </connections>
- <buttongroups>
-  <buttongroup name="buttonGroup"/>
- </buttongroups>
 </ui>
