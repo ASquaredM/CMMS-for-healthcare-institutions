@@ -25,8 +25,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>794</width>
-         <height>586</height>
+         <width>798</width>
+         <height>599</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1088,7 +1088,7 @@
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1428,7 +1428,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1460,7 +1460,7 @@ p, li { white-space: pre-wrap; }
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                    </widget>
@@ -1564,8 +1564,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>765</width>
-         <height>416</height>
+         <width>763</width>
+         <height>400</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1952,8 +1952,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>840</width>
-         <height>399</height>
+         <width>848</width>
+         <height>381</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -2090,7 +2090,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1287</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2341,9 +2341,9 @@ All Rights Reserved</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>659</width>
-          <height>350</height>
+          <y>-108</y>
+          <width>636</width>
+          <height>332</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout">
@@ -2435,9 +2435,6 @@ All Rights Reserved</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
-          <widget class="QLineEdit" name="lineEdit_7"/>
-         </item>
          <item row="7" column="0">
           <widget class="QLabel" name="label_18">
            <property name="text">
@@ -2490,20 +2487,10 @@ All Rights Reserved</string>
          <item row="10" column="1">
           <widget class="QLineEdit" name="lineEdit_11"/>
          </item>
-         <item row="11" column="0">
-          <widget class="QLabel" name="label_22">
-           <property name="text">
-            <string>PPM</string>
-           </property>
-           <property name="buddy">
-            <cstring>lineEdit</cstring>
-           </property>
-          </widget>
-         </item>
          <item row="11" column="1">
           <widget class="QLineEdit" name="lineEdit_12"/>
          </item>
-         <item row="12" column="0">
+         <item row="11" column="0">
           <widget class="QLabel" name="label_23">
            <property name="text">
             <string>Department</string>
@@ -2513,8 +2500,31 @@ All Rights Reserved</string>
            </property>
           </widget>
          </item>
-         <item row="12" column="1">
-          <widget class="QLineEdit" name="lineEdit_13"/>
+         <item row="6" column="1">
+          <widget class="QDateEdit" name="installation_dateEdit">
+           <property name="wrapping">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="showGroupSeparator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="dateTime">
+            <datetime>
+             <hour>0</hour>
+             <minute>0</minute>
+             <second>0</second>
+             <year>2020</year>
+             <month>5</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -2597,8 +2607,8 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>571</width>
-          <height>229</height>
+          <width>588</width>
+          <height>224</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
@@ -2613,7 +2623,7 @@ All Rights Reserved</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_14"/>
+          <widget class="QLineEdit" name="createForm_ans1"/>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_27">
@@ -2626,7 +2636,7 @@ All Rights Reserved</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_16"/>
+          <widget class="QLineEdit" name="createForm_ans2"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_37">
@@ -2639,7 +2649,7 @@ All Rights Reserved</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_22"/>
+          <widget class="QLineEdit" name="createForm_ans3"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="label_41">
@@ -2653,7 +2663,7 @@ All Rights Reserved</string>
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QTextEdit" name="textEdit_6"/>
+          <widget class="QTextEdit" name="createForm_ans4"/>
          </item>
         </layout>
        </widget>
@@ -2793,7 +2803,7 @@ All Rights Reserved</string>
   </action>
   <action name="actionPPM">
    <property name="icon">
-    <iconset resource="Resources/resource.qrc">
+    <iconset>
      <normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
    </property>
    <property name="text">
