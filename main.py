@@ -48,6 +48,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
+        self.dockWidget_AddDeviceWindow.close()
+        self.dockWidget_CreateFormWindow.close()
+        self.dockWidget_AboutWindow.close()
+
+
         self.question = [
             self.q1, self.q2, self.q3, self.q4, self.q5, self.q6, self.q7,
             self.q8, self.q9, self.q10
@@ -58,6 +63,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.UpdateDevCombo()
         self.UpdateTables()
         self.InitComboBoxes()
+        self.InitButtons()
 
     def InitCheckBoxes(self):
         self.checks = [
@@ -81,6 +87,10 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             lambda: self.toolBox.setCurrentIndex(1))
         self.actionTools.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(2))
+        self.actionAdd_Device.triggered.connect(
+            self.dockWidget_AddDeviceWindow.show)
+        self.actionCreate_Form.triggered.connect(
+            self.dockWidget_CreateFormWindow.show)
 
     def InitComboBoxes(self):
         ## gives an error when we choose all departmenst after changing the department from the combo
@@ -96,6 +106,12 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 .Forms_table))
 
         self.Inspection_comboBox.currentIndexChanged.connect(self.UpdateForm)
+
+    def InitButtons(self):
+        self.AddDevice_button.clicked.connect(
+            self.dockWidget_AddDeviceWindow.show)
+        self.CreateForm_button.clicked.connect(
+            self.dockWidget_CreateFormWindow.show)
 
     def UpdateDevCombo(self):
         self.Inspection_comboBox.clear()
@@ -174,7 +190,6 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
     #     else:
     #         print('Clearing All Form')
     #         self.clear_form(10, 10)
-
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
