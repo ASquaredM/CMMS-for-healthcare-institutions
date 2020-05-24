@@ -16,7 +16,6 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
         ''' Buttons
         self.SubmitPPMAnswers_button.clicked.connect()
-        self.ManageTasks_button.clicked.connect()
         self.Export_button.clicked.connect()
         self.Print_button.clicked.connect()
         '''
@@ -125,6 +124,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.dockWidget_AddDeviceWindow.show)
         self.CreateForm_button.clicked.connect(
             self.dockWidget_CreateFormWindow.show)
+        self.ManageTasks_button.clicked.connect(lambda: self.NavTo(0, 1))
 
         self.SubmitInspectionAnswers_button.clicked.connect(
             self.CollectingForm)
