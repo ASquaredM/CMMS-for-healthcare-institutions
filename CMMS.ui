@@ -18,15 +18,15 @@
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1013</width>
-         <height>618</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -730,7 +730,7 @@
                 </widget>
                </item>
                <item row="0" column="2">
-                <widget class="QCheckBox" name="MarkAsDone_checkBox">
+                <widget class="QCheckBox" name="CheckAll_checkBox">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -873,7 +873,7 @@
               <item row="12" column="0">
                <widget class="QLabel" name="q7">
                 <property name="text">
-                 <string> </string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -1081,7 +1081,7 @@
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1108,8 +1108,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1013</width>
-         <height>618</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1402,7 +1402,7 @@ p, li { white-space: pre-wrap; }
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
-             <widget class="QComboBox" name="DepartmentSelection_combo_3">
+             <widget class="QComboBox" name="DepartmentSelection_combo_2">
               <item>
                <property name="text">
                 <string>All Departments</string>
@@ -1496,8 +1496,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1013</width>
-         <height>618</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1634,7 +1634,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1033</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

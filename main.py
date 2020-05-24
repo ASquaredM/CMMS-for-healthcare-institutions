@@ -45,7 +45,6 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' Combos
         self.DepartmentSelection_combo
         self.DepartmentSelection_combo_2
-        self.DepartmentSelection_combo_3
         self.Date_comboBox
         self.Inspection_comboBox
         '''
@@ -67,7 +66,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.checkq9, self.checkq10
         ]
 
-        self.MarkAsDone_checkBox.stateChanged.connect(self.CheckAll)
+        self.CheckAll_checkBox.stateChanged.connect(self.CheckAll)
 
         for i in range(10):
             self.checks[i].stateChanged.connect(self.FormIsFilling)
@@ -91,9 +90,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 DB.SelectRows(
                     'device', 'depid = %s' % self.DepartmentSelection_combo.
                     currentIndex()), self.Devices_table))
-        self.DepartmentSelection_combo_3.currentIndexChanged.connect(
+        self.DepartmentSelection_combo_2.currentIndexChanged.connect(
             lambda: self.UpdateTable(
-                DB.GetDF(self.DepartmentSelection_combo_3.currentIndex()), self
+                DB.GetDF(self.DepartmentSelection_combo_2.currentIndex()), self
                 .Forms_table))
 
         self.Inspection_comboBox.currentIndexChanged.connect(self.UpdateForm)
@@ -172,7 +171,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
 
     def CheckAll(self):
         for i in range(10):
-            if self.MarkAsDone_checkBox.isChecked():
+            if self.CheckAll_checkBox.isChecked():
                 self.checks[i].setChecked(True)
                 self.FormIsFilling()
             else:
@@ -184,8 +183,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             False, False, False, False, False, False, False, False, False,
             False, False
         ]
-        print(len(self.CheckStates))
-        self.CheckStates[10] = self.MarkAsDone_checkBox.isChecked()
+        self.CheckStates[10] = self.CheckAll_checkBox.isChecked()
         for i in range(10):
             self.CheckStates[i] = self.checks[i].isChecked()
 

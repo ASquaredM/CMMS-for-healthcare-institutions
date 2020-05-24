@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'CMMS.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtWidgets.QToolBox(self.centralwidget)
         self.toolBox.setObjectName("toolBox")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 1013, 618))
+        self.page.setGeometry(QtCore.QRect(0, 0, 1015, 634))
         self.page.setObjectName("page")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -454,16 +454,16 @@ class Ui_MainWindow(object):
         self.Inspection_comboBox.addItem("")
         self.Inspection_comboBox.addItem("")
         self.gridLayout_6.addWidget(self.Inspection_comboBox, 0, 0, 1, 1)
-        self.MarkAsDone_checkBox = QtWidgets.QCheckBox(self.groupBox_2)
+        self.CheckAll_checkBox = QtWidgets.QCheckBox(self.groupBox_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
                                            QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(
-            self.MarkAsDone_checkBox.sizePolicy().hasHeightForWidth())
-        self.MarkAsDone_checkBox.setSizePolicy(sizePolicy)
-        self.MarkAsDone_checkBox.setObjectName("MarkAsDone_checkBox")
-        self.gridLayout_6.addWidget(self.MarkAsDone_checkBox, 0, 2, 1, 1)
+            self.CheckAll_checkBox.sizePolicy().hasHeightForWidth())
+        self.CheckAll_checkBox.setSizePolicy(sizePolicy)
+        self.CheckAll_checkBox.setObjectName("CheckAll_checkBox")
+        self.gridLayout_6.addWidget(self.CheckAll_checkBox, 0, 2, 1, 1)
         self.dateEdit = QtWidgets.QDateEdit(self.groupBox_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
                                            QtWidgets.QSizePolicy.Fixed)
@@ -548,6 +548,7 @@ class Ui_MainWindow(object):
         self.checkq9.setObjectName("checkq9")
         self.gridLayout_7.addWidget(self.checkq9, 16, 2, 1, 1)
         self.q7 = QtWidgets.QLabel(self.tab_8)
+        self.q7.setText("")
         self.q7.setObjectName("q7")
         self.gridLayout_7.addWidget(self.q7, 12, 0, 1, 1)
         self.q5 = QtWidgets.QLabel(self.tab_8)
@@ -697,7 +698,7 @@ class Ui_MainWindow(object):
                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page, icon8, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 1013, 618))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 1015, 634))
         self.page_2.setObjectName("page_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
@@ -811,14 +812,14 @@ class Ui_MainWindow(object):
         self.tab_7.setObjectName("tab_7")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.tab_7)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.DepartmentSelection_combo_3 = QtWidgets.QComboBox(self.tab_7)
-        self.DepartmentSelection_combo_3.setObjectName(
-            "DepartmentSelection_combo_3")
-        self.DepartmentSelection_combo_3.addItem("")
-        self.DepartmentSelection_combo_3.addItem("")
-        self.DepartmentSelection_combo_3.addItem("")
-        self.DepartmentSelection_combo_3.addItem("")
-        self.verticalLayout_4.addWidget(self.DepartmentSelection_combo_3)
+        self.DepartmentSelection_combo_2 = QtWidgets.QComboBox(self.tab_7)
+        self.DepartmentSelection_combo_2.setObjectName(
+            "DepartmentSelection_combo_2")
+        self.DepartmentSelection_combo_2.addItem("")
+        self.DepartmentSelection_combo_2.addItem("")
+        self.DepartmentSelection_combo_2.addItem("")
+        self.DepartmentSelection_combo_2.addItem("")
+        self.verticalLayout_4.addWidget(self.DepartmentSelection_combo_2)
         self.Forms_table = QtWidgets.QTableWidget(self.tab_7)
         self.Forms_table.setRowCount(10)
         self.Forms_table.setObjectName("Forms_table")
@@ -848,7 +849,7 @@ class Ui_MainWindow(object):
                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page_2, icon9, "")
         self.page_3 = QtWidgets.QWidget()
-        self.page_3.setGeometry(QtCore.QRect(0, 0, 1013, 618))
+        self.page_3.setGeometry(QtCore.QRect(0, 0, 1015, 634))
         self.page_3.setObjectName("page_3")
         self.gridLayout_18 = QtWidgets.QGridLayout(self.page_3)
         self.gridLayout_18.setObjectName("gridLayout_18")
@@ -904,7 +905,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.toolBox, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1033, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1033, 21))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -1000,7 +1001,7 @@ class Ui_MainWindow(object):
         self.toolBar.addSeparator()
 
         self.retranslateUi(MainWindow)
-        self.toolBox.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(2)
         self.followUp_tabWidget.setCurrentIndex(2)
         self.Date_comboBox.setCurrentIndex(2)
         self.Inspection_comboBox.setCurrentIndex(0)
@@ -1082,7 +1083,7 @@ class Ui_MainWindow(object):
             0, _translate("MainWindow", "Task X"))
         self.Inspection_comboBox.setItemText(
             1, _translate("MainWindow", "Task Y"))
-        self.MarkAsDone_checkBox.setText(_translate("MainWindow", "Check all"))
+        self.CheckAll_checkBox.setText(_translate("MainWindow", "Check all"))
         self.checkq8.setText(_translate("MainWindow", "Done"))
         self.checkq7.setText(_translate("MainWindow", "Done"))
         self.q1.setText(_translate("MainWindow", "Fix Lights"))
@@ -1090,7 +1091,6 @@ class Ui_MainWindow(object):
         self.q2.setText(_translate("MainWindow", "Fix Beds"))
         self.checkq10.setText(_translate("MainWindow", "Done"))
         self.checkq9.setText(_translate("MainWindow", "Done"))
-        self.q7.setText(_translate("MainWindow", " "))
         self.q5.setText(_translate("MainWindow", "Clean Windows"))
         self.q8.setText(_translate("MainWindow", "HHHH"))
         self.q10.setText(_translate("MainWindow", "HhHh"))
@@ -1111,7 +1111,7 @@ class Ui_MainWindow(object):
                 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                 "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
+                "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
                 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;\"><br /></p></body></html>"
             ))
         self.followUp_tabWidget.setTabText(
@@ -1213,13 +1213,13 @@ class Ui_MainWindow(object):
         self.information_tabWidget.setTabText(
             self.information_tabWidget.indexOf(self.tab_4),
             _translate("MainWindow", "Departments"))
-        self.DepartmentSelection_combo_3.setItemText(
+        self.DepartmentSelection_combo_2.setItemText(
             0, _translate("MainWindow", "All Departments"))
-        self.DepartmentSelection_combo_3.setItemText(
+        self.DepartmentSelection_combo_2.setItemText(
             1, _translate("MainWindow", "Operating Room"))
-        self.DepartmentSelection_combo_3.setItemText(
+        self.DepartmentSelection_combo_2.setItemText(
             2, _translate("MainWindow", "ICU"))
-        self.DepartmentSelection_combo_3.setItemText(
+        self.DepartmentSelection_combo_2.setItemText(
             3, _translate("MainWindow", "Radiology"))
         item = self.Forms_table.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
