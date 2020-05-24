@@ -92,7 +92,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.dockWidget_AddDeviceWindow.show)
         self.actionCreate_Form.triggered.connect(
             self.dockWidget_CreateFormWindow.show)
-        self.actionManage_Tasks.triggered.connect(lambda: self.NavTo(2))
+        self.actionManage_Tasks.triggered.connect(lambda: self.NavTo(0, 1))
         self.actionCMMS.triggered.connect(self.dockWidget_AboutWindow.show)
 
     def InitComboBoxes(self):
@@ -113,12 +113,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
 
     def InitButtons(self):
         self.Dash_ToDo_Button.clicked.connect(lambda: self.NavTo(0, 1))
-        self.Dash_Forms_Button.clicked.connect(
-            lambda: self.toolBox.setCurrentIndex(1, 1))
-        self.Dash_Devices_Button.clicked.connect(
-            lambda: self.toolBox.setCurrentIndex(1, 1))
-        self.Dash_Dept_Button.clicked.connect(
-            lambda: self.toolBox.setCurrentIndex(1, 1))
+        self.Dash_Forms_Button.clicked.connect(lambda: self.NavTo(1, 2))
+        self.Dash_Devices_Button.clicked.connect(lambda: self.NavTo(1, 0))
+        self.Dash_Dept_Button.clicked.connect(lambda: self.NavTo(1, 1))
         self.Dash_Inspection_Button.clicked.connect(lambda: self.NavTo(0, 2))
 
         self.AddDevice_button.clicked.connect(
