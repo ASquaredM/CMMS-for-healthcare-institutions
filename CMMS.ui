@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1171</width>
-    <height>814</height>
+    <width>1287</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,10 +23,10 @@
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
-         <x>-170</x>
-         <y>-2</y>
+         <x>-54</x>
+         <y>-218</y>
          <width>798</width>
-         <height>594</height>
+         <height>599</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -40,7 +40,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="followUp_tabWidget">
           <property name="currentIndex">
-           <number>3</number>
+           <number>2</number>
           </property>
           <property name="iconSize">
            <size>
@@ -713,7 +713,7 @@
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
                <item row="0" column="1">
-                <widget class="QDateEdit" name="dateEdit">
+                <widget class="QDateEdit" name="dateEdit_inspection">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -834,7 +834,7 @@
               <item row="12" column="0">
                <widget class="QLabel" name="q7">
                 <property name="text">
-                 <string/>
+                 <string>qestion </string>
                 </property>
                </widget>
               </item>
@@ -960,7 +960,7 @@
                </widget>
               </item>
               <item row="19" column="2">
-               <widget class="QPushButton" name="SubmitAnswers_button">
+               <widget class="QPushButton" name="SubmitInspectionAnswers_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1061,7 +1061,7 @@
                </widget>
               </item>
               <item row="20" column="2">
-               <widget class="QPushButton" name="pushButton">
+               <widget class="QPushButton" name="deleteInspection_button">
                 <property name="text">
                  <string>Delete</string>
                 </property>
@@ -1127,36 +1127,6 @@ p, li { white-space: pre-wrap; }
                <string>Task:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_14">
-               <item row="0" column="1">
-                <widget class="QDateEdit" name="dateEdit_Ppm">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="dateTime">
-                  <datetime>
-                   <hour>0</hour>
-                   <minute>0</minute>
-                   <second>0</second>
-                   <year>2020</year>
-                   <month>5</month>
-                   <day>20</day>
-                  </datetime>
-                 </property>
-                 <property name="minimumDate">
-                  <date>
-                   <year>2015</year>
-                   <month>9</month>
-                   <day>14</day>
-                  </date>
-                 </property>
-                 <property name="calendarPopup">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="0">
                 <widget class="QComboBox" name="ppm_comboBox">
                  <property name="currentIndex">
@@ -1187,13 +1157,43 @@ p, li { white-space: pre-wrap; }
                  </property>
                 </widget>
                </item>
+               <item row="0" column="1">
+                <widget class="QDateEdit" name="dateEdit_ppm">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2020</year>
+                   <month>5</month>
+                   <day>20</day>
+                  </datetime>
+                 </property>
+                 <property name="minimumDate">
+                  <date>
+                   <year>2015</year>
+                   <month>9</month>
+                   <day>14</day>
+                  </date>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
             <item>
              <layout class="QGridLayout" name="gridLayout_7">
-              <item row="14" column="2">
-               <widget class="QCheckBox" name="checkq8">
+              <item row="19" column="2">
+               <widget class="QCheckBox" name="checkq20">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1203,240 +1203,48 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
                </widget>
               </item>
-              <item row="12" column="2">
-               <widget class="QCheckBox" name="checkq7">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="q1">
-                <property name="text">
-                 <string>Fix Lights</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QCheckBox" name="checkq2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="q2">
+              <item row="3" column="0">
+               <widget class="QLabel" name="q12">
                 <property name="text">
                  <string>Fix Beds</string>
                 </property>
                </widget>
               </item>
-              <item row="18" column="2">
-               <widget class="QCheckBox" name="checkq10">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="17" column="0">
-               <widget class="Line" name="line_9">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="16" column="2">
-               <widget class="QCheckBox" name="checkq9">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="0">
-               <widget class="QLabel" name="q7">
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="0">
-               <widget class="QLabel" name="q5">
-                <property name="text">
-                 <string>Clean Windows</string>
-                </property>
-               </widget>
-              </item>
-              <item row="14" column="0">
-               <widget class="QLabel" name="q8">
-                <property name="text">
-                 <string>HHHH</string>
-                </property>
-               </widget>
-              </item>
-              <item row="18" column="0">
-               <widget class="QLabel" name="q10">
+              <item row="19" column="0">
+               <widget class="QLabel" name="q20">
                 <property name="text">
                  <string>HhHh</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <widget class="Line" name="line_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QCheckBox" name="checkq4">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="q3">
-                <property name="text">
-                 <string>Fix MRI</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="2">
-               <widget class="QCheckBox" name="checkq3">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="Line" name="line_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="16" column="0">
-               <widget class="QLabel" name="q9">
-                <property name="text">
-                 <string>hhhh</string>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="0">
-               <widget class="Line" name="line_5">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="2">
-               <widget class="QCheckBox" name="checkq6">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QCheckBox" name="checkq1">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Done</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
+              <item row="2" column="0">
                <widget class="Line" name="line_1">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
-              <item row="10" column="0">
-               <widget class="QLabel" name="q6">
+              <item row="11" column="0">
+               <widget class="QLabel" name="q16">
                 <property name="text">
                  <string>Install Word 2007</string>
                 </property>
                </widget>
               </item>
-              <item row="11" column="0">
-               <widget class="Line" name="line_6">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <widget class="Line" name="line_4">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="0">
-               <widget class="Line" name="line_7">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="q4">
+              <item row="1" column="0">
+               <widget class="QLabel" name="q11">
                 <property name="text">
-                 <string>Fix X-Ray</string>
+                 <string>Fix Lights</string>
                 </property>
                </widget>
               </item>
-              <item row="8" column="2">
-               <widget class="QCheckBox" name="checkq5">
+              <item row="15" column="2">
+               <widget class="QCheckBox" name="checkq18">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1446,17 +1254,20 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>Done</string>
                 </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
                </widget>
               </item>
               <item row="15" column="0">
-               <widget class="Line" name="line_8">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+               <widget class="QLabel" name="q18">
+                <property name="text">
+                 <string>HHHH</string>
                 </property>
                </widget>
               </item>
-              <item row="19" column="2">
-               <widget class="QPushButton" name="SubmitAnswers_button">
+              <item row="13" column="2">
+               <widget class="QCheckBox" name="checkq17">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1464,14 +1275,169 @@ p, li { white-space: pre-wrap; }
                  </sizepolicy>
                 </property>
                 <property name="text">
-                 <string>Submit</string>
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QCheckBox" name="checkq12">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="Line" name="line_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
-              <item row="19" column="0">
+              <item row="5" column="2">
+               <widget class="QCheckBox" name="checkq13">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="q13">
+                <property name="text">
+                 <string>Fix MRI</string>
+                </property>
+               </widget>
+              </item>
+              <item row="17" column="2">
+               <widget class="QCheckBox" name="checkq19">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="18" column="0">
+               <widget class="Line" name="line_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="Line" name="line_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="17" column="0">
+               <widget class="QLabel" name="q19">
+                <property name="text">
+                 <string>hhhh</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="2">
+               <widget class="QCheckBox" name="checkq16">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="q15">
+                <property name="text">
+                 <string>Clean Windows</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="Line" name="line_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="0">
+               <widget class="QLabel" name="q17">
+                <property name="text">
+                 <string>Question</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QCheckBox" name="checkq14">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QCheckBox" name="checkq11">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="20" column="0">
                <layout class="QHBoxLayout" name="horizontalLayout">
                 <item>
-                 <widget class="QLabel" name="label">
+                 <widget class="QLabel" name="notes2Label">
                   <property name="font">
                    <font>
                     <weight>75</weight>
@@ -1484,7 +1450,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item>
-                 <widget class="QTextEdit" name="textEdit">
+                 <widget class="QTextEdit" name="ppmNotes_text">
                   <property name="html">
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1510,7 +1476,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QTextEdit" name="textEdit_5">
+                   <widget class="QTextEdit" name="ppmCost_text">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
                       <horstretch>0</horstretch>
@@ -1529,6 +1495,77 @@ p, li { white-space: pre-wrap; }
                  </layout>
                 </item>
                </layout>
+              </item>
+              <item row="20" column="2">
+               <widget class="QPushButton" name="SubmitPPMAnswers_button">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Submit</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="q14">
+                <property name="text">
+                 <string>Fix X-Ray</string>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="0">
+               <widget class="Line" name="line_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="16" column="0">
+               <widget class="Line" name="line_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="Line" name="line_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="Line" name="line_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="2">
+               <widget class="QCheckBox" name="checkq15">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Done</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="3">
+               <widget class="Line" name="line_12">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -1557,8 +1594,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>647</width>
-         <height>314</height>
+         <width>763</width>
+         <height>400</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1946,7 +1983,7 @@ p, li { white-space: pre-wrap; }
          <x>0</x>
          <y>0</y>
          <width>848</width>
-         <height>306</height>
+         <height>381</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -2082,7 +2119,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1171</width>
+     <width>1287</width>
      <height>25</height>
     </rect>
    </property>
@@ -2138,6 +2175,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionHome"/>
    <addaction name="actionTo_Do"/>
    <addaction name="actionDaily_Inspection"/>
+   <addaction name="actionPPM"/>
    <addaction name="separator"/>
    <addaction name="separator"/>
    <addaction name="actionInformation"/>
@@ -2334,7 +2372,7 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>614</width>
+          <width>686</width>
           <height>352</height>
          </rect>
         </property>
@@ -2589,7 +2627,7 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>494</width>
+          <width>538</width>
           <height>224</height>
          </rect>
         </property>
@@ -2736,6 +2774,9 @@ All Rights Reserved</string>
    </property>
   </action>
   <action name="actionInformation">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset>
      <normaloff>Resources/images/request.png</normaloff>Resources/images/request.png</iconset>
@@ -2780,6 +2821,15 @@ All Rights Reserved</string>
     <string>Manage Tasks</string>
    </property>
   </action>
+  <action name="actionPPM">
+   <property name="icon">
+    <iconset resource="Resources/resource.qrc">
+     <normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
+   </property>
+   <property name="text">
+    <string>PPM</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="Resources/resource.qrc"/>
@@ -2792,7 +2842,7 @@ All Rights Reserved</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>752</x>
+     <x>868</x>
      <y>465</y>
     </hint>
     <hint type="destinationlabel">
@@ -2809,7 +2859,7 @@ All Rights Reserved</string>
    <hints>
     <hint type="sourcelabel">
      <x>65</x>
-     <y>803</y>
+     <y>889</y>
     </hint>
     <hint type="destinationlabel">
      <x>574</x>
@@ -2824,14 +2874,177 @@ All Rights Reserved</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>749</x>
-     <y>803</y>
+     <x>821</x>
+     <y>889</y>
     </hint>
     <hint type="destinationlabel">
-     <x>846</x>
-     <y>553</y>
+     <x>918</x>
+     <y>639</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq11</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>710</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>683</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq12</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>721</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>680</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq13</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>691</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>694</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq14</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>681</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq15</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>666</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>693</x>
+     <y>301</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq16</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>676</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>687</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq17</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>689</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq18</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>676</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>681</x>
+     <y>402</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq19</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>671</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>670</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MarkAsDone_checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkq20</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>664</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>675</x>
+     <y>472</y>
     </hint>
    </hints>
   </connection>
  </connections>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>
