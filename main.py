@@ -151,6 +151,31 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.clear_form(10, 10)
             self.question[0].setText('No Form To Display For This Device')
 
+    # def update_form2(self):
+    #     self.clear_form(10, 10)
+    #     family = DB.SelectRows(
+    #         "device",
+    #         "DevName='{}'".format(self.ppm_comboBox.currentText())) #####edit
+    #     if len(family) > 0:
+    #         form = DB.SelectRows(
+    #             "form",
+    #             "formfamily='{}' AND formtype= 'PPM' ".format(
+    #                 str(family[0][8])))
+    #         if len(form) > 0:
+    #             form = form[0][3].split("?")
+    #             form = [str(question) + str('  ?') for question in form]
+    #             print(form)
+    #             for i, quest in enumerate(form):
+    #                 if quest != "  ?":
+    #                     print(quest)
+    #                     self.question2[i - 1].setText(quest) ######### edit
+    #             self.clear_form(len(self.checks), 10 - len(form)) ############generalize these functions ---> enable_form(self,checklist, amount) , clear_Form(self, questionList,checklist,lenlist, amount)
+    #             self.enable_form(len(form) - 1)
+    #     else:
+    #         print('Clearing All Form')
+    #         self.clear_form(10, 10)
+
+
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
 
