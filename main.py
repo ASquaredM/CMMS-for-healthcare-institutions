@@ -52,7 +52,6 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.dockWidget_CreateFormWindow.close()
         self.dockWidget_AboutWindow.close()
 
-
         self.question = [
             self.q1, self.q2, self.q3, self.q4, self.q5, self.q6, self.q7,
             self.q8, self.q9, self.q10
@@ -91,6 +90,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.dockWidget_AddDeviceWindow.show)
         self.actionCreate_Form.triggered.connect(
             self.dockWidget_CreateFormWindow.show)
+        self.actionCMMS.triggered.connect(self.dockWidget_AboutWindow.show)
 
     def InitComboBoxes(self):
         ## gives an error when we choose all departmenst after changing the department from the combo
