@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1014</width>
-    <height>838</height>
+    <width>1033</width>
+    <height>814</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,15 +18,15 @@
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>-258</y>
-         <width>802</width>
-         <height>650</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -712,7 +712,7 @@
                <string>Task:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
-               <item row="0" column="1">
+              <item row="0" column="1">
                 <widget class="QDateEdit" name="dateEdit">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -760,7 +760,7 @@
                 </widget>
                </item>
                <item row="0" column="2">
-                <widget class="QCheckBox" name="MarkAsDone_checkBox">
+                <widget class="QCheckBox" name="CheckAll_checkBox">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -772,7 +772,7 @@
                  </property>
                 </widget>
                </item>
-              </layout>
+               </layout>
              </widget>
             </item>
             <item>
@@ -1109,7 +1109,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab_3">
            <attribute name="icon">
             <iconset resource="Resources/resource.qrc">
-             <normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>:/Edit/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
+             <normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
            </attribute>
            <attribute name="title">
             <string>PPM</string>
@@ -1128,7 +1128,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <layout class="QGridLayout" name="gridLayout_14">
                <item row="0" column="1">
-                <widget class="QDateEdit" name="dateEdit_3">
+                <widget class="QDateEdit" name="dateEdit">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -1191,9 +1191,9 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item>
-             <layout class="QGridLayout" name="gridLayout_13">
+             <layout class="QGridLayout" name="gridLayout_7">
               <item row="14" column="2">
-               <widget class="QCheckBox" name="checkq8_4">
+               <widget class="QCheckBox" name="checkq8">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1206,7 +1206,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="12" column="2">
-               <widget class="QCheckBox" name="checkq7_4">
+               <widget class="QCheckBox" name="checkq7">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1219,14 +1219,14 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="QLabel" name="q1_4">
+               <widget class="QLabel" name="q1">
                 <property name="text">
                  <string>Fix Lights</string>
                 </property>
                </widget>
               </item>
               <item row="2" column="2">
-               <widget class="QCheckBox" name="checkq2_4">
+               <widget class="QCheckBox" name="checkq2">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1239,14 +1239,14 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="q2_4">
+               <widget class="QLabel" name="q2">
                 <property name="text">
                  <string>Fix Beds</string>
                 </property>
                </widget>
               </item>
               <item row="18" column="2">
-               <widget class="QCheckBox" name="checkq10_4">
+               <widget class="QCheckBox" name="checkq10">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1259,14 +1259,14 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="17" column="0">
-               <widget class="Line" name="line_13">
+               <widget class="Line" name="line_9">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="16" column="2">
-               <widget class="QCheckBox" name="checkq9_4">
+               <widget class="QCheckBox" name="checkq9">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1279,42 +1279,42 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="12" column="0">
-               <widget class="QLabel" name="q7_4">
+               <widget class="QLabel" name="q7">
                 <property name="text">
                  <string/>
                 </property>
                </widget>
               </item>
               <item row="8" column="0">
-               <widget class="QLabel" name="q5_4">
+               <widget class="QLabel" name="q5">
                 <property name="text">
                  <string>Clean Windows</string>
                 </property>
                </widget>
               </item>
               <item row="14" column="0">
-               <widget class="QLabel" name="q8_4">
+               <widget class="QLabel" name="q8">
                 <property name="text">
                  <string>HHHH</string>
                 </property>
                </widget>
               </item>
               <item row="18" column="0">
-               <widget class="QLabel" name="q10_4">
+               <widget class="QLabel" name="q10">
                 <property name="text">
                  <string>HhHh</string>
                 </property>
                </widget>
               </item>
               <item row="3" column="0">
-               <widget class="Line" name="line_34">
+               <widget class="Line" name="line_2">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="6" column="2">
-               <widget class="QCheckBox" name="checkq4_4">
+               <widget class="QCheckBox" name="checkq4">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1327,14 +1327,14 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="4" column="0">
-               <widget class="QLabel" name="q3_4">
+               <widget class="QLabel" name="q3">
                 <property name="text">
                  <string>Fix MRI</string>
                 </property>
                </widget>
               </item>
               <item row="4" column="2">
-               <widget class="QCheckBox" name="checkq3_4">
+               <widget class="QCheckBox" name="checkq3">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1347,28 +1347,28 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="5" column="0">
-               <widget class="Line" name="line_35">
+               <widget class="Line" name="line_3">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="16" column="0">
-               <widget class="QLabel" name="q9_4">
+               <widget class="QLabel" name="q9">
                 <property name="text">
                  <string>hhhh</string>
                 </property>
                </widget>
               </item>
               <item row="9" column="0">
-               <widget class="Line" name="line_36">
+               <widget class="Line" name="line_5">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="10" column="2">
-               <widget class="QCheckBox" name="checkq6_4">
+               <widget class="QCheckBox" name="checkq6">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1381,7 +1381,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QCheckBox" name="checkq1_4">
+               <widget class="QCheckBox" name="checkq1">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1394,49 +1394,49 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="Line" name="line_37">
+               <widget class="Line" name="line_1">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="10" column="0">
-               <widget class="QLabel" name="q6_4">
+               <widget class="QLabel" name="q6">
                 <property name="text">
                  <string>Install Word 2007</string>
                 </property>
                </widget>
               </item>
               <item row="11" column="0">
-               <widget class="Line" name="line_38">
+               <widget class="Line" name="line_6">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="7" column="0">
-               <widget class="Line" name="line_39">
+               <widget class="Line" name="line_4">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="13" column="0">
-               <widget class="Line" name="line_40">
+               <widget class="Line" name="line_7">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="6" column="0">
-               <widget class="QLabel" name="q4_4">
+               <widget class="QLabel" name="q4">
                 <property name="text">
                  <string>Fix X-Ray</string>
                 </property>
                </widget>
               </item>
               <item row="8" column="2">
-               <widget class="QCheckBox" name="checkq5_4">
+               <widget class="QCheckBox" name="checkq5">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1449,14 +1449,14 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="15" column="0">
-               <widget class="Line" name="line_41">
+               <widget class="Line" name="line_8">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="19" column="2">
-               <widget class="QPushButton" name="SubmitAnswers_button_4">
+               <widget class="QPushButton" name="SubmitAnswers_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -1469,9 +1469,9 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="19" column="0">
-               <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <layout class="QHBoxLayout" name="horizontalLayout">
                 <item>
-                 <widget class="QLabel" name="label_4">
+                 <widget class="QLabel" name="label">
                   <property name="font">
                    <font>
                     <weight>75</weight>
@@ -1484,12 +1484,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item>
-                 <widget class="QTextEdit" name="textEdit_4">
+                 <widget class="QTextEdit" name="textEdit">
                   <property name="html">
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1533,7 +1533,7 @@ p, li { white-space: pre-wrap; }
              </layout>
             </item>
             <item>
-             <widget class="Line" name="line_12">
+             <widget class="Line" name="line_11">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -1557,8 +1557,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>487</width>
-         <height>320</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1572,7 +1572,7 @@ p, li { white-space: pre-wrap; }
         <item row="0" column="0">
          <widget class="QTabWidget" name="information_tabWidget">
           <property name="currentIndex">
-           <number>2</number>
+           <number>1</number>
           </property>
           <property name="iconSize">
            <size>
@@ -1851,7 +1851,7 @@ p, li { white-space: pre-wrap; }
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
-             <widget class="QComboBox" name="DepartmentSelection_combo_3">
+             <widget class="QComboBox" name="DepartmentSelection_combo_2">
               <item>
                <property name="text">
                 <string>All Departments</string>
@@ -1945,8 +1945,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>858</width>
-         <height>312</height>
+         <width>1015</width>
+         <height>634</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -2082,8 +2082,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1014</width>
-     <height>26</height>
+     <width>1033</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2229,7 +2229,7 @@ Renad Taher</string>
         </size>
        </property>
        <property name="pixmap">
-        <pixmap resource="Resources/resource.qrc">:/Edit/images/app.png</pixmap>
+        <pixmap resource="Resources/resource.qrc">Resources/images/app.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -2781,9 +2781,6 @@ All Rights Reserved</string>
    </property>
   </action>
  </widget>
- <resources>
-  <include location="Resources/resource.qrc"/>
- </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>
