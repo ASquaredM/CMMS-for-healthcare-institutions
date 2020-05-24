@@ -29,6 +29,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' Combos
         self.Date_comboBox
         '''
+        self.Dash_ToDo_Button
+        self.Dash_Forms_Button
+        self.Dash_Devices_Button
+        self.Dash_Dept_Button
+        self.Dash_Inspection_Button
 
         self.CurrDate = datetime.now().strftime("%y-%m-%d")
         self.CurrTime = datetime.now().strftime("%H:%M")
@@ -45,6 +50,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.q11, self.q12, self.q13, self.q14, self.q15, self.q16,
             self.q17, self.q18, self.q19, self.q20
         ]
+        self.tabs = [self.followUp_tabWidget, self.information_tabWidget]
         self.questions = [self.question1, self.question2]
         self.InitCheckBoxes()
         self.InitActions()
@@ -74,10 +80,10 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         #Ordered by the actual toolbar order
         self.actionFollow_Up.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(0))
-        self.actionHome.triggered.connect(lambda: self.NavTo(0))
-        self.actionTo_Do.triggered.connect(lambda: self.NavTo(1))
-        self.actionDaily_Inspection.triggered.connect(lambda: self.NavTo(2))
-        self.actionPPM.triggered.connect(lambda: self.NavTo(3))
+        self.actionHome.triggered.connect(lambda: self.NavTo(0, 0))
+        self.actionTo_Do.triggered.connect(lambda: self.NavTo(0, 1))
+        self.actionDaily_Inspection.triggered.connect(lambda: self.NavTo(0, 2))
+        self.actionPPM.triggered.connect(lambda: self.NavTo(0, 3))
         self.actionInformation.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(1))
         self.actionTools.triggered.connect(
@@ -106,6 +112,15 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.ppm_comboBox.currentIndexChanged.connect(self.update_form2)
 
     def InitButtons(self):
+        self.Dash_ToDo_Button.clicked.connect(lambda: self.NavTo(0, 1))
+        self.Dash_Forms_Button.clicked.connect(
+            lambda: self.toolBox.setCurrentIndex(1, 1))
+        self.Dash_Devices_Button.clicked.connect(
+            lambda: self.toolBox.setCurrentIndex(1, 1))
+        self.Dash_Dept_Button.clicked.connect(
+            lambda: self.toolBox.setCurrentIndex(1, 1))
+        self.Dash_Inspection_Button.clicked.connect(lambda: self.NavTo(0, 2))
+
         self.AddDevice_button.clicked.connect(
             self.dockWidget_AddDeviceWindow.show)
         self.CreateForm_button.clicked.connect(
@@ -215,9 +230,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.checks[group][i].setDisabled(False)
             self.checks[group][i].show()
 
-    def NavTo(self, i):
-        self.toolBox.setCurrentIndex(0)
-        self.followUp_tabWidget.setCurrentIndex(i)
+    def NavTo(self, toolboxidx, tabidx):
+        self.toolBox.setCurrentIndex(toolboxidx)
+        self.tabs[toolboxidx].setCurrentIndex(tabidx)
 
     def CheckAll(self):
         for i in range(10):
