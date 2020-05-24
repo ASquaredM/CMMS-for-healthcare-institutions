@@ -1,11 +1,12 @@
 import os
 import sys
+from datetime import datetime
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QTableWidgetItem
 
-from DB_Management import DatabaseUtilities as DU
 import hospital_gui
+from DB_Management import DatabaseUtilities as DU
 
 DB = DU()
 
@@ -48,6 +49,10 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Date_comboBox
         self.Inspection_comboBox
         '''
+
+        self.CurrDate = datetime.now().strftime("%y-%m-%d")
+        self.CurrTime = datetime.now().strftime("%H:%M")
+
         self.dockWidget_AddDeviceWindow.close()
         self.dockWidget_CreateFormWindow.close()
         self.dockWidget_AboutWindow.close()
