@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1033</width>
+    <width>1171</width>
     <height>814</height>
    </rect>
   </property>
@@ -18,15 +18,15 @@
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>-258</y>
-         <width>1015</width>
-         <height>634</height>
+         <x>-170</x>
+         <y>-2</y>
+         <width>798</width>
+         <height>594</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -40,7 +40,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="followUp_tabWidget">
           <property name="currentIndex">
-           <number>2</number>
+           <number>3</number>
           </property>
           <property name="iconSize">
            <size>
@@ -712,7 +712,7 @@
                <string>Task:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
-              <item row="0" column="1">
+               <item row="0" column="1">
                 <widget class="QDateEdit" name="dateEdit">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -772,7 +772,7 @@
                  </property>
                 </widget>
                </item>
-               </layout>
+              </layout>
              </widget>
             </item>
             <item>
@@ -1088,7 +1088,7 @@
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1108,7 +1108,7 @@ p, li { white-space: pre-wrap; }
           </widget>
           <widget class="QWidget" name="tab_3">
            <attribute name="icon">
-            <iconset resource="Resources/resource.qrc">
+            <iconset>
              <normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
            </attribute>
            <attribute name="title">
@@ -1128,7 +1128,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <layout class="QGridLayout" name="gridLayout_14">
                <item row="0" column="1">
-                <widget class="QDateEdit" name="dateEdit">
+                <widget class="QDateEdit" name="dateEdit_Ppm">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -1158,7 +1158,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="Inspection_comboBox_3">
+                <widget class="QComboBox" name="ppm_comboBox">
                  <property name="currentIndex">
                   <number>0</number>
                  </property>
@@ -1489,7 +1489,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1521,7 +1521,7 @@ p, li { white-space: pre-wrap; }
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                    </widget>
@@ -1557,8 +1557,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1015</width>
-         <height>634</height>
+         <width>647</width>
+         <height>314</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1945,8 +1945,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1015</width>
-         <height>634</height>
+         <width>848</width>
+         <height>306</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -2082,8 +2082,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1033</width>
-     <height>21</height>
+     <width>1171</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2229,7 +2229,7 @@ Renad Taher</string>
         </size>
        </property>
        <property name="pixmap">
-        <pixmap resource="Resources/resource.qrc">Resources/images/app.png</pixmap>
+        <pixmap>Resources/images/app.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -2334,8 +2334,8 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>516</width>
-          <height>392</height>
+          <width>614</width>
+          <height>352</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout">
@@ -2589,8 +2589,8 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>429</width>
-          <height>215</height>
+          <width>494</width>
+          <height>224</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
@@ -2637,7 +2637,7 @@ All Rights Reserved</string>
           <widget class="QLabel" name="label_41">
            <property name="text">
             <string>Text
- 'Separte with $'</string>
+ 'Separte questions with ?'</string>
            </property>
            <property name="buddy">
             <cstring>lineEdit</cstring>
@@ -2781,6 +2781,9 @@ All Rights Reserved</string>
    </property>
   </action>
  </widget>
+ <resources>
+  <include location="Resources/resource.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>
@@ -2793,8 +2796,8 @@ All Rights Reserved</string>
      <y>465</y>
     </hint>
     <hint type="destinationlabel">
-     <x>611</x>
-     <y>107</y>
+     <x>1170</x>
+     <y>187</y>
     </hint>
    </hints>
   </connection>
@@ -2806,7 +2809,7 @@ All Rights Reserved</string>
    <hints>
     <hint type="sourcelabel">
      <x>65</x>
-     <y>812</y>
+     <y>803</y>
     </hint>
     <hint type="destinationlabel">
      <x>574</x>
@@ -2821,8 +2824,8 @@ All Rights Reserved</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>846</x>
-     <y>818</y>
+     <x>749</x>
+     <y>803</y>
     </hint>
     <hint type="destinationlabel">
      <x>846</x>
