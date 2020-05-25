@@ -8,10 +8,11 @@ class DatabaseUtilities:
         self.DB_init()
 
     def DB_init(self):
-        self.mydb = mysql.connector.connect(host="localhost",
-                                            user="root",
-                                            passwd="mysql",
-                                            database="Hospital")
+        self.mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            passwd="mysql",
+            database="Hospital")
         self.cursor = self.mydb.cursor()
 
     def CreateTable(self, tableName):
@@ -19,20 +20,33 @@ class DatabaseUtilities:
         self.RunCommand(cmd)
 
     def GetTable(self, tableName):
-        return self.RunCommand("SELECT * FROM %s;" % tableName)
+        return self.RunCommand("SELECT * FROM %s;" %
+                               tableName)
 
     def GetTables(self):
         return self.RunCommand("SHOW Tables")
 
     def GetColumns(self, tableName):
-        return self.RunCommand("SHOW COLUMNS FROM %s;" % tableName)
+        return self.RunCommand("SHOW COLUMNS FROM %s;" %
+                               tableName)
 
     def GetRows(self, tableName):
-        return self.RunCommand("SELECT * FROM %s;" % tableName)
+        return self.RunCommand("SELECT * FROM %s;" %
+                               tableName)
 
     def SelectRows(self, tableName, Condition):
         cmd = tableName + ' where ' + Condition
         return self.RunCommand("SELECT * FROM %s;" % cmd)
+
+    def SelectRows_22(self, tableName,
+                      Condition):  #depid = 0
+        print(Condition[-1])
+        if Condition[-1] != '0':
+            cmd = tableName + ' where ' + Condition
+            return self.RunCommand("SELECT * FROM %s;" % cmd)
+        else:
+            return self.RunCommand("SELECT * FROM %s;" %
+                                   tableName)
 
     def GetDF(self, i):
         cmd = '''
@@ -59,7 +73,8 @@ class DatabaseUtilities:
             msg = self.cursor.fetchone()
 
         return msg
-    def RunInsert(self,cmd) :
+
+    def RunInsert(self, cmd):
         try:
             self.cursor.execute(cmd, multi=True)
         except mysql.connector.Error as err:
@@ -67,14 +82,13 @@ class DatabaseUtilities:
             print('WITH ' + cmd)
         self.mydb.commit()
 
-
-
     def AddEntryToTable(self, tableName, message):
         Date = datetime.now().strftime("%y-%m-%d")
         Time = datetime.now().strftime("%H:%M")
 
         cmd = " INSERT INTO " + tableName + " (date, time, message)"
-        cmd += " VALUES ('%s', '%s', '%s' );" % (Date, Time, message)
+        cmd += " VALUES ('%s', '%s', '%s' );" % (Date, Time,
+                                                 message)
         self.RunCommand(cmd)
 
     def __del__(self):

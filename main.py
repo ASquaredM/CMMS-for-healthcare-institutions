@@ -136,7 +136,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         # because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
             lambda: self.UpdateTable(
-                DB.SelectRows(
+                DB.SelectRows_22(
                     'device', 'depid = %s' % self
                     .DepartmentSelection_combo.currentIndex(
                     )), self.Devices_table))
