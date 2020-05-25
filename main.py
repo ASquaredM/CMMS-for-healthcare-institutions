@@ -28,12 +28,13 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' Combos
         self.Date_comboBox
         '''
+        
         self.Dash_ToDo_Button
         self.Dash_Forms_Button
         self.Dash_Devices_Button
         self.Dash_Dept_Button
         self.Dash_Inspection_Button
-
+        print(self.lineEdit_6.text())
         self.CurrDate = datetime.now().strftime("%y-%m-%d")
         self.CurrTime = datetime.now().strftime("%H:%M")
 
@@ -60,7 +61,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ]
         self.tabs = [self.followUp_tabWidget, self.information_tabWidget]
         self.questions = [self.question1, self.question2]
-
+        ############################################ adding device , Form #############################################
+        self.newDevice = [str(self.lineEdit.text()), self.lineEdit_2.text(), self.lineEdit_3.text(), self.lineEdit_4.text(), self.lineEdit_5.text(), self.lineEdit_6.text(), str(self.installation_dateEdit.date().toPyDate()), self.lineEdit_8.text(), self.lineEdit_9.text(), self.lineEdit_10.text(), self.lineEdit_11.text(), self.lineEdit_12.text()]
+        self.newForm = [self.createForm_ans1.text(), self.createForm_ans2.text(),self.createForm_ans3.text(),self.createForm_ans4.toPlainText()]
+        ################################################################################################################
+        print(str(self.installation_dateEdit.date().toPyDate()))
     def InitCheckBoxes(self):
         self.checks1 = [
             self.checkq1, self.checkq2, self.checkq3, self.checkq4,
@@ -79,7 +84,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.checks[0][i].stateChanged.connect(self.FormIsFilling)
 
     def InitActions(self):
-        #Ordered by the actual toolbar order
+        # Ordered by the actual toolbar order
         self.actionFollow_Up.triggered.connect(
             lambda: self.toolBox.setCurrentIndex(0))
         self.actionHome.triggered.connect(lambda: self.NavTo(0, 0))
@@ -98,8 +103,8 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.actionCMMS.triggered.connect(self.dockWidget_AboutWindow.show)
 
     def InitComboBoxes(self):
-        ## gives an error when we choose all departmenst after changing the department from the combo
-        ## because there is no department with id ==0
+        # gives an error when we choose all departmenst after changing the department from the combo
+        # because there is no department with id ==0
         self.DepartmentSelection_combo.currentIndexChanged.connect(
             lambda: self.UpdateTable(
                 DB.SelectRows(
@@ -128,6 +133,8 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
 
         self.SubmitInspectionAnswers_button.clicked.connect(
             self.CollectingForm)
+        self.pushButton_AddDeviceWindow.clicked.connect(lambda : self.insert2DB(1,"device"))
+        self.pushButton_CreateFormWindow.clicked.connect(lambda : self.insert2DB(2,"form"))
 
     def UpdateDevCombo(self):
         self.Inspection_comboBox.clear()
@@ -181,7 +188,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                     else:
                         EnableVar -= 1
                 self.clear_form(0, len(self.checks1), 10 - EnableVar)
-                self.enable_form(0, EnableVar)  #######
+                self.enable_form(0, EnableVar)
             else:
                 self.clear_form(0, 10, 10)
                 self.question1[0].setText('No Form To Display For This Device')
@@ -208,14 +215,35 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                         EnableVar -= 1
                 self.clear_form(
                     1, len(self.checks2), 10 - EnableVar
-                )  ############generalize these functions ---> enable_form(self,checklist, amount) , clear_Form(self, questionList,checklist,lenlist, amount)
-                self.enable_form(1, EnableVar)  #######
+                )  # generalize these functions ---> enable_form(self,checklist, amount) , clear_Form(self, questionList,checklist,lenlist, amount)
+                self.enable_form(1, EnableVar)
             else:
                 self.clear_form(1, 10, 10)
                 self.question2[0].setText('No Form To Display For This Device')
         else:
             self.clear_form(1, 10, 10)
             self.question2[0].setText('No Form To Display For This Device')
+
+    def insert2DB(self,typeOfData, table):
+        ############################################ adding device , Form #############################################
+        self.newDevice = [str(self.lineEdit.text()), self.lineEdit_2.text(), self.lineEdit_3.text(), self.lineEdit_4.text(), self.lineEdit_5.text(), self.lineEdit_6.text(), str(self.installation_dateEdit.date().toPyDate()), self.lineEdit_8.text(), self.lineEdit_9.text(), self.lineEdit_10.text(), self.lineEdit_11.text(), self.lineEdit_12.text()]
+        self.newForm = [self.createForm_ans1.text(), self.createForm_ans2.text(),self.createForm_ans3.text(),self.createForm_ans4.toPlainText()]
+        ################################################################################################################
+        if typeOfData ==1 :
+            data = self.newDevice
+        else :
+            data = self.newForm
+        print("------------list",data)
+        print("--------tuple",tuple(data))
+        cmd = " INSERT INTO " + table 
+        cmd += " VALUES %r;" % (tuple(data),)
+        DB.RunInsert(cmd)
+
+
+
+
+
+
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))

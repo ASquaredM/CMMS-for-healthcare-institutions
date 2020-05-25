@@ -59,6 +59,15 @@ class DatabaseUtilities:
             msg = self.cursor.fetchone()
 
         return msg
+    def RunInsert(self,cmd) :
+        try:
+            self.cursor.execute(cmd, multi=True)
+        except mysql.connector.Error as err:
+            print('ERROR MESSAGE: ' + str(err.msg))
+            print('WITH ' + cmd)
+        self.mydb.commit()
+
+
 
     def AddEntryToTable(self, tableName, message):
         Date = datetime.now().strftime("%y-%m-%d")
