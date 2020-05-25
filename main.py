@@ -169,8 +169,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.ManageTasks_button.clicked.connect(
             lambda: self.NavTo(0, 1))
 
-        self.SubmitInspectionAnswers_button.clicked.connect(
-            self.CollectingForm)
+        self.SubmitInspectionAnswers_button.clicked.connect( lambda :self.submit_inspection() )
+        self.SubmitPPMAnswers_button.clicked.connect(lambda : self.submit_ppm())
+         
         self.pushButton_AddDeviceWindow.clicked.connect(
             lambda: self.insert2DB(1, "device"))
         self.pushButton_CreateFormWindow.clicked.connect(
@@ -284,6 +285,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.clear_form(1, 10, 10)
             self.question2[0].setText(
                 'No Form To Display For This Device')
+    
+
+
+
+
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
@@ -329,15 +335,15 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         else:
             self.Inspection_comboBox.setDisabled(False)
 
-    def CollectingForm(self):
+    def CollectingForm(self,num):
         Answers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
+        
         for i in range(10):
-            if len(self.question1[i].text()
-                   ) > 3 and self.checks[0][i].isChecked():
+            if len(self.questions[num][i].text()
+                   ) > 3 and self.checks[num][i].isChecked():
                 Answers[i] = 1
-
-        print(Answers)
+        # print(Answers)
+        return(Answers)
 
     def insert2DB(self, typeOfData, table):
         ############################################ adding device , Form #############################################
@@ -373,6 +379,51 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         cmd += " VALUES %r;" % (tuple(data), )
         DB.RunInsert(cmd)
         self.UpdateTables()
+
+
+    def submit_inspection(self):
+
+        device_id = self.Inspection_comboBox.currentText().split(" ,ID:")[1]
+        date = str(self.dateEdit_inspection.date().toPyDate())
+        notes =   self.insp_notes.toPlainText()
+        result = self.CollectingForm(0)
+        result = [str(num) for num in result]
+        result = ''.join(result)
+        self.save_inspectionAnswers(device_id, date, notes, result)
+
+    def save_inspectionAnswers(self,device_id, date, notes, result) : ## send it to DB
+
+        cmd = " INSERT INTO Daily_Inspection ( DevID,InspDate , InspExtraNotes, InspResult )"
+        cmd += " VALUES ('{}', '{}', '{}', '{}' );".format(device_id, date, notes, result,)
+        DB.RunInsert(cmd)
+        self.UpdateTables()
+    
+
+    def submit_ppm(self):
+
+        device_id = self.ppm_comboBox.currentText().split(" ,ID:")[1]
+        date = str(self.dateEdit_ppm.date().toPyDate())
+        notes =   self.ppmNotes_text.toPlainText()
+        result = self.CollectingForm(1)
+        result = [str(num) for num in result]
+        result = ''.join(result)
+        cost = self.ppmCost_text.toPlainText()
+
+        self.save_ppm(device_id, date, notes, result,cost)
+
+    def save_ppm(self,device_id, date, notes, result,cost) :
+
+        
+        cmd = " INSERT INTO PPM ( DevID, PpmDate , PpmExtraNotes, PpmResult, Cost)"
+        cmd += " VALUES ('{}', '{}', '{}', '{}', '{}' );".format(device_id, date, notes, result, cost, )
+        DB.RunInsert(cmd)
+        self.UpdateTables()
+
+
+
+
+
+
 
 
 def main():
