@@ -6,7 +6,7 @@ from dateutil.relativedelta import relativedelta
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QTableWidgetItem
 from PyQt5.QtGui import QPainter, QColor, QFont
-from PyQt5.QtCore import QRect ,QDate
+from PyQt5.QtCore import QRect, QDate
 
 import hospital_gui
 from DB_Management import DatabaseUtilities as DU
@@ -25,13 +25,12 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' Tables
         self.ToDo_table
         '''
-        ''' LineEdit
-        self.Search_lineEdit
-        '''
         ''' Combos
         self.Date_comboBox
         '''
-        self.todo_dateEdit.dateChanged.connect(lambda : self.ppms_today(self.todo_dateEdit.date().toPyDate()) )
+        self.todo_dateEdit.dateChanged.connect(
+            lambda: self.ppms_today(self.todo_dateEdit.date(
+            ).toPyDate()))
         # print(self.lineEdit_6.text())
         self.CurrDate = datetime.now().strftime("%y-%m-%d")
         self.CurrTime = datetime.now().strftime("%H:%M")
@@ -58,11 +57,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.q11, self.q12, self.q13, self.q14, self.q15,
             self.q16, self.q17, self.q18, self.q19, self.q20
         ]
+        self.questions = [self.question1, self.question2]
         self.tabs = [
             self.followUp_tabWidget,
             self.information_tabWidget
         ]
-        self.questions = [self.question1, self.question2]
         ############################################ adding device , Form #############################################
         self.newDevice = [
             str(self.lineEdit.text()),
@@ -85,6 +84,10 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.createForm_ans3.text(),
             self.createForm_ans4.toPlainText()
         ]
+        self.Form_comboBoxes = [
+            self.Inspection_comboBox, self.ppm_comboBox
+        ]
+        self.formTypes = ['daily inspection', 'PPM']
         ################################################################################################################
         # print(
         #     str(self.installation_dateEdit.date().toPyDate())
@@ -151,9 +154,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                          currentIndex()), self.Forms_table))
 
         self.Inspection_comboBox.currentIndexChanged.connect(
-            self.UpdateForm)
+            lambda: self.UpdateForm(0))
         self.ppm_comboBox.currentIndexChanged.connect(
-            self.update_form2)
+            lambda: self.UpdateForm(1))
 
     def InitButtons(self):
         self.Dash_ToDo_Button.clicked.connect(
@@ -174,9 +177,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.ManageTasks_button.clicked.connect(
             lambda: self.NavTo(0, 1))
 
-        self.SubmitInspectionAnswers_button.clicked.connect( lambda :self.submit_inspection() )
-        self.SubmitPPMAnswers_button.clicked.connect(lambda : self.submit_ppm())
-         
+        self.SubmitInspectionAnswers_button.clicked.connect(
+            lambda: self.submit_inspection())
+        self.SubmitPPMAnswers_button.clicked.connect(
+            lambda: self.submit_ppm())
+
         self.pushButton_AddDeviceWindow.clicked.connect(
             lambda: self.insert2DB(1, "device"))
         self.pushButton_CreateFormWindow.clicked.connect(
@@ -201,11 +206,12 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                          self.Devices_table)
         self.UpdateTable(DB.GetRows('form'),
                          self.Forms_table)
-        self.UpdateForm()
-        self.update_form2()
+        self.UpdateForm(0)
+        self.UpdateForm(1)
 
     def UpdateTable(self, rows, UItable):
-        if str(type(rows)) != "<class 'NoneType'>" and len(rows[0]) > 0:
+        if str(type(rows)) != "<class 'NoneType'>" and len(
+                rows[0]) > 0:
             UItable.setRowCount(len(rows))
 
             UItable.setColumnCount(len(rows[0]))
@@ -219,18 +225,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         else:
             UItable.clearContents()
 
-    def UpdateForm(self):
+    def UpdateForm(self, i):
         family = DB.SelectRows(
             "device", "DevName='{}'".format(
-                str(self.Inspection_comboBox.currentText()).
+                str(self.Form_comboBoxes[i].currentText()).
                 split(" ,ID:")[0]))
-        # print(str(self.Inspection_comboBox.currentText()).split(" ,ID:")[0])
-        # print(family)
         if len(family) > 0:
             form = DB.SelectRows(
                 "form",
-                "formfamily='{}' AND formtype= 'daily inspection' "
-                .format(str(family[0][8])))
+                "formfamily='{}' AND formtype= {} ".format(
+                    str(family[0][8]), self.formTypes[i]))
             if len(form) > 0:
                 form = form[0][3].split("?")
                 form = [
@@ -240,134 +244,96 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 EnableVar = len(form)
                 for i, quest in enumerate(form):
                     if quest != "  ?":
-                        self.question1[i - 1].setText(quest)
+                        self.questions[i][i -
+                                          1].setText(quest)
                     else:
                         EnableVar -= 1
-                self.clear_form(0, len(self.checks1),
+                # generalize these functions ---> enable_form(self,checklist, amount) , clear_Form(self, questionList,checklist,lenlist, amount)
+                self.clear_form(i, len(self.checks[i]),
                                 10 - EnableVar)
-                self.enable_form(0, EnableVar)
+                self.enable_form(i, EnableVar)
             else:
-                self.clear_form(0, 10, 10)
-                self.question1[0].setText(
+                self.clear_form(i, 10, 10)
+                self.questions[i][0].setText(
                     'No Form To Display For This Device')
         else:
-            self.clear_form(0, 10, 10)
-            self.question1[0].setText(
+            self.clear_form(i, 10, 10)
+            self.questions[i][0].setText(
                 'No Form To Display For This Device')
 
-    def update_form2(self):
-        family = DB.SelectRows(
-            "device", "DevName='{}'".format(
-                str(self.ppm_comboBox.currentText()).split(
-                    " ,ID:")[0]))
-        if len(family) > 0:
-            form = DB.SelectRows(
-                "form",
-                "formfamily='{}' AND formtype= 'PPM' ".
-                format(str(family[0][8])))
-            if len(form) > 0:
-                form = form[0][3].split("?")
-                form = [
-                    str(question) + str('  ?')
-                    for question in form
-                ]
-                EnableVar = len(form)
-                for i, quest in enumerate(form):
-                    if quest != "  ?":
-                        self.question2[i - 1].setText(quest)
-                    else:
-                        EnableVar -= 1
-                self.clear_form(
-                    1, len(self.checks2), 10 - EnableVar
-                )  # generalize these functions ---> enable_form(self,checklist, amount) , clear_Form(self, questionList,checklist,lenlist, amount)
-                self.enable_form(1, EnableVar)
-            else:
-                self.clear_form(1, 10, 10)
-                self.question2[0].setText(
-                    'No Form To Display For This Device')
-        else:
-            self.clear_form(1, 10, 10)
-            self.question2[0].setText(
-                'No Form To Display For This Device')
-    
-
-    def next_PPMs(self,device_ID) : #for a given device untill 2021/4
-        cmd =  "SELECT DevName , DevID , InstallationDate , PpmPeriod FROM device WHERE DevID='{}'".format(device_ID)
-        data= DB.RunCommand(cmd )
+    def next_PPMs(
+        self, device_ID):  #for a given device untill 2021/4
+        cmd = "SELECT DevName , DevID , InstallationDate , PpmPeriod FROM device WHERE DevID='{}'".format(
+            device_ID)
+        data = DB.RunCommand(cmd)
         # print(data)
         installation_date = data[0][2]
-        devID =  data[0][1]
+        devID = data[0][1]
         name = data[0][0]
         ppm_period = data[0][3].split()[0]
         # print(ppm_period)
-        this_year = datetime.strptime(str(installation_date) , '%Y-%m-%d').replace(year =2019)
+        this_year = datetime.strptime(
+            str(installation_date),
+            '%Y-%m-%d').replace(year=2019)
         # print(this_year)
-        nextPPMs=list()
-        while this_year< datetime.strptime("2021-04-15" , '%Y-%m-%d'):
-            this_year +=  relativedelta(months=+int(ppm_period))
+        nextPPMs = list()
+        while this_year < datetime.strptime(
+                "2021-04-15", '%Y-%m-%d'):
+            this_year += relativedelta(
+                months=+int(ppm_period))
             # print(this_year)
             nextPPMs.append(str(this_year).split()[0])
 
         # print(nextPPMs)
-        return(nextPPMs)
+        return (nextPPMs)
 
-    def ppms_today(self ,date ) :
+    def ppms_today(self, date):
         """ppms_today [takes date string]
 
         Args:
             date ([date string]): [selected day to invistigate it's tasks]
         """
         # date = date.date().toPyDate()
-        cmd =  "SELECT DevName , DevID , DepID  FROM device " ### returns all devices (name,id,department number)
-        data= DB.RunCommand(cmd )
-        
+        cmd = "SELECT DevName , DevID , DepID  FROM device "  ### returns all devices (name,id,department number)
+        data = DB.RunCommand(cmd)
+
         satisfied_devices = []
-        if len(data)>0 :
-            for device in data :
+        if len(data) > 0:
+            for device in data:
                 # print(device)
                 ID = int(device[1])
-                device =list(device)
+                device = list(device)
                 device.append("basement")
                 print(device)
-                if device[2] == 1 :
+                if device[2] == 1:
                     device[2] = "Operating Room"
-                elif device[2] == 2 :
+                elif device[2] == 2:
                     device[2] = "Radiology"
-                elif device[2] == 3 :
+                elif device[2] == 3:
                     device[2] = "Intensive Care Unit (ICU)"
-                nextPPMs = self.next_PPMs(ID)  #### a list of next ppms for this device
+                nextPPMs = self.next_PPMs(
+                    ID
+                )  #### a list of next ppms for this device
                 device = tuple(device)
-                
+
                 # print(len(nextPPMs))
-                for day in nextPPMs :
+                for day in nextPPMs:
                     # print("days+++++++++++++",day,"date+++++++++++++++++",date)
                     # print(type(day), type(str(date)))
-                    if day == str(date) :
+                    if day == str(date):
                         # print("****************",True)
-                        satisfied_devices.append(device)  #### append the device (name,id ,dep) 
-            if len(satisfied_devices) >0 :
-                self.UpdateTable(satisfied_devices,self.ToDo_table)   
-            else :
+                        satisfied_devices.append(
+                            device
+                        )  #### append the device (name,id ,dep)
+            if len(satisfied_devices) > 0:
+                self.UpdateTable(satisfied_devices,
+                                 self.ToDo_table)
+            else:
                 self.ToDo_table.clearContents()
-       
-        print("*********************devices are",satisfied_devices)
-        return(satisfied_devices)
-        
-        
 
-
-
-
-                
-
-
-
-
-
-
-
-
-
+        print("*********************devices are",
+              satisfied_devices)
+        return (satisfied_devices)
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
@@ -413,15 +379,15 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         else:
             self.Inspection_comboBox.setDisabled(False)
 
-    def CollectingForm(self,num):
+    def CollectingForm(self, num):
         Answers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        
+
         for i in range(10):
             if len(self.questions[num][i].text()
                    ) > 3 and self.checks[num][i].isChecked():
                 Answers[i] = 1
         # print(Answers)
-        return(Answers)
+        return (Answers)
 
     def insert2DB(self, typeOfData, table):
         ############################################ adding device , Form #############################################
@@ -452,62 +418,71 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         else:
             data = self.newForm
         # print("------------list", data)
-        # print("--------tuple", tuple(data)) 
+        # print("--------tuple", tuple(data))
 
         cmd = " INSERT INTO " + table
         cmd += " VALUES %r;" % (tuple(data), )
         DB.RunInsert(cmd)
         self.UpdateTables()
 
-
     def submit_inspection(self):
 
-        device_id = self.Inspection_comboBox.currentText().split(" ,ID:")[1]
-        date = str(self.dateEdit_inspection.date().toPyDate())
-        notes =   self.insp_notes.toPlainText()
+        device_id = self.Inspection_comboBox.currentText(
+        ).split(" ,ID:")[1]
+        date = str(
+            self.dateEdit_inspection.date().toPyDate())
+        notes = self.insp_notes.toPlainText()
         result = self.CollectingForm(0)
         result = [str(num) for num in result]
         result = ''.join(result)
-        self.save_inspectionAnswers(device_id, date, notes, result)
+        self.save_inspectionAnswers(device_id, date, notes,
+                                    result)
 
-    def save_inspectionAnswers(self,device_id, date, notes, result) : ## send it to DB
+    def save_inspectionAnswers(self, device_id, date, notes,
+                               result):  ## send it to DB
 
         cmd = " INSERT INTO Daily_Inspection ( DevID,InspDate , InspExtraNotes, InspResult )"
-        cmd += " VALUES ('{}', '{}', '{}', '{}' );".format(device_id, date, notes, result,)
+        cmd += " VALUES ('{}', '{}', '{}', '{}' );".format(
+            device_id,
+            date,
+            notes,
+            result,
+        )
         DB.RunInsert(cmd)
         self.UpdateTables()
-    
 
     def submit_ppm(self):
 
-        device_id = self.ppm_comboBox.currentText().split(" ,ID:")[1]
+        device_id = self.ppm_comboBox.currentText().split(
+            " ,ID:")[1]
         date = str(self.dateEdit_ppm.date().toPyDate())
-        notes =   self.ppmNotes_text.toPlainText()
+        notes = self.ppmNotes_text.toPlainText()
         result = self.CollectingForm(1)
         result = [str(num) for num in result]
         result = ''.join(result)
         cost = self.ppmCost_text.toPlainText()
 
-        self.save_ppm(device_id, date, notes, result,cost)
+        self.save_ppm(device_id, date, notes, result, cost)
 
-    def save_ppm(self,device_id, date, notes, result,cost) :
+    def save_ppm(self, device_id, date, notes, result, cost):
 
-        
         cmd = " INSERT INTO PPM ( DevID, PpmDate , PpmExtraNotes, PpmResult, Cost)"
-        cmd += " VALUES ('{}', '{}', '{}', '{}', '{}' );".format(device_id, date, notes, result, cost, )
+        cmd += " VALUES ('{}', '{}', '{}', '{}', '{}' );".format(
+            device_id,
+            date,
+            notes,
+            result,
+            cost,
+        )
         DB.RunInsert(cmd)
         self.UpdateTables()
-
-
-
 
     # def highlight_date(self) :
 
     #     painter = QPainter()
     #     painter.fillRect(QRect(25, 25, 25, 25), QColor(200, 200, 0) )
     #     self.calendarWidget.paintCell(painter, QRect(25, 25, 25, 25), QDate(2020, 5, 15))
-    #    
-
+    #
 
 
 def main():

@@ -58,7 +58,11 @@ class DatabaseUtilities:
         result = self.RunCommand(cmd)
         self.cursor.close()
         self.DB_init()
-        return result
+        if len(result) < 3:
+            result = self.GetRows('form')
+            return result
+        else:
+            return result
 
     def RunCommand(self, cmd):
         # print("RUNNING COMMAND: " + cmd)

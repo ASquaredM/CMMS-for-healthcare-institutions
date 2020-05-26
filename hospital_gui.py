@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'CMMS.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -13,16 +13,27 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1400, 861)
+        MainWindow.resize(850, 784)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QtCore.QSize(850, 784))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
+        self.centralwidget.setSizePolicy(sizePolicy)
+        self.centralwidget.setMinimumSize(QtCore.QSize(346, 408))
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
         self.toolBox = QtWidgets.QToolBox(self.centralwidget)
         self.toolBox.setObjectName("toolBox")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 857, 599))
+        self.page.setGeometry(QtCore.QRect(0, 0, 794, 574))
         self.page.setObjectName("page")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -870,7 +881,7 @@ class Ui_MainWindow(object):
         icon7.addPixmap(QtGui.QPixmap("Resources/images/follow-up.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page, icon7, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 642, 393))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 328, 300))
         self.page_2.setObjectName("page_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
@@ -1031,7 +1042,7 @@ class Ui_MainWindow(object):
         icon8.addPixmap(QtGui.QPixmap("Resources/images/request.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page_2, icon8, "")
         self.page_3 = QtWidgets.QWidget()
-        self.page_3.setGeometry(QtCore.QRect(0, 0, 848, 374))
+        self.page_3.setGeometry(QtCore.QRect(0, 0, 840, 301))
         self.page_3.setObjectName("page_3")
         self.gridLayout_18 = QtWidgets.QGridLayout(self.page_3)
         self.gridLayout_18.setObjectName("gridLayout_18")
@@ -1083,7 +1094,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.toolBox, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1400, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 850, 21))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -1168,7 +1179,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -102, 793, 326))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 463, 324))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.formLayout = QtWidgets.QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName("formLayout")
@@ -1297,7 +1308,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 544, 224))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 330, 229))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.formLayout_2 = QtWidgets.QFormLayout(self.scrollAreaWidgetContents_2)
         self.formLayout_2.setObjectName("formLayout_2")
@@ -1429,10 +1440,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.toolBox.setCurrentIndex(0)
-        self.followUp_tabWidget.setCurrentIndex(3)
+        self.followUp_tabWidget.setCurrentIndex(0)
         self.Inspection_comboBox.setCurrentIndex(0)
         self.ppm_comboBox.setCurrentIndex(0)
-        self.information_tabWidget.setCurrentIndex(2)
+        self.information_tabWidget.setCurrentIndex(1)
         self.buttonBox.clicked['QAbstractButton*'].connect(self.dockWidget_AboutWindow.close)
         self.pushButton_CancelAddDeviceWindow.clicked.connect(self.dockWidget_AddDeviceWindow.close)
         self.pushButton_CancelCreateFormWindow.clicked.connect(self.dockWidget_CreateFormWindow.close)
@@ -1534,7 +1545,7 @@ class Ui_MainWindow(object):
         self.insp_notes.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;\"><br /></p></body></html>"))
         self.followUp_tabWidget.setTabText(self.followUp_tabWidget.indexOf(self.tab_8), _translate("MainWindow", "Inspection"))
         self.groupBox_6.setTitle(_translate("MainWindow", "Task:"))
@@ -1567,13 +1578,13 @@ class Ui_MainWindow(object):
         self.ppmNotes_text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;\"><br /></p></body></html>"))
         self.label_5.setText(_translate("MainWindow", "Cost:"))
         self.ppmCost_text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;\"><br /></p></body></html>"))
         self.SubmitPPMAnswers_button.setText(_translate("MainWindow", "Submit"))
         self.q14.setText(_translate("MainWindow", "Fix X-Ray"))
@@ -1760,7 +1771,6 @@ class Ui_MainWindow(object):
         self.actionCreate_Form.setText(_translate("MainWindow", "Create Form"))
         self.actionManage_Tasks.setText(_translate("MainWindow", "Manage Tasks"))
         self.actionPPM.setText(_translate("MainWindow", "PPM"))
-
 
 if __name__ == "__main__":
     import sys

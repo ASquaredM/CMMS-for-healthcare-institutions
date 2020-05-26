@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1400</width>
-    <height>861</height>
+    <width>850</width>
+    <height>784</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
@@ -20,6 +26,18 @@
    <string>CMMS</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>346</width>
+     <height>408</height>
+    </size>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
@@ -31,8 +49,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>857</width>
-         <height>599</height>
+         <width>794</width>
+         <height>574</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -46,7 +64,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="followUp_tabWidget">
           <property name="currentIndex">
-           <number>3</number>
+           <number>0</number>
           </property>
           <property name="iconSize">
            <size>
@@ -1125,7 +1143,7 @@
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1499,7 +1517,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1535,7 +1553,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1653,8 +1671,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>642</width>
-         <height>393</height>
+         <width>328</width>
+         <height>300</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1668,7 +1686,7 @@ p, li { white-space: pre-wrap; }
         <item row="0" column="0">
          <widget class="QTabWidget" name="information_tabWidget">
           <property name="currentIndex">
-           <number>2</number>
+           <number>1</number>
           </property>
           <property name="iconSize">
            <size>
@@ -2083,8 +2101,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>848</width>
-         <height>374</height>
+         <width>840</width>
+         <height>301</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -2220,8 +2238,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1400</width>
-     <height>25</height>
+     <width>850</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2472,9 +2490,9 @@ All Rights Reserved</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-102</y>
-          <width>793</width>
-          <height>326</height>
+          <y>0</y>
+          <width>463</width>
+          <height>324</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout">
@@ -2761,8 +2779,8 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>544</width>
-          <height>224</height>
+          <width>330</width>
+          <height>229</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
