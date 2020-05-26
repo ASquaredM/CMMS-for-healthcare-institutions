@@ -38,13 +38,16 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.CurrYear = str(self.CurrDate)[:4]
         self.CurrMonth = str(self.CurrDate)[5:7]
         self.CurrDay = str(self.CurrDate)[8:10]
-        print(
+        """ print(
             str(self.CurrDate)[:9], self.CurrYear,
-            self.CurrMonth, self.CurrDay)
+            self.CurrMonth, self.CurrDay) """
         self.todo_dateEdit.setDate(
             QDate(int(self.CurrYear), int(self.CurrMonth),
                   int(self.CurrDay)))
         self.calendarWidget.setSelectedDate(
+            QDate(int(self.CurrYear), int(self.CurrMonth),
+                  int(self.CurrDay)))
+        self.installation_dateEdit.setDate(
             QDate(int(self.CurrYear), int(self.CurrMonth),
                   int(self.CurrDay)))
         # self.highlight_date()
@@ -318,7 +321,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 ID = int(device[1])
                 device = list(device)
                 device.append("basement")
-                print(device)
+                """ print(device) """
                 if device[2] == 1:
                     device[2] = "Operating Room"
                 elif device[2] == 2:
@@ -344,9 +347,8 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                                  self.ToDo_table)
             else:
                 self.ToDo_table.clearContents()
-
-        print("*********************devices are",
-              satisfied_devices)
+        """ print("*********************devices are",
+              satisfied_devices) """
         return (satisfied_devices)
 
     def InsertAtIndex(self, table, y, x, Item):

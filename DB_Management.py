@@ -40,7 +40,6 @@ class DatabaseUtilities:
 
     def SelectRows_22(self, tableName,
                       Condition):  #depid = 0
-        print(Condition[-1])
         if Condition[-1] != '0':
             cmd = tableName + ' where ' + Condition
             return self.RunCommand("SELECT * FROM %s;" % cmd)
@@ -65,7 +64,7 @@ class DatabaseUtilities:
             return result
 
     def RunCommand(self, cmd):
-        # print("RUNNING COMMAND: " + cmd)
+        print("RUNNING COMMAND: " + cmd)
         try:
             self.cursor.execute(cmd, multi=True)
         except mysql.connector.Error as err:
