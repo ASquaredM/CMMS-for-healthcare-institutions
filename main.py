@@ -191,7 +191,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Inspection_comboBox.clear()
         self.ppm_comboBox.clear()
         dailyDevices_names = DB.RunCommand(
-            "SELECT DevName ,DevId FROM device")
+            "SELECT DevName, DevId FROM device")
         dailyDevices_names = [
             str(device[0]) + " ,ID:" + str(device[1])
             for device in dailyDevices_names
@@ -233,7 +233,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         if len(family) > 0:
             form = DB.SelectRows(
                 "form",
-                "formfamily='{}' AND formtype= {} ".format(
+                "formfamily='{}' AND formtype= '{}' ".format(
                     str(family[0][8]), self.formTypes[i]))
             if len(form) > 0:
                 form = form[0][3].split("?")
@@ -242,9 +242,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                     for question in form
                 ]
                 EnableVar = len(form)
-                for i, quest in enumerate(form):
+                for idx, quest in enumerate(form):
                     if quest != "  ?":
-                        self.questions[i][i -
+                        self.questions[i][idx -
                                           1].setText(quest)
                     else:
                         EnableVar -= 1
