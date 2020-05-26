@@ -32,8 +32,17 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             lambda: self.ppms_today(self.todo_dateEdit.date(
             ).toPyDate()))
         # print(self.lineEdit_6.text())
-        self.CurrDate = datetime.now().strftime("%y-%m-%d")
+        self.CurrDate = datetime.now()
         self.CurrTime = datetime.now().strftime("%H:%M")
+        self.CurrYear = str(self.CurrDate)[:4]
+        self.CurrMonth = str(self.CurrDate)[5:7]
+        self.CurrDay = str(self.CurrDate)[8:10]
+        print(
+            str(self.CurrDate)[:9], self.CurrYear,
+            self.CurrMonth, self.CurrDay)
+        self.todo_dateEdit.setDate(
+            QDate(int(self.CurrYear), int(self.CurrMonth),
+                  int(self.CurrDay)))
         # self.highlight_date()
         # self.next_PPMs()
         self.dockWidget_AddDeviceWindow.close()
@@ -47,6 +56,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.UpdateTables()
         self.InitComboBoxes()
         self.InitButtons()
+        self.ppms_today(self.todo_dateEdit.date().toPyDate())
 
     def InitVariables(self):
         self.question1 = [
