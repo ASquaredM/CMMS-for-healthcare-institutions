@@ -90,7 +90,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.lineEdit_9.text(),
             self.lineEdit_10.text(),
             self.lineEdit_11.text(),
-            self.lineEdit_12.currentText()
+            self.lineEdit_12.currentIndex()+1
         ]
         self.newForm = [
             self.createForm_ans1.text(),
@@ -418,7 +418,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.lineEdit_9.text(),
             self.lineEdit_10.text(),
             self.lineEdit_11.text(),
-            self.lineEdit_12.currentText()
+            self.lineEdit_12.currentIndex()+1
         ]
         self.newForm = [
             self.createForm_ans1.text(),
