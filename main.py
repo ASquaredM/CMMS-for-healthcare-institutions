@@ -1,9 +1,12 @@
 import os
 import sys
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtGui import QPainter, QColor, QFont
+from PyQt5.QtCore import QRect ,QDate
 
 import hospital_gui
 from DB_Management import DatabaseUtilities as DU
@@ -28,10 +31,12 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' Combos
         self.Date_comboBox
         '''
-        print(self.lineEdit_6.text())
+        self.todo_dateEdit.dateChanged.connect(lambda : self.ppms_today(self.todo_dateEdit.date().toPyDate()) )
+        # print(self.lineEdit_6.text())
         self.CurrDate = datetime.now().strftime("%y-%m-%d")
         self.CurrTime = datetime.now().strftime("%H:%M")
-
+        # self.highlight_date()
+        # self.next_PPMs()
         self.dockWidget_AddDeviceWindow.close()
         self.dockWidget_CreateFormWindow.close()
         self.dockWidget_AboutWindow.close()
@@ -72,18 +77,18 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.lineEdit_9.text(),
             self.lineEdit_10.text(),
             self.lineEdit_11.text(),
-            self.lineEdit_12.text()
+            self.lineEdit_12.currentText()
         ]
         self.newForm = [
             self.createForm_ans1.text(),
-            self.createForm_ans2.text(),
+            self.createForm_ans2.currentText(),
             self.createForm_ans3.text(),
             self.createForm_ans4.toPlainText()
         ]
         ################################################################################################################
-        print(
-            str(self.installation_dateEdit.date().toPyDate())
-        )
+        # print(
+        #     str(self.installation_dateEdit.date().toPyDate())
+        # )
 
     def InitCheckBoxes(self):
         self.checks1 = [
@@ -200,8 +205,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.update_form2()
 
     def UpdateTable(self, rows, UItable):
-        if str(type(rows)) != "<class 'NoneType'>" and len(
-                rows[0]) > 0:
+        if str(type(rows)) != "<class 'NoneType'>" and len(rows[0]) > 0:
             UItable.setRowCount(len(rows))
 
             UItable.setColumnCount(len(rows[0]))
@@ -287,6 +291,80 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                 'No Form To Display For This Device')
     
 
+    def next_PPMs(self,device_ID) : #for a given device untill 2021/4
+        cmd =  "SELECT DevName , DevID , InstallationDate , PpmPeriod FROM device WHERE DevID='{}'".format(device_ID)
+        data= DB.RunCommand(cmd )
+        # print(data)
+        installation_date = data[0][2]
+        devID =  data[0][1]
+        name = data[0][0]
+        ppm_period = data[0][3].split()[0]
+        # print(ppm_period)
+        this_year = datetime.strptime(str(installation_date) , '%Y-%m-%d').replace(year =2019)
+        # print(this_year)
+        nextPPMs=list()
+        while this_year< datetime.strptime("2021-04-15" , '%Y-%m-%d'):
+            this_year +=  relativedelta(months=+int(ppm_period))
+            # print(this_year)
+            nextPPMs.append(str(this_year).split()[0])
+
+        # print(nextPPMs)
+        return(nextPPMs)
+
+    def ppms_today(self ,date ) :
+        """ppms_today [takes date string]
+
+        Args:
+            date ([date string]): [selected day to invistigate it's tasks]
+        """
+        # date = date.date().toPyDate()
+        cmd =  "SELECT DevName , DevID , DepID  FROM device " ### returns all devices (name,id,department number)
+        data= DB.RunCommand(cmd )
+        
+        satisfied_devices = []
+        if len(data)>0 :
+            for device in data :
+                # print(device)
+                ID = int(device[1])
+                device =list(device)
+                device.append("basement")
+                print(device)
+                if device[2] == 1 :
+                    device[2] = "Operating Room"
+                elif device[2] == 2 :
+                    device[2] = "Radiology"
+                elif device[2] == 3 :
+                    device[2] = "Intensive Care Unit (ICU)"
+                nextPPMs = self.next_PPMs(ID)  #### a list of next ppms for this device
+                device = tuple(device)
+                
+                # print(len(nextPPMs))
+                for day in nextPPMs :
+                    # print("days+++++++++++++",day,"date+++++++++++++++++",date)
+                    # print(type(day), type(str(date)))
+                    if day == str(date) :
+                        # print("****************",True)
+                        satisfied_devices.append(device)  #### append the device (name,id ,dep) 
+            if len(satisfied_devices) >0 :
+                self.UpdateTable(satisfied_devices,self.ToDo_table)   
+            else :
+                self.ToDo_table.clearContents()
+       
+        print("*********************devices are",satisfied_devices)
+        return(satisfied_devices)
+        
+        
+
+
+
+
+                
+
+
+
+
+
+
 
 
 
@@ -360,11 +438,11 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             self.lineEdit_9.text(),
             self.lineEdit_10.text(),
             self.lineEdit_11.text(),
-            self.lineEdit_12.text()
+            self.lineEdit_12.currentText()
         ]
         self.newForm = [
             self.createForm_ans1.text(),
-            self.createForm_ans2.text(),
+            self.createForm_ans2.currentText(),
             self.createForm_ans3.text(),
             self.createForm_ans4.toPlainText()
         ]
@@ -373,8 +451,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             data = self.newDevice
         else:
             data = self.newForm
-        print("------------list", data)
-        print("--------tuple", tuple(data))
+        # print("------------list", data)
+        # print("--------tuple", tuple(data)) 
+
         cmd = " INSERT INTO " + table
         cmd += " VALUES %r;" % (tuple(data), )
         DB.RunInsert(cmd)
@@ -422,7 +501,12 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
 
 
 
+    # def highlight_date(self) :
 
+    #     painter = QPainter()
+    #     painter.fillRect(QRect(25, 25, 25, 25), QColor(200, 200, 0) )
+    #     self.calendarWidget.paintCell(painter, QRect(25, 25, 25, 25), QDate(2020, 5, 15))
+    #    
 
 
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
-    <height>784</height>
+    <width>1400</width>
+    <height>861</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -31,8 +31,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>794</width>
-         <height>586</height>
+         <width>857</width>
+         <height>599</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -72,7 +72,224 @@
             <string>Dashboard</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_10">
+            <item row="1" column="2">
+             <widget class="QPushButton" name="Dash_Devices_Button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="Dash_ToDo_Button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="1">
+             <widget class="QPushButton" name="Dash_Forms_Button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QPushButton" name="Dash_Inspection_Button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Resources/images/paste.png</normaloff>Resources/images/paste.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QCalendarWidget" name="calendarWidget">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>750</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="gridVisible">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="3">
+             <widget class="QPushButton" name="Dash_Dept_Button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Resources/images/black-placeholder-variant.png</normaloff>Resources/images/black-placeholder-variant.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
              <widget class="QSplitter" name="splitter_2">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -113,29 +330,7 @@
               </widget>
              </widget>
             </item>
-            <item row="0" column="0" colspan="5">
-             <widget class="QGroupBox" name="groupBox_3">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="title">
-               <string>Search</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_3">
-               <item>
-                <widget class="QLineEdit" name="Search_lineEdit">
-                 <property name="placeholderText">
-                  <string>Search for To Do, Tasks, Devices,..etc</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="1" column="3">
+            <item row="0" column="3">
              <widget class="QSplitter" name="splitter_5">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -176,7 +371,7 @@
               </widget>
              </widget>
             </item>
-            <item row="1" column="2">
+            <item row="0" column="2">
              <widget class="QSplitter" name="splitter_3">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -217,7 +412,7 @@
               </widget>
              </widget>
             </item>
-            <item row="1" column="4">
+            <item row="0" column="4">
              <widget class="QSplitter" name="splitter_4">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -258,7 +453,7 @@
               </widget>
              </widget>
             </item>
-            <item row="1" column="0">
+            <item row="0" column="0">
              <widget class="QSplitter" name="splitter">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -299,223 +494,6 @@
               </widget>
              </widget>
             </item>
-            <item row="2" column="4">
-             <widget class="QPushButton" name="Dash_Inspection_Button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Resources/images/paste.png</normaloff>Resources/images/paste.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>50</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="3">
-             <widget class="QPushButton" name="Dash_Dept_Button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Resources/images/black-placeholder-variant.png</normaloff>Resources/images/black-placeholder-variant.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>50</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QPushButton" name="Dash_Devices_Button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Resources/images/monitor-tool-symbol.png</normaloff>Resources/images/monitor-tool-symbol.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>50</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="Dash_Forms_Button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Resources/images/check.png</normaloff>Resources/images/check.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>50</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="Dash_ToDo_Button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Resources/images/list.png</normaloff>Resources/images/list.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>50</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0" colspan="5">
-             <layout class="QGridLayout" name="gridLayout_8">
-              <item row="0" column="0" alignment="Qt::AlignHCenter">
-               <widget class="QCalendarWidget" name="calendarWidget">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>750</width>
-                  <height>300</height>
-                 </size>
-                </property>
-                <property name="gridVisible">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
            </layout>
           </widget>
           <widget class="QWidget" name="tab">
@@ -529,6 +507,9 @@
            <layout class="QGridLayout" name="gridLayout_4">
             <item row="1" column="0">
              <widget class="QTableWidget" name="ToDo_table">
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
               <property name="alternatingRowColors">
                <bool>true</bool>
               </property>
@@ -538,23 +519,38 @@
               <property name="sortingEnabled">
                <bool>true</bool>
               </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
               <property name="cornerButtonEnabled">
                <bool>false</bool>
               </property>
               <property name="rowCount">
                <number>10</number>
               </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>133</number>
+              </attribute>
               <attribute name="horizontalHeaderStretchLastSection">
                <bool>true</bool>
               </attribute>
               <attribute name="verticalHeaderVisible">
                <bool>false</bool>
               </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderMinimumSectionSize">
+               <number>27</number>
+              </attribute>
               <attribute name="verticalHeaderShowSortIndicator" stdset="0">
                <bool>true</bool>
               </attribute>
               <attribute name="verticalHeaderStretchLastSection">
-               <bool>true</bool>
+               <bool>false</bool>
               </attribute>
               <row/>
               <row/>
@@ -568,22 +564,34 @@
               <row/>
               <column>
                <property name="text">
-                <string>Task</string>
+                <string>Device Name</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+               <property name="foreground">
+                <brush brushstyle="Dense1Pattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                 </color>
+                </brush>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Date</string>
+                <string>ID</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Status</string>
+                <string>Department</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Comment</string>
+                <string>location</string>
                </property>
               </column>
               <item row="0" column="0">
@@ -650,63 +658,40 @@
             </item>
             <item row="0" column="0">
              <widget class="QGroupBox" name="groupBox">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="title">
-               <string>View:</string>
+               <string>PPMs Schedule at Date :</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_5">
-               <item row="0" column="1">
-                <widget class="QPushButton" name="Export_button">
+               <item row="2" column="0">
+                <widget class="QDateEdit" name="todo_dateEdit">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
-                 <property name="text">
-                  <string>Export...</string>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
-                 <property name="icon">
-                  <iconset>
-                   <normaloff>Resources/images/export.png</normaloff>Resources/images/export.png</iconset>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2020</year>
+                   <month>5</month>
+                   <day>20</day>
+                  </datetime>
                  </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QComboBox" name="Date_comboBox">
-                 <property name="currentIndex">
-                  <number>2</number>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>7 Days</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>3 Days</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Today</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QPushButton" name="Print_button">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>Print...</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</normaloff>Resources/images/document-rounded-square-interface-symbol-with-text-lines.png</iconset>
+                 <property name="calendarPopup">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -799,7 +784,28 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="Inspection_comboBox_Dep_comboBox"/>
+                  <widget class="QComboBox" name="Inspection_comboBox_Dep_comboBox">
+                   <item>
+                    <property name="text">
+                     <string>All Departments</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Operating Room</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Radiology</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Intensive Care Unit (ICU)</string>
+                    </property>
+                   </item>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -1119,7 +1125,7 @@
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1221,7 +1227,28 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="ppm_Dep_comboBox"/>
+                  <widget class="QComboBox" name="ppm_Dep_comboBox">
+                   <item>
+                    <property name="text">
+                     <string>All Departments</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Operating Room</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Radiology</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Intensive Care Unit (ICU)</string>
+                    </property>
+                   </item>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -1472,7 +1499,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1508,7 +1535,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.85455pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -1626,8 +1653,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>328</width>
-         <height>300</height>
+         <width>642</width>
+         <height>393</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -1641,7 +1668,7 @@ p, li { white-space: pre-wrap; }
         <item row="0" column="0">
          <widget class="QTabWidget" name="information_tabWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>2</number>
           </property>
           <property name="iconSize">
            <size>
@@ -1684,6 +1711,12 @@ p, li { white-space: pre-wrap; }
             </item>
             <item>
              <widget class="QTableWidget" name="Devices_table">
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
               <property name="alternatingRowColors">
                <bool>true</bool>
               </property>
@@ -1846,6 +1879,12 @@ p, li { white-space: pre-wrap; }
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QTableWidget" name="Department_table">
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
               <property name="alternatingRowColors">
                <bool>false</bool>
               </property>
@@ -1854,6 +1893,9 @@ p, li { white-space: pre-wrap; }
               </property>
               <attribute name="horizontalHeaderStretchLastSection">
                <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
               </attribute>
               <row/>
               <row/>
@@ -1960,6 +2002,12 @@ p, li { white-space: pre-wrap; }
               <property name="autoFillBackground">
                <bool>false</bool>
               </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
               <property name="alternatingRowColors">
                <bool>true</bool>
               </property>
@@ -2035,8 +2083,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>840</width>
-         <height>301</height>
+         <width>848</width>
+         <height>374</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -2172,8 +2220,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>850</width>
-     <height>21</height>
+     <width>1400</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2424,16 +2472,16 @@ All Rights Reserved</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>478</width>
-          <height>324</height>
+          <y>-102</y>
+          <width>793</width>
+          <height>326</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout">
          <item row="0" column="0">
           <widget class="QLabel" name="label_11">
            <property name="text">
-            <string>ID</string>
+            <string>ID (optional)</string>
            </property>
            <property name="buddy">
             <cstring>lineEdit</cstring>
@@ -2570,13 +2618,10 @@ All Rights Reserved</string>
          <item row="10" column="1">
           <widget class="QLineEdit" name="lineEdit_11"/>
          </item>
-         <item row="11" column="1">
-          <widget class="QLineEdit" name="lineEdit_12"/>
-         </item>
          <item row="11" column="0">
           <widget class="QLabel" name="label_23">
            <property name="text">
-            <string>Department ID</string>
+            <string>Department </string>
            </property>
            <property name="buddy">
             <cstring>lineEdit</cstring>
@@ -2585,6 +2630,13 @@ All Rights Reserved</string>
          </item>
          <item row="6" column="1">
           <widget class="QDateEdit" name="installation_dateEdit">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="wrapping">
             <bool>false</bool>
            </property>
@@ -2607,6 +2659,25 @@ All Rights Reserved</string>
            <property name="calendarPopup">
             <bool>true</bool>
            </property>
+          </widget>
+         </item>
+         <item row="11" column="1">
+          <widget class="QComboBox" name="lineEdit_12">
+           <item>
+            <property name="text">
+             <string>Operating Room</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Radiology</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Intensive Care Unit (ICU)</string>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>
@@ -2690,15 +2761,15 @@ All Rights Reserved</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>315</width>
-          <height>229</height>
+          <width>544</width>
+          <height>224</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
          <item row="0" column="0">
           <widget class="QLabel" name="label_24">
            <property name="text">
-            <string>ID</string>
+            <string>ID (optional)</string>
            </property>
            <property name="buddy">
             <cstring>lineEdit</cstring>
@@ -2718,13 +2789,10 @@ All Rights Reserved</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="createForm_ans2"/>
-         </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_37">
            <property name="text">
-            <string>Family</string>
+            <string>Device Family</string>
            </property>
            <property name="buddy">
             <cstring>lineEdit</cstring>
@@ -2737,7 +2805,7 @@ All Rights Reserved</string>
          <item row="3" column="0">
           <widget class="QLabel" name="label_41">
            <property name="text">
-            <string>Text
+            <string>Questions
  'Separte questions with ?'</string>
            </property>
            <property name="buddy">
@@ -2747,6 +2815,25 @@ All Rights Reserved</string>
          </item>
          <item row="3" column="1">
           <widget class="QTextEdit" name="createForm_ans4"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="createForm_ans2">
+           <item>
+            <property name="text">
+             <string>Daily Inspection</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>PPM</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Installation</string>
+            </property>
+           </item>
+          </widget>
          </item>
         </layout>
        </widget>
