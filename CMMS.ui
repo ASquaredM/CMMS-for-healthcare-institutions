@@ -326,7 +326,7 @@
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>Tasks:</string>
+                <string>Inspection Forms:</string>
                </property>
               </widget>
               <widget class="QLabel" name="DashTasksCount_label">
@@ -343,7 +343,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>2</string>
+                <string>16</string>
                </property>
               </widget>
              </widget>
@@ -466,7 +466,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>0</string>
+                <string>17</string>
                </property>
               </widget>
              </widget>
@@ -507,7 +507,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>38</string>
+                <string>0</string>
                </property>
               </widget>
              </widget>
