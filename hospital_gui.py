@@ -1439,11 +1439,11 @@ class Ui_MainWindow(object):
         self.label_41.setBuddy(self.lineEdit)
 
         self.retranslateUi(MainWindow)
-        self.toolBox.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(1)
         self.followUp_tabWidget.setCurrentIndex(0)
         self.Inspection_comboBox.setCurrentIndex(0)
         self.ppm_comboBox.setCurrentIndex(0)
-        self.information_tabWidget.setCurrentIndex(1)
+        self.information_tabWidget.setCurrentIndex(0)
         self.buttonBox.clicked['QAbstractButton*'].connect(self.dockWidget_AboutWindow.close)
         self.pushButton_CancelAddDeviceWindow.clicked.connect(self.dockWidget_AddDeviceWindow.close)
         self.pushButton_CancelCreateFormWindow.clicked.connect(self.dockWidget_CreateFormWindow.close)

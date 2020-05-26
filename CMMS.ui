@@ -42,7 +42,7 @@
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
@@ -1686,7 +1686,7 @@ p, li { white-space: pre-wrap; }
         <item row="0" column="0">
          <widget class="QTabWidget" name="information_tabWidget">
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="iconSize">
            <size>
