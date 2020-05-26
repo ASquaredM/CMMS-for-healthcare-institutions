@@ -1439,7 +1439,7 @@ class Ui_MainWindow(object):
         self.label_41.setBuddy(self.lineEdit)
 
         self.retranslateUi(MainWindow)
-        self.toolBox.setCurrentIndex(1)
+        self.toolBox.setCurrentIndex(0)
         self.followUp_tabWidget.setCurrentIndex(0)
         self.Inspection_comboBox.setCurrentIndex(0)
         self.ppm_comboBox.setCurrentIndex(0)

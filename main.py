@@ -28,6 +28,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         ''' Combos
         self.Date_comboBox
         '''
+        self.calendarWidget.selectedDate
         self.todo_dateEdit.dateChanged.connect(
             lambda: self.ppms_today(self.todo_dateEdit.date(
             ).toPyDate()))
@@ -41,6 +42,9 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             str(self.CurrDate)[:9], self.CurrYear,
             self.CurrMonth, self.CurrDay)
         self.todo_dateEdit.setDate(
+            QDate(int(self.CurrYear), int(self.CurrMonth),
+                  int(self.CurrDay)))
+        self.calendarWidget.setSelectedDate(
             QDate(int(self.CurrYear), int(self.CurrMonth),
                   int(self.CurrDay)))
         # self.highlight_date()
