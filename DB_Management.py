@@ -64,7 +64,7 @@ class DatabaseUtilities:
             return result
 
     def RunCommand(self, cmd):
-        print("RUNNING COMMAND: " + cmd)
+        # print("RUNNING COMMAND: " + cmd)
         try:
             self.cursor.execute(cmd, multi=True)
         except mysql.connector.Error as err:

@@ -6,7 +6,7 @@ from dateutil.relativedelta import relativedelta
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QTableWidgetItem
 from PyQt5.QtGui import QPainter, QColor, QFont
-from PyQt5.QtCore import QRect, QDate
+from PyQt5.QtCore import QRect, QDate ,Qt , QPoint
 
 import hospital_gui
 from DB_Management import DatabaseUtilities as DU
@@ -17,17 +17,30 @@ DB = DU()
 class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self, mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
-        ''' Buttons
-        self.SubmitPPMAnswers_button.clicked.connect()
-        self.Export_button.clicked.connect()
-        self.Print_button.clicked.connect()
-        '''
-        ''' Tables
-        self.ToDo_table
-        '''
-        ''' Combos
-        self.Date_comboBox
-        '''
+        dates_list =self.highlight_dates()
+        class Scheduler(QtWidgets.QCalendarWidget):
+
+            def __init__(self, parent=None  ):
+                    super().__init__(parent)
+                    self.events = dates_list
+
+            def paintCell(self, painter, rect, date):
+                    super().paintCell(painter, rect, date)
+                    if date in self.events:
+                            painter.setBrush(Qt.green)
+                            painter.drawEllipse(rect.topLeft() + QPoint(12, 7), 6, 6)
+        # copy the initiallization lines of the calendar from the gui file and paste them here 
+        self.calendarWidget = Scheduler(self.tab_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.calendarWidget.sizePolicy().hasHeightForWidth())
+        self.calendarWidget.setSizePolicy(sizePolicy)
+        self.calendarWidget.setMinimumSize(QtCore.QSize(750, 300))
+        self.calendarWidget.setGridVisible(True)
+        self.calendarWidget.setObjectName("calendarWidget")
+        self.gridLayout_8.addWidget(self.calendarWidget, 0, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        #################################################################
         self.calendarWidget.selectedDate
         self.todo_dateEdit.dateChanged.connect(
             lambda: self.ppms_today(self.todo_dateEdit.date(
@@ -350,6 +363,29 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         """ print("*********************devices are",
               satisfied_devices) """
         return (satisfied_devices)
+
+
+    def highlight_dates(self) :
+        days_highlighted = []
+        for i in range(90) :
+            day = "2020-04-1"
+            date = datetime.strptime( str(day),'%Y-%m-%d')
+            date +=  relativedelta( days=+int(i))
+            # print(date[:10])
+            size= len(self.ppms_today(str(date).split(" ")[0]))
+            # print(size)
+            if size>0 :
+                date = str(date).split(" ")[0].split("-")
+                
+                year  = int(date[0]) 
+                month = int(date[1])
+                day   = int(date[2])
+                qt_date = QDate(year,month,day)
+                days_highlighted.append(qt_date)
+        return(days_highlighted)
+            
+
+
 
     def InsertAtIndex(self, table, y, x, Item):
         table.setItem(y, x, QTableWidgetItem(Item))
