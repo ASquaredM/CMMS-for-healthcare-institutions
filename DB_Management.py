@@ -49,7 +49,7 @@ class DatabaseUtilities:
 
     def GetDF(self, i):
         cmd = '''
-        SELECT T1.text, T1.formid, T1.formtype, T1.formfamily FROM (SELECT form.text, form.formid, form.formtype, form.formfamily, device.depid 
+        SELECT  T1.formid, T1.formtype, T1.formfamily,T1.text FROM (SELECT form.text, form.formid, form.formtype, form.formfamily, device.depid 
                                                                     FROM form 
                                                                     JOIN device on form.formfamily = device.family) AS T1 
         WHERE depid = {};)

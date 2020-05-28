@@ -17,6 +17,9 @@ DB = DU()
 class ApplicationWindow(hospital_gui.Ui_MainWindow):
     def __init__(self, mainWindow):
         super(ApplicationWindow, self).setupUi(mainWindow)
+        self.dockWidget_AddDeviceWindow.close()
+        self.dockWidget_CreateFormWindow.close()
+        self.dockWidget_AboutWindow.close()
         dates_list =self.highlight_dates()
         class Scheduler(QtWidgets.QCalendarWidget):
 
@@ -65,14 +68,17 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                   int(self.CurrDay)))
         # self.highlight_date()
         # self.next_PPMs()
-        self.dockWidget_AddDeviceWindow.close()
-        self.dockWidget_CreateFormWindow.close()
-        self.dockWidget_AboutWindow.close()
+       
 
         self.InitVariables()
         self.InitCheckBoxes()
         self.InitActions()
-        self.UpdateDevCombo()
+        self.UpdateDevCombo(0,0)
+        self.UpdateDevCombo(1,0)
+        for i in range(2) :
+            
+            self.Form_Department_combobox[i].currentIndexChanged.connect(lambda :self.UpdateDevCombo(i, self.Form_Department_combobox[i].currentIndex()))
+
         self.UpdateTables()
         self.InitComboBoxes()
         self.InitButtons()
@@ -117,6 +123,7 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.Form_comboBoxes = [
             self.Inspection_comboBox, self.ppm_comboBox
         ]
+        self.Form_Department_combobox = [  self.Inspection_comboBox_Dep_comboBox  ,self.ppm_Dep_comboBox]
         self.formTypes = ['daily inspection', 'PPM']
         ################################################################################################################
         # print(
@@ -184,9 +191,14 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
                          currentIndex()), self.Forms_table))
 
         self.Inspection_comboBox.currentIndexChanged.connect(
-            lambda: self.UpdateForm(0))
+            lambda: self.UpdateForm(0 ))
         self.ppm_comboBox.currentIndexChanged.connect(
             lambda: self.UpdateForm(1))
+      
+        # self.Form_Department_combobox[0].currentIndexChanged.connect( lambda: self.UpdateForm(0))
+        # self.Form_Department_combobox[1].currentIndexChanged.connect( lambda: self.UpdateForm(1))
+
+
 
     def InitButtons(self):
         self.Dash_ToDo_Button.clicked.connect(
@@ -217,17 +229,19 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
         self.pushButton_CreateFormWindow.clicked.connect(
             lambda: self.insert2DB(2, "form"))
 
-    def UpdateDevCombo(self):
-        self.Inspection_comboBox.clear()
-        self.ppm_comboBox.clear()
-        dailyDevices_names = DB.RunCommand(
-            "SELECT DevName, DevId FROM device")
+    def UpdateDevCombo(self,c,i): 
+        self.Form_comboBoxes[c].clear()
+        if i == 0 :
+            dailyDevices_names = DB.RunCommand(
+            "SELECT DevName, DevId FROM device ")
+        else :
+            dailyDevices_names = DB.RunCommand(
+            "SELECT DevName, DevId FROM device WHERE DepID = '{}' ".format(self.Form_Department_combobox[c].currentIndex()))
         dailyDevices_names = [
             str(device[0]) + " ,ID:" + str(device[1])
             for device in dailyDevices_names
         ]
-        self.Inspection_comboBox.addItems(dailyDevices_names)
-        self.ppm_comboBox.addItems(dailyDevices_names)
+        self.Form_comboBoxes[c].addItems(dailyDevices_names)
 
     def UpdateTables(self):
         self.UpdateTable(DB.GetRows('department'),
@@ -256,28 +270,37 @@ class ApplicationWindow(hospital_gui.Ui_MainWindow):
             UItable.clearContents()
 
     def UpdateForm(self, i):
+       
+
         family = DB.SelectRows(
-            "device", "DevName='{}'".format(
-                str(self.Form_comboBoxes[i].currentText()).
-                split(" ,ID:")[0]))
+                "device", "DevName='{}'".format(
+                    str(self.Form_comboBoxes[i].currentText()).
+                    split(" ,ID:")[0]))
+        # print(family)
         if len(family) > 0:
             form = DB.SelectRows(
                 "form",
                 "formfamily='{}' AND formtype= '{}' ".format(
-                    str(family[0][8]), self.formTypes[i]))
+                   str(family[0][8]), self.formTypes[i]))
+            # print("**********************************",form)
             if len(form) > 0:
                 form = form[0][3].split("?")
-                form = [
-                    str(question) + str('  ?')
-                    for question in form
-                ]
+                form = [  str(question) + str('  ?') for question in form ]
+                form =form[1:-1]
                 EnableVar = len(form)
+                if EnableVar >10 :
+                    EnableVar =10
+                print(form)
+
                 for idx, quest in enumerate(form):
-                    if quest != "  ?":
-                        self.questions[i][idx -
-                                          1].setText(quest)
-                    else:
-                        EnableVar -= 1
+                    if idx < 10 :
+                        self.questions[i][idx].setText(quest)
+
+                    # print(idx)
+                    # if quest != "  ?" :
+                    #     self.questions[i][idx-1].setText(quest)
+                    # else:
+                    #     EnableVar -= 1
                 # generalize these functions ---> enable_form(self,checklist, amount) , clear_Form(self, questionList,checklist,lenlist, amount)
                 self.clear_form(i, len(self.checks[i]),
                                 10 - EnableVar)
