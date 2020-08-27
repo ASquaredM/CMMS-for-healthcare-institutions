@@ -15,7 +15,7 @@ To install required dependencies please :
 3.	Intensive care units (ICU)
 
 ## Features
-● **Dahsboard:**
+● **Dashboard:**
 
 ![ ](Resources/images/Dashboard.png)
 
